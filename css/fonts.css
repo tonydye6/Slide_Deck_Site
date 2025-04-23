@@ -1,0 +1,18 @@
+/* Font face declarations for ADAM.CG PRO and Neodex */
+@font-face {
+    font-family: 'ADAM-CG-PRO';
+    src: url('../fonts/adam.css');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neodex';
+    src: url('../fonts/neodex.css');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Using Inter from Google Fonts (linked in the HTML) */

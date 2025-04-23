@@ -1,0 +1,877 @@
+/* Specific Slide Styles */
+
+/* Slide 1: Game State */
+.game-state .grid-item:nth-child(1) {
+    background-color: rgba(255, 0, 38, 0.1);
+    border-left-color: var(--sparq-red);
+}
+
+.game-state .grid-item:nth-child(2) {
+    background-color: rgba(0, 186, 179, 0.1);
+    border-left-color: var(--sparq-teal);
+}
+
+.game-state .grid-item:nth-child(3) {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-left-color: var(--sparq-gold);
+}
+
+/* Slide 2: Crown U Championships */
+.crown-u-championships .left-column, 
+.crown-u-championships .right-column {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-gold);
+}
+
+/* Slide 3: Crown U - NCAA Party */
+.ncaa-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.game-features, .ncaa-integration {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-gold);
+}
+
+/* Slide 4: Why Web3 Matters */
+.web3-matters .left-column {
+    background-color: rgba(0, 186, 179, 0.1);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.web3-matters .right-column {
+    background-color: rgba(255, 0, 38, 0.1);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+/* Slide 5: Appendix */
+.appendix-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    background-color: rgba(51, 51, 51, 0.5);
+    border-radius: 8px;
+}
+
+/* Slide 6: Disclaimer */
+.disclaimer-content {
+    padding: var(--spacing-lg);
+    background-color: rgba(51, 51, 51, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-light-gray);
+    font-size: var(--small-size);
+}
+
+/* Slide 7: Join the Future */
+.future-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.sparq-logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* Slide 8: Deep Relationships */
+.relationship-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.central-hub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-md);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    border: 3px solid var(--sparq-red);
+}
+
+.relationship-connections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.connection {
+    text-align: center;
+}
+
+.entity {
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    min-width: 150px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.entity p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Slide 9: Leadership */
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.leader {
+    text-align: center;
+}
+
+.leader h4 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.leader p {
+    color: var(--sparq-light-gray);
+    font-size: var(--small-size);
+}
+
+/* Slide 10: CEO Profile */
+.ceo-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex: 1;
+    align-items: center;
+}
+
+.ceo-bio {
+    flex: 1;
+}
+
+.quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--sparq-red);
+    margin-bottom: var(--spacing-md);
+    font-family: 'Neodex', 'Georgia', serif;
+}
+
+/* Slide 11: Evolution */
+.evolution-stages {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.stage {
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    border-top: 4px solid var(--sparq-light-gray);
+}
+
+.stage.current {
+    border-top-color: var(--sparq-red);
+    box-shadow: 0 0 15px rgba(255, 0, 38, 0.5);
+}
+
+/* Slide 12: SPARQ Token */
+.token-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex: 1;
+}
+
+.token-info {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+.token-chart {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie-chart {
+    width: 250px;
+    height: 250px;
+    margin-bottom: var(--spacing-md);
+}
+
+.chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-box {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+/* Slide 13: Board of Directors */
+.board-members {
+    flex: 1;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.board-member {
+    text-align: center;
+}
+
+.board-member h4 {
+    margin-bottom: 0;
+}
+
+.board-member p {
+    color: var(--sparq-light-gray);
+    font-size: var(--small-size);
+}
+
+/* Slide 14: Advisory Board */
+.advisory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.advisor {
+    text-align: center;
+}
+
+.advisor h4 {
+    margin-bottom: 0;
+}
+
+.advisor p {
+    color: var(--sparq-light-gray);
+    font-size: var(--small-size);
+}
+
+/* Slide 15: Business Model */
+.model-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex: 1;
+}
+
+.revenue-streams, .market-opportunity {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.revenue-streams {
+    border-left: 4px solid var(--sparq-red);
+}
+
+.market-opportunity {
+    border-left: 4px solid var(--sparq-teal);
+}
+
+/* Slide 16: Market Opportunity */
+.opportunity-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.key-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.stat-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-light-gray);
+}
+
+.stat-column.accent {
+    border-left-color: var(--sparq-red);
+}
+
+.stats-list li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Slide 17: Go To Market */
+.gtm-content {
+    flex: 1;
+}
+
+.gtm-strategy {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.strategy-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.strategy-column:nth-child(1) {
+    border-top: 4px solid var(--sparq-teal);
+}
+
+.strategy-column:nth-child(2) {
+    border-top: 4px solid var(--sparq-red);
+}
+
+.strategy-column:nth-child(3) {
+    border-top: 4px solid var(--sparq-gold);
+}
+
+/* Slide 18: Product Roadmap */
+.roadmap-content {
+    flex: 1;
+}
+
+.roadmap-timeline {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.timeline-phase {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-red);
+}
+
+.phase-content {
+    margin-top: var(--spacing-md);
+}
+
+/* Slide 19: AI Efficiency */
+.ai-content {
+    flex: 1;
+}
+
+.ai-applications {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.ai-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.ai-column:nth-child(1) {
+    border-left: 4px solid var(--sparq-red);
+}
+
+.ai-column:nth-child(2) {
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.ai-column:nth-child(3) {
+    border-left: 4px solid var(--sparq-gold);
+}
+
+/* Slide 20: Playbook */
+.playbook-content {
+    flex: 1;
+}
+
+.strategy-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.strategy-item {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+/* Slide 21: Ecosystem */
+.ecosystem-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ecosystem-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-lg);
+}
+
+.central-node {
+    background-color: var(--sparq-gray);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    border: 3px solid var(--sparq-red);
+}
+
+.node-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ecosystem-connections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.ecosystem-connections .connection {
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-sm);
+    border-radius: 4px;
+    min-width: 150px;
+    text-align: center;
+    border-left: 3px solid var(--sparq-teal);
+}
+
+/* Slide 22: College Esports */
+.esports-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-block {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    border-top: 4px solid var(--sparq-red);
+}
+
+.stat-block h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.growth-chart {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart {
+    width: 100%;
+    max-height: 300px;
+}
+
+/* Slide 23: Recession Proof */
+.recession-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.recession-data {
+    margin-bottom: var(--spacing-md);
+}
+
+.insight {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.recession-insights {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+/* Slide 24: Web3 Race */
+.web3-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-success-factors {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-factor {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.success-factor:nth-child(1) {
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.success-factor:nth-child(2) {
+    border-left: 4px solid var(--sparq-red);
+}
+
+.market-potential {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-highlight {
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.stat-highlight h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Slide 25: Game Overview */
+.game-content {
+    flex: 1;
+}
+
+.game-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.feature {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+/* Slide 26: Platform */
+.platform-content {
+    flex: 1;
+}
+
+.platform-features {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.feature-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-red);
+}
+
+/* Slide 27: Web3 Simplified */
+.web3-simplified .web3-content {
+    flex: 1;
+}
+
+.simplified-approach {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.web3-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.web3-column.highlight {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+/* Slide 28: Core Values */
+.values-content {
+    flex: 1;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.value {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-teal);
+}
+
+/* Slide 29: Mission */
+.mission-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-statement {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: var(--spacing-lg);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+    color: var(--sparq-red);
+}
+
+.mission-pillars {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+}
+
+.pillar {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 4px solid var(--sparq-red);
+}
+
+.traction-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Slide 30: Traction */
+.traction-content {
+    flex: 1;
+}
+
+.metrics-overview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.metric-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metric {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric.highlighted {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+.metric h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.partners-showcase, .milestones {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+/* Slide 31: Support Logos */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.logo-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 80px;
+}
+
+/* Slide 32: Contact */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sparq-logo-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-details {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    color: var(--sparq-white);
+    text-decoration: none;
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--sparq-red);
+}
+
+/* Slide 33: Thank You */
+.thank-you-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-size: 4rem;
+    color: var(--sparq-red);
+    margin: var(--spacing-lg) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--sparq-white);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+}

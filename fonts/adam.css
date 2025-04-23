@@ -1,0 +1,14 @@
+/* 
+ * ADAM.CG PRO Font
+ * 
+ * This is a CSS file that refers to the custom font.
+ * In a production environment, you would include the actual font files.
+ * For this example, we're using system fonts as fallbacks.
+ */
+
+@font-face {
+    font-family: 'ADAM-CG-PRO';
+    src: local('Arial Black'), local('Impact');
+    font-weight: bold;
+    font-style: normal;
+}

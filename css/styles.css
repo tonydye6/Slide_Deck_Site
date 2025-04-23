@@ -1,0 +1,393 @@
+/* Base Styles for Sparq Games Pitch Deck */
+:root {
+    /* Brand Colors */
+    --sparq-red: #FF0026;
+    --sparq-teal: #00BAB3;
+    --sparq-black: #000000;
+    --sparq-white: #FFFFFF;
+    --sparq-gold: #FFD700;
+    --sparq-dark-gray: #1A1A1A;
+    --sparq-gray: #333333;
+    --sparq-light-gray: #666666;
+    
+    /* Font Sizes */
+    --title-size: 3.5rem;
+    --subtitle-size: 2.5rem;
+    --heading-size: 1.8rem;
+    --subheading-size: 1.4rem;
+    --body-size: 1.1rem;
+    --small-size: 0.9rem;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Aspect Ratio */
+    --aspect-ratio: 16/9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--sparq-black);
+    color: var(--sparq-white);
+    line-height: 1.6;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1.title {
+    font-size: var(--title-size);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-md);
+}
+
+h2 {
+    font-size: var(--subtitle-size);
+}
+
+h3 {
+    font-size: var(--heading-size);
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--body-size);
+}
+
+.subtitle {
+    color: var(--sparq-teal);
+    font-size: 0.65em;
+}
+
+.highlight {
+    color: var(--sparq-red);
+}
+
+.red-glow {
+    color: var(--sparq-red);
+    text-shadow: 0 0 10px rgba(255, 0, 38, 0.6);
+}
+
+.centered-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* Presentation Container */
+.presentation-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Navigation Controls */
+.nav-controls {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.nav-btn {
+    background-color: var(--sparq-gray);
+    color: var(--sparq-white);
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: var(--sparq-red);
+}
+
+#slide-counter {
+    color: var(--sparq-white);
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+}
+
+/* Slides Container */
+.slides-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Individual Slide */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: var(--sparq-black);
+    padding: var(--spacing-lg);
+}
+
+.slide-active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide Content */
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.header.centered {
+    text-align: center;
+}
+
+/* Logo Styling */
+.sparq-logo, .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-skull {
+    width: 4rem;
+    height: 4rem;
+    margin-right: var(--spacing-sm);
+}
+
+.logo-skull-small {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.logo-skull-large {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.crown-logo {
+    width: 4rem;
+    height: 4rem;
+    margin-right: var(--spacing-sm);
+}
+
+/* Grid Layouts */
+.grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.grid-item {
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    flex: 1;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    margin-bottom: var(--spacing-md);
+}
+
+ul li {
+    margin-bottom: var(--spacing-xs);
+    position: relative;
+    padding-left: var(--spacing-md);
+    font-size: var(--body-size);
+}
+
+ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    background-color: var(--sparq-red);
+    border-radius: 50%;
+}
+
+/* CTA Buttons */
+.btn, .btn-large {
+    display: inline-block;
+    background-color: var(--sparq-red);
+    color: var(--sparq-white);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #d00021;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-large {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* Placeholders for Images */
+.leader-placeholder, .member-placeholder, .advisor-placeholder, .ceo-image-placeholder, .partner-placeholder, .logo-placeholder {
+    background-color: var(--sparq-gray);
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.leader-placeholder, .member-placeholder, .advisor-placeholder {
+    height: 150px;
+}
+
+.ceo-image-placeholder {
+    height: 300px;
+    flex: 0 0 300px;
+}
+
+.partner-placeholder, .logo-placeholder {
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Stats & Metrics */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--spacing-md);
+}
+
+.stat {
+    text-align: center;
+    padding: var(--spacing-sm);
+}
+
+.stat h4 {
+    font-size: 2.5rem;
+    color: var(--sparq-red);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat p {
+    font-size: var(--small-size);
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    :root {
+        --title-size: 3rem;
+        --subtitle-size: 2rem;
+        --heading-size: 1.5rem;
+        --body-size: 1rem;
+    }
+    
+    .grid-3x3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .slide {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --title-size: 2.5rem;
+        --subtitle-size: 1.8rem;
+        --heading-size: 1.3rem;
+    }
+    
+    .grid-3x3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
