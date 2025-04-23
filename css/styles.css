@@ -308,9 +308,62 @@ p {
     flex: 1;
 }
 
+.three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
 .left-column, .right-column {
     display: flex;
     flex-direction: column;
+}
+
+/* Web3 Simplified Styling */
+.web-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    position: relative;
+}
+
+.web-column.highlight {
+    background-color: rgba(30, 30, 36, 0.7);
+    border: 1px solid var(--sparq-red);
+    box-shadow: 0 0 15px rgba(235, 0, 40, 0.3);
+}
+
+.web-column ul {
+    text-align: left;
+}
+
+.web-icon {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.web-evolution {
+    position: relative;
+}
+
+.web-evolution::after {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0.3) 0%, 
+        rgba(255,255,255,0.7) 50%, 
+        var(--sparq-red) 100%);
+    z-index: 0;
 }
 
 /* Lists */
@@ -401,6 +454,25 @@ ul li:before {
 .partner-placeholder, .logo-placeholder {
     height: 80px;
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* NCAA Logo Placeholder */
+.ncaa-logo-placeholder {
+    background-color: #0067b1; /* NCAA blue */
+    color: white;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    margin: 0 auto;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Stats & Metrics */
