@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparq Games - Pitch Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slides.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide navigation controls -->
+        <div class="nav-controls">
+            <button class="nav-btn prev-btn" onclick="prevSlide()">&lt;</button>
+            <span id="slide-counter">1 / 33</span>
+            <button class="nav-btn next-btn" onclick="nextSlide()">&gt;</button>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-container">
+            <!-- Slide 1: SPARQ -->
+            <section class="slide slide-active" id="slide-1">
+                <div class="content sparq-intro">
+                    <div class="header centered">
+                        <div class="sparq-logo">
+                            <svg class="logo-skull-large" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50,10 C30,10 15,25 15,45 C15,65 30,75 30,80 L70,80 C70,75 85,65 85,45 C85,25 70,10 50,10 Z" fill="#FF0026"/>
+                                <circle cx="35" cy="40" r="10" fill="black"/>
+                                <circle cx="65" cy="40" r="10" fill="black"/>
+                                <path d="M35,65 L65,65 L50,80 Z" fill="black"/>
+                                <path d="M50,80 L40,90 L60,90 Z" fill="#FF0026"/>
+                            </svg>
+                            <h1 class="title">SPARQ</h1>
+                        </div>
+                    </div>
+                    <div class="intro-content">
+                        <p class="centered-text">SPARQ uses premier sports IP to publish high user-base, AI-boosted, Web2 mobile games to invisibly bridge sports fans and gamers to Web3 blockchain rewards, collectibles, and enhanced fan experiences</p>
+                        <div class="logo-showcase">
+                            <!-- NCAA Sports logo placeholder -->
+                            <div class="partner-logo">
+                                <div class="logo-placeholder"></div>
+                                <p>NCAA Sports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Mission -->
+            <section class="slide" id="slide-2">
+                <div class="content mission">
+                    <div class="header">
+                        <h1 class="title">Mission</h1>
+                    </div>
+                    <div class="mission-content">
+                        <p>We're on a mission to disrupt the gaming industry with a revolutionary mobile game publishing platform that harnesses the power of modern technologies and cutting-edge AI.</p>
+                        <p>Our goal is to create the most fun, immersive, and engaging mobile sports games in the world, while fostering a culture of creativity, innovation, and happiness.</p>
+                        <div class="values-section">
+                            <h3>Our Core Values</h3>
+                            <div class="values-grid">
+                                <div class="value">
+                                    <h4>People-Centric</h4>
+                                    <ul>
+                                        <li>We prioritize the well-being, happiness, and growth of our employees, athletes, and gamers</li>
+                                        <li>We strive to create a workplace that defies industry labor challenges, where people can thrive, grow, and love what they do</li>
+                                    </ul>
+                                </div>
+                                <div class="value">
+                                    <h4>Unleash Creativity</h4>
+                                    <ul>
+                                        <li>We empower our team to think outside the box and bring their most innovative ideas to life</li>
+                                        <li>We encourage experimentation, risk-taking, and learning from failure</li>
+                                    </ul>
+                                </div>
+                                <div class="value">
+                                    <h4>Embrace Excellence</h4>
+                                    <ul>
+                                        <li>We are committed to delivering the highest quality games and experiences</li>
+                                        <li>We continuously refine and improve our products, processes, and ourselves</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Web3 Simplified -->
+            <section class="slide" id="slide-3">
+                <div class="content web3-simplified">
+                    <div class="header">
+                        <h1 class="title">Web3 Simplified</h1>
+                    </div>
+                    <div class="web3-content">
+                        <div class="simplified-approach">
+                            <div class="web3-column">
+                                <h3>The Issue</h3>
+                                <p>Web3 Gaming has failed to reach mainstream adoption due to:</p>
+                                <ul>
+                                    <li>Complexity of onboarding</li>
+                                    <li>Poor gaming experiences</li>
+                                    <li>Focus on speculation over fun</li>
+                                    <li>Technical barriers to entry</li>
+                                </ul>
+                            </div>
+                            <div class="web3-column highlight">
+                                <h3>Our Approach</h3>
+                                <p>We make Web3 invisible by:</p>
+                                <ul>
+                                    <li>Creating fun-first games with top IP</li>
+                                    <li>Seamless Web2-style UX</li>
+                                    <li>No crypto knowledge required</li>
+                                    <li>Benefits appear naturally during gameplay</li>
+                                </ul>
+                            </div>
+                            <div class="web3-column">
+                                <h3>The Benefits</h3>
+                                <p>Web3 enhances player experience with:</p>
+                                <ul>
+                                    <li>True ownership of digital assets</li>
+                                    <li>Cross-game item portability</li>
+                                    <li>Trading and monetization options</li>
+                                    <li>Community governance features</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: The Problem -->
+            <section class="slide" id="slide-4">
+                <div class="content problem">
+                    <div class="header">
+                        <h1 class="title">The Problem</h1>
+                    </div>
+                    <div class="problem-content">
+                        <div class="problem-diagram">
+                            <div class="problem-steps">
+                                <div class="step">
+                                    <h3>Mobile Games Need<br>Big TAM</h3>
+                                    <p>Sports IP delivers massive audiences</p>
+                                </div>
+                                <div class="step">
+                                    <h3>Game Dev is Hard <br> & Expensive</h3>
+                                    <p>Traditional development is slow and costly</p>
+                                </div>
+                                <div class="step">
+                                    <h3>Web3 Games <br> Missing the Mark</h3>
+                                    <p>Current Web3 games focus on crypto not fun</p>
+                                </div>
+                                <div class="step">
+                                    <h3>Fan Engagement <br> Opportunities Lost</h3>
+                                    <p>Sports brands need deeper fan connections</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-callout">
+                            <h3 class="red-glow">SPARQ SOLVES ALL OF THESE</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Web3 Games Failed to Match Web2 Mobile Game Success -->
+            <section class="slide" id="slide-5">
+                <div class="content web3-games-failure">
+                    <div class="header">
+                        <h1 class="title">Web3 Games Failed to Match Web2 Mobile Game Success</h1>
+                    </div>
+                    <div class="web3-failure-content">
+                        <div class="failure-reasons">
+                            <div class="reason">
+                                <h3>Lack of Fun</h3>
+                                <p>Games prioritized tokenomics over gameplay and fun</p>
+                            </div>
+                            <div class="reason">
+                                <h3>Poor User Experience</h3>
+                                <p>Complicated onboarding, wallets, gas fees created friction</p>
+                            </div>
+                            <div class="reason">
+                                <h3>No IP Connection</h3>
+                                <p>Failed to leverage existing beloved brands and franchises</p>
+                            </div>
+                            <div class="reason">
+                                <h3>Disconnected Communities</h3>
+                                <p>Web3 native focus isolated mainstream audiences</p>
+                            </div>
+                        </div>
+                        <div class="success-factors">
+                            <h3>Keys to Success</h3>
+                            <ul>
+                                <li>Start with fun - gameplay first</li>
+                                <li>Make Web3 invisible until needed</li>
+                                <li>Connect with established IP</li>
+                                <li>Target mainstream audiences</li>
+                                <li>Use AI to boost production efficiency</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: By Contrast, Mobile Gaming is Recession Proof -->
+            <section class="slide" id="slide-6">
+                <div class="content recession-proof">
+                    <div class="header">
+                        <h1 class="title">By Contrast, Mobile Gaming is Recession Proof</h1>
+                    </div>
+                    <div class="recession-content">
+                        <div class="recession-insights">
+                            <p class="insight">Mobile gaming has demonstrated consistent growth even during economic downturns</p>
+                            <ul>
+                                <li>During the 2008 recession, mobile gaming grew by over 20% while traditional sectors declined</li>
+                                <li>COVID-19 lockdowns saw mobile gaming surge 40% in downloads and revenue</li>
+                                <li>Low cost entertainment thrives during economic uncertainty</li>
+                                <li>Gaming provides escape and connection during difficult times</li>
+                                <li>Mobile accessibility keeps barriers to entry minimal</li>
+                            </ul>
+                        </div>
+                        <div class="growth-chart">
+                            <!-- Chart placeholder -->
+                            <div class="chart">
+                                <!-- Recession-proof growth visualization would go here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: COLLEGE SPORTS -->
+            <section class="slide" id="slide-7">
+                <div class="content college-sports">
+                    <div class="header">
+                        <h1 class="title">COLLEGE SPORTS</h1>
+                    </div>
+                    <div class="college-content">
+                        <div class="stats-grid">
+                            <div class="stat-block">
+                                <h2>190M+</h2>
+                                <p>College Sports Fans</p>
+                            </div>
+                            <div class="stat-block">
+                                <h2>$18B+</h2>
+                                <p>Annual Revenue</p>
+                            </div>
+                            <div class="stat-block">
+                                <h2>56%</h2>
+                                <p>Fan Base Growth</p>
+                            </div>
+                            <div class="stat-block">
+                                <h2>1,100+</h2>
+                                <p>Schools</p>
+                            </div>
+                        </div>
+                        <div class="audience-insights">
+                            <div class="column">
+                                <h3>College Sports Audience</h3>
+                                <ul>
+                                    <li>Loyal and passionate fan bases</li>
+                                    <li>Strong alumni connections</li>
+                                    <li>Regional and national appeal</li>
+                                    <li>Year-round engagement calendar</li>
+                                    <li>Multi-generational support</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h3>Gaming Opportunity</h3>
+                                <ul>
+                                    <li>Untapped mobile gaming market</li>
+                                    <li>NIL rule changes opening new opportunities</li>
+                                    <li>Collegiate esports growing rapidly</li>
+                                    <li>School vs. school competition format</li>
+                                    <li>Natural community structure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Sparq Gaming Ecosystem -->
+            <section class="slide" id="slide-8">
+                <div class="content ecosystem">
+                    <div class="header centered">
+                        <h1 class="title">Sparq Gaming Ecosystem™</h1>
+                    </div>
+                    <div class="ecosystem-content">
+                        <div class="ecosystem-diagram">
+                            <div class="central-node">
+                                <div class="node-content">
+                                    <svg class="logo-skull-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M50,10 C30,10 15,25 15,45 C15,65 30,75 30,80 L70,80 C70,75 85,65 85,45 C85,25 70,10 50,10 Z" fill="#FF0026"/>
+                                        <circle cx="35" cy="40" r="10" fill="black"/>
+                                        <circle cx="65" cy="40" r="10" fill="black"/>
+                                        <path d="M35,65 L65,65 L50,80 Z" fill="black"/>
+                                        <path d="M50,80 L40,90 L60,90 Z" fill="#FF0026"/>
+                                    </svg>
+                                    <p>SPARQ</p>
+                                </div>
+                            </div>
+                            <div class="ecosystem-connections">
+                                <div class="connection">
+                                    <p>Crown U</p>
+                                </div>
+                                <div class="connection">
+                                    <p>Locker Room™</p>
+                                </div>
+                                <div class="connection">
+                                    <p>AI Game Dev</p>
+                                </div>
+                                <div class="connection">
+                                    <p>$SPARQ Token</p>
+                                </div>
+                                <div class="connection">
+                                    <p>Player Rewards</p>
+                                </div>
+                                <div class="connection">
+                                    <p>Sports Partnerships</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ecosystem-description">
+                            <p>Our fully integrated ecosystem creates a seamless experience from game development to player rewards, all powered by our proprietary technology stack and strategic partnerships.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: The Playbook -->
+            <section class="slide" id="slide-9">
+                <div class="content playbook">
+                    <div class="header">
+                        <h1 class="title">The Playbook</h1>
+                    </div>
+                    <div class="playbook-content">
+                        <div class="strategy-overview">
+                            <div class="strategy-item">
+                                <h3>Leverage Proven IP</h3>
+                                <p>Partner with established sports brands to access built-in audiences and reduce marketing costs</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h3>AI-Accelerated Development</h3>
+                                <p>Use our proprietary AI tools to slash development time and costs while maintaining quality</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h3>Web3 Integration</h3>
+                                <p>Invisible blockchain technology enhances gameplay without complicating the user experience</p>
+                            </div>
+                            <div class="strategy-item">
+                                <h3>Community First</h3>
+                                <p>Build engaged player communities around team loyalties and collegiate rivalries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Use AI Everywhere to Be Fast and Ultra-Efficient -->
+            <section class="slide" id="slide-10">
+                <div class="content ai-efficiency">
+                    <div class="header">
+                        <h1 class="title">Use AI Everywhere to Be Fast and Ultra-Efficient</h1>
+                    </div>
+                    <div class="ai-content">
+                        <div class="ai-applications">
+                            <div class="ai-column">
+                                <h3>Game Development</h3>
+                                <ul>
+                                    <li>3D model generation and optimization</li>
+                                    <li>Texture and animation creation</li>
+                                    <li>Code generation and debugging</li>
+                                    <li>70% faster asset production</li>
+                                </ul>
+                            </div>
+                            <div class="ai-column">
+                                <h3>User Experience</h3>
+                                <ul>
+                                    <li>Dynamic difficulty adjustment</li>
+                                    <li>Personalized content delivery</li>
+                                    <li>Smart matchmaking systems</li>
+                                    <li>Chat and support automation</li>
+                                </ul>
+                            </div>
+                            <div class="ai-column">
+                                <h3>Business Operations</h3>
+                                <ul>
+                                    <li>Predictive analytics for player behavior</li>
+                                    <li>Automated marketing optimization</li>
+                                    <li>Infrastructure scaling and management</li>
+                                    <li>Fraud detection and prevention</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- JavaScript for slide navigation -->
+            <script>
+                // Simple slide navigation script
+                let currentSlide = 1;
+                const totalSlides = document.querySelectorAll('.slide').length;
+                
+                function updateSlideCounter() {
+                    document.getElementById('slide-counter').textContent = `${currentSlide} / ${totalSlides}`;
+                }
+                
+                function showSlide(slideNumber) {
+                    // Hide all slides
+                    document.querySelectorAll('.slide').forEach(slide => {
+                        slide.classList.remove('slide-active');
+                    });
+                    
+                    // Show the current slide
+                    document.getElementById(`slide-${slideNumber}`).classList.add('slide-active');
+                    
+                    // Update the counter
+                    currentSlide = slideNumber;
+                    updateSlideCounter();
+                }
+                
+                function nextSlide() {
+                    if (currentSlide < totalSlides) {
+                        showSlide(currentSlide + 1);
+                    }
+                }
+                
+                function prevSlide() {
+                    if (currentSlide > 1) {
+                        showSlide(currentSlide - 1);
+                    }
+                }
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowRight' || e.key === ' ') {
+                        nextSlide();
+                    } else if (e.key === 'ArrowLeft') {
+                        prevSlide();
+                    }
+                });
+                
+                // Initialize counter
+                updateSlideCounter();
+            </script>
+        </div>
+    </div>
+</body>
+</html>
