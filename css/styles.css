@@ -1,22 +1,27 @@
 /* Base Styles for Sparq Games Pitch Deck */
 :root {
-    /* Brand Colors */
-    --sparq-red: #FF0026;
-    --sparq-teal: #00BAB3;
-    --sparq-black: #000000;
+    /* Brand Colors - Updated to match Design Document */
+    --sparq-red: #EB0028; /* Outlaw Red */
+    --sparq-teal: #00A19C; /* Grit Teal */
+    --sparq-carbon: #2B2842; /* Primary dark background: Carbon */
+    --sparq-graphite: #404BF2; /* Graphite - use sparingly */
+    --sparq-steel: #1E1E24; /* Steel - alternative dark background */
     --sparq-white: #FFFFFF;
-    --sparq-gold: #FFD700;
+    --sparq-gold: #FFD700; /* Victory Gold - use sparingly for emphasis */
+    --sparq-cyber-teal: #C0F2EA; /* Cyber Teal - lighter teal for accents */
+    --sparq-rebel-pink: #FF3864; /* Rebel Pink - use very sparingly */
     --sparq-dark-gray: #1A1A1A;
     --sparq-gray: #333333;
     --sparq-light-gray: #666666;
     
-    /* Font Sizes */
-    --title-size: 3.5rem;
-    --subtitle-size: 2.5rem;
-    --heading-size: 1.8rem;
+    /* Font Sizes - Based on Design Document Hierarchy */
+    --title-size: 3.5rem; /* 48px - 60px for main titles */
+    --subtitle-size: 2.5rem; /* 24px - 36px for subtitles */
+    --heading-size: 1.8rem; /* 20px - 24px for section heads */
     --subheading-size: 1.4rem;
-    --body-size: 1.1rem;
-    --small-size: 0.9rem;
+    --body-size: 1.1rem; /* 14px - 18px for body text */
+    --small-size: 0.9rem; /* 12px - 14px for captions/labels */
+    --quote-size: 2rem; /* 24px - 48px for quotes */
     
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -37,7 +42,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--sparq-black);
+    background-color: var(--sparq-carbon); /* Updated to Carbon background color */
     color: var(--sparq-white);
     line-height: 1.6;
     overflow: hidden;
@@ -79,6 +84,25 @@ p {
     font-size: 0.65em;
 }
 
+.accent-title {
+    font-family: 'Neodex', sans-serif;
+    color: var(--sparq-white);
+    font-size: var(--subtitle-size);
+    margin-bottom: var(--spacing-sm);
+}
+
+.accent-title.red {
+    color: var(--sparq-red);
+}
+
+.accent-title.teal {
+    color: var(--sparq-teal);
+}
+
+.accent-title.gold {
+    color: var(--sparq-gold);
+}
+
 .highlight {
     color: var(--sparq-red);
 }
@@ -111,29 +135,34 @@ p {
     display: flex;
     align-items: center;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.5rem;
-    border-radius: 5px;
+    background-color: rgba(30, 30, 36, 0.8); /* Steel color with opacity */
+    padding: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--sparq-red);
 }
 
 .nav-btn {
-    background-color: var(--sparq-gray);
+    background-color: var(--sparq-carbon);
     color: var(--sparq-white);
-    border: none;
-    width: 2rem;
-    height: 2rem;
+    border: 2px solid var(--sparq-red);
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 0.5rem;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-btn:hover {
     background-color: var(--sparq-red);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(235, 0, 40, 0.5);
 }
 
 #slide-counter {
@@ -159,7 +188,7 @@ p {
     width: 100%;
     height: 100%;
     display: none;
-    background-color: var(--sparq-black);
+    background-color: var(--sparq-carbon); /* Updated to Carbon background color */
     padding: var(--spacing-lg);
 }
 
@@ -226,10 +255,11 @@ p {
 }
 
 .grid-item {
-    background-color: var(--sparq-gray);
+    background-color: var(--sparq-steel); /* Updated to Steel background color */
     padding: var(--spacing-md);
     border-radius: 8px;
     border-left: 4px solid var(--sparq-red);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .two-column {

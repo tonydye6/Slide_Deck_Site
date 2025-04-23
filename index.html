@@ -1220,11 +1220,15 @@
                     });
                     
                     // Show the current slide
-                    document.getElementById(`slide-${slideNumber}`).classList.add('slide-active');
-                    
-                    // Update the counter
-                    currentSlide = slideNumber;
-                    updateSlideCounter();
+                    const targetSlide = document.getElementById(`slide-${slideNumber}`);
+                    if (targetSlide) {
+                        targetSlide.classList.add('slide-active');
+                        // Update the counter
+                        currentSlide = slideNumber;
+                        updateSlideCounter();
+                    } else {
+                        console.warn(`Slide #${slideNumber} not found`);
+                    }
                 }
                 
                 function nextSlide() {
