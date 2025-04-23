@@ -1,0 +1,29 @@
+Objective: Generate a 33-slide static HTML pitch deck for Sparq Games.
+Primary Instructions:
+Follow the detailed specifications outlined in the Sparq Games Pitch Deck Design Document (v1.1) provided in the immersive artifact sparq_deck_design_doc_v1. This document contains overall design principles and specific slide-by-slide instructions for layout, color, typography, imagery, and content placement.
+Key Input Files & Resources:
+Design Document: sparq_deck_design_doc_v1 (The primary instruction set you must follow meticulously).
+Content: Use the text provided in Pitch_Deck_Content.txt for all slide content. Ensure every word is included, adjusting font sizes (using the 'Inter' font for body text) as necessary for readability on each slide. Use the exact slide titles specified in the content file.
+Brand Guidelines: Adhere to the branding specified in Sparq_Brand_Guide.pdf (especially colors, logo usage, and the 'Outlaw' archetype feel).
+Logos: Utilize logos from Sparq_Logos_Grid.pdf and Logos_Grid2.pdf as specified in the Design Document.
+Images: Incorporate images (headshots, characters, support graphics, game covers) from Headshots_Grid.pdf, Character_Images_Grid.pdf, and Support_Images_Grid.pdf as detailed per slide in the Design Document.
+Fonts:
+Use ADAM.CG PRO for primary titles.
+Use Inter (load from Google Fonts or similar CDN) for all body text, lists, captions, and labels.
+Use Neodex (from the provided Neodex.woff file - ensure you reference this using @font-face in the CSS) sparingly for accent headlines, specific subheadings, or large quotes/callouts as specified in the Design Document's typography section.
+Inspiration: Refer to INK_Games_Deck(for_reference).pdf for general inspiration regarding layout energy, dynamic use of visuals, and handling dense information, but prioritize the specific instructions in the Sparq Design Document.
+Previous Versions (Context): Sparq_Deck v0 (v1.0).pdf, Current_Sparq_Deck.pdf, Comprehensive Feedback for Sparq Deck v0 v1.pdf are provided for context on desired changes (e.g., brighter feel, better brand integration than v0).
+Core Technical Requirements:
+Output: Static HTML file(s) with associated CSS (preferably using Tailwind CSS classes as much as possible for styling, alongside custom CSS for font-face definitions and any specific styling not covered by Tailwind).
+Structure: Create a single HTML file containing all 33 slides, likely using <div> elements for each slide.
+Styling: Implement all visual specifications from the Design Document (colors, gradients, typography, spacing, borders, etc.).
+Responsiveness: While the primary goal is a pitch deck (often viewed on desktops), apply basic responsive principles so it doesn't break completely on smaller viewports. Use relative units and Tailwind's responsive prefixes where appropriate.
+No Interactivity: The deck must be static. Avoid JavaScript-driven animations, complex hover effects, or interactive components. Basic mailto: links for email addresses are acceptable.
+Code Quality: Generate clean, well-commented HTML and CSS.
+Execution Steps:
+Carefully parse the Sparq Games Pitch Deck Design Document (v1.1) (sparq_deck_design_doc_v1).
+Process the content from Pitch_Deck_Content.txt.
+For each of the 33 slides, generate the HTML structure and apply CSS styling according to the specific instructions for that slide in the Design Document, incorporating the correct text, images, and logos.
+Ensure all overall design principles (fonts, colors, footer logo, etc.) are applied consistently.
+Generate the final static HTML and CSS files.
+Please proceed with generating the pitch deck based on these instructions and resources. Ask for clarification if any part of the Design Document is ambiguous.
