@@ -6,14 +6,16 @@ import re
 with open('index.html', 'r') as file:
     html_content = file.read()
 
-# Use more precise pattern matching to find and fix slide footers
-slide_pattern = r'(<!-- Slide ([0-9]+)[^>]*>.*?<div class="slide-footer">).*?(<\/div>\s*<\/div>\s*<\/section>)'
+# Use comprehensive pattern matching to properly format all slide footers
+# This pattern matches the entire slide section including footer
+slide_pattern = r'(<!-- Slide ([0-9]+)[^>]*>.*?)<!-- Slide Footer with Skull Logo -->\s*<div class="slide-footer">.*?</div>\s*</div>\s*</section>'
+
 slide_count = 44  # Total number of slides
 
 def footer_replacement(match):
     slide_num = match.group(2)
-    # Create a properly formatted footer with correct logo and slide number with proper indentation
-    return f'{match.group(1)}\n                            <img src="attached_assets/Footer_Logo_Skull(White).png" alt="Sparq Skull Logo" class="footer-logo-img">\n                            <span class="slide-footer-text">{slide_num} / {slide_count}</span>\n                        {match.group(3)}'
+    # Return the slide content with a properly formatted footer
+    return f'{match.group(1)}<!-- Slide Footer with Skull Logo -->\n                    <div class="slide-footer">\n                        <img src="attached_assets/Footer_Logo_Skull(White).png" alt="Sparq Skull Logo" class="footer-logo-img">\n                        <span class="slide-footer-text">{slide_num} / {slide_count}</span>\n                    </div>\n                </div>\n            </section>'
 
 # Apply the replacements
 fixed_html = re.sub(slide_pattern, footer_replacement, html_content, flags=re.DOTALL)
@@ -22,4 +24,4 @@ fixed_html = re.sub(slide_pattern, footer_replacement, html_content, flags=re.DO
 with open('index.html', 'w') as file:
     file.write(fixed_html)
 
-print("All slide footers have been fixed with the correct Footer_Logo_Skull(White).png and proper slide numbering!")
+print("All slide footers have been fixed with the correct Footer_Logo_Skull(White).png and proper slide numbering and HTML structure!")
