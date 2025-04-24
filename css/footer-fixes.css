@@ -2,19 +2,40 @@
 
 .slide-footer {
     position: absolute;
-    bottom: var(--spacing-sm);
-    left: var(--spacing-sm);
+    bottom: 20px;
+    left: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px);
     z-index: 10;
 }
 
-.slide-footer .footer-logo-img {
+.footer-logo-img {
     width: 24px !important;
     height: 24px !important;
     max-width: 24px !important;
     max-height: 24px !important;
     margin-right: 0.5rem;
     object-fit: contain;
-    filter: brightness(0.9);
+}
+
+/* Style for slide-1 specific footer */
+#slide-1 .slide1-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+#slide-1 .slide1-footer .skull-logo-container img {
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
+    object-fit: contain;
 }
