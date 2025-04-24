@@ -532,6 +532,14 @@ ul li:before {
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.5rem;
+    display: none; /* Hide the SVG skull */
+}
+
+.slide-footer .footer-logo-img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    object-fit: contain;
 }
 
 .slide-footer .slide-footer-text {
