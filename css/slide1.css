@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 0 40px;
+    padding: 110px 0 40px; /* Increased from 60px to 110px (added 50px) */
     position: relative;
     z-index: 2;
 }
