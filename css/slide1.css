@@ -9,13 +9,14 @@
 
 .hero-bg-overlay {
     position: absolute;
-    top: 5%;   /* Adjusted to create space around the image */
-    left: 5%;  /* Adjusted to create space around the image */
-    width: 90%; /* Reduced by 10% */
-    height: 90%; /* Reduced by 10% */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('../attached_assets/Hero1.png');
-    background-size: cover;
+    background-size: contain; /* Changed from 'cover' to 'contain' to ensure full image is visible */
     background-position: center;
+    background-repeat: no-repeat; /* Prevent image tiling */
     opacity: 0.1;
     z-index: 1;
 }
