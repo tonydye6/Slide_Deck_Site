@@ -2182,14 +2182,40 @@
                     });
                     
                     // Show the current slide
-                    const targetSlide = document.getElementById(`slide-${slideNumber}`);
+                    let targetSlide = document.getElementById(`slide-${slideNumber}`);
+                    
+                    // If slide doesn't exist, find the next available slide
+                    if (!targetSlide) {
+                        console.warn(`Slide #${slideNumber} not found, finding next available slide`);
+                        let nextAvailable = slideNumber;
+                        // Try the next slide number
+                        while (!targetSlide && nextAvailable <= totalSlides) {
+                            nextAvailable++;
+                            targetSlide = document.getElementById(`slide-${nextAvailable}`);
+                        }
+                        
+                        // If no slide found going forward, try backward
+                        if (!targetSlide) {
+                            nextAvailable = slideNumber;
+                            while (!targetSlide && nextAvailable > 0) {
+                                nextAvailable--;
+                                targetSlide = document.getElementById(`slide-${nextAvailable}`);
+                            }
+                        }
+                        
+                        // Update slide number if we found an alternative
+                        if (targetSlide) {
+                            slideNumber = nextAvailable;
+                        }
+                    }
+                    
                     if (targetSlide) {
                         targetSlide.classList.add('slide-active');
                         // Update the counter
                         currentSlide = slideNumber;
                         updateSlideCounter();
                     } else {
-                        console.warn(`Slide #${slideNumber} not found`);
+                        console.error("No valid slides found");
                     }
                 }
                 
