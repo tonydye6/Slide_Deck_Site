@@ -1,0 +1,604 @@
+/* Token Utility (Slide 34) */
+.token-utility-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.token-utility-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.token-utility-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.token-utility-content p {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.token-highlight {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* TGE Strategy (Slide 35) */
+.tge-strategy-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.tge-strategy-content h2 {
+    font-size: 1.3rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.tge-strategy-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.tge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tge-item {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.tge-item:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.tge-item h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.tge-item ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tge-item li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.execution-roadmap {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.execution-roadmap h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+}
+
+.roadmap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.roadmap-table th, .roadmap-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+
+.roadmap-table th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--sparq-red);
+}
+
+/* Bitcoin Halving (Slide 36) */
+.bitcoin-halving-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.bitcoin-points {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bitcoin-points li {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.bitcoin-points li:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+/* Bitcoin Cycles (Slide 37) */
+.bitcoin-cycles-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.bitcoin-cycles-content h2 {
+    font-size: 1.3rem;
+    color: var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.cycle-insights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.insight-item {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.insight-item:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.insight-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.insight-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.timeline-insights {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.timeline-insights p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-insights p:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sparq-red);
+}
+
+/* Risk Mitigation (Slide 38) */
+.risk-mitigation-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.risk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.risk-table th, .risk-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.risk-table th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--sparq-red);
+}
+
+.risk-table tr:nth-child(odd) {
+    background-color: rgba(51, 51, 51, 0.4);
+}
+
+.risk-table tr:nth-child(even) {
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+.bottom-line {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.bottom-line p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Deflationary Core (Slide 39) */
+.deflationary-core-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.deflationary-core-content h2 {
+    font-size: 1.3rem;
+    color: var(--sparq-red);
+    margin-bottom: 10px;
+}
+
+.deflationary-benefits {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.deflationary-benefits li {
+    padding: 8px 0 8px 20px;
+    position: relative;
+}
+
+.deflationary-benefits li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sparq-red);
+}
+
+.highlight-box {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Token Allocation (Slide 40) */
+.token-allocation-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.token-allocation-content h2 {
+    font-size: 1.3rem;
+    color: var(--sparq-red);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.token-allocation-content h3 {
+    font-size: 1.1rem;
+    color: var(--sparq-white);
+    margin: 15px 0 10px 0;
+}
+
+.token-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.token-sale-details {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pie-chart-placeholder {
+    background-color: rgba(51, 51, 51, 0.4);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.token-distribution-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.token-distribution-list li {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* Allocation Continued (Slide 41) */
+.allocation-continued-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.allocation-continued-content h2 {
+    font-size: 1.3rem;
+    color: var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.release-chart-placeholder {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    color: var(--sparq-light-gray);
+    font-style: italic;
+}
+
+/* Retention and Engagement (Slide 42) */
+.retention-engagement-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.retention-engagement-content h2, .retention-engagement-content h3 {
+    font-size: 1.1rem;
+    color: var(--sparq-red);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.funnel-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+}
+
+.step p {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.arrow {
+    padding: 0 10px;
+    color: var(--sparq-red);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.why-it-works {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.why-it-works h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.why-it-works p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Athlete Comp (Slide 43) */
+.athlete-comp-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.athlete-comp-content h2 {
+    font-size: 1.3rem;
+    color: var(--sparq-red);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.comparison-table {
+    margin: 15px 0;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+
+.comparison-table th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--sparq-red);
+}
+
+.comparison-table tr:nth-child(odd) {
+    background-color: rgba(51, 51, 51, 0.4);
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+.model-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.model-details h3 {
+    font-size: 1rem;
+    color: var(--sparq-white);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.model-details ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.model-details li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+/* Rise Together Fund (Slide 44) */
+.rise-together-fund-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 15px;
+}
+
+.rise-together-fund-content h2, .rise-together-fund-content h3 {
+    font-size: 1.1rem;
+    color: var(--sparq-red);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.fund-sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.fund-sections .section {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.fund-sections .section:nth-child(2) {
+    border-left-color: var(--sparq-teal);
+}
+
+.fund-sections .section:nth-child(3) {
+    border-left-color: var(--sparq-gold, #FFD700);
+}
+
+.fund-sections h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.fund-sections ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.fund-sections li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.quote {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.quote p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
