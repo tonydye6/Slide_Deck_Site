@@ -601,7 +601,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Slide 16: Traction -->
             <section class="slide" id="slide-16">
                 <div class="content traction">
@@ -673,14 +673,8 @@
                     <div class="ceo-content">
                         <div class="ceo-image-placeholder"></div>
                         <div class="ceo-bio">
-                            <p class="quote">"The future of gaming is at the intersection of sports, entertainment, and technology."</p>
-                            <p class="bio-text">Our CEO brings over two decades of gaming industry experience, having led multiple successful game studios and published titles with over 100M+ downloads.</p>
-                            <ul>
-                                <li>Former VP at major gaming publisher</li>
-                                <li>Led development of sports titles generating $500M+</li>
-                                <li>Early blockchain gaming pioneer</li>
-                                <li>Built and sold two gaming startups</li>
-                            </ul>
+                            <p>Jan Horsfall ran the marketing unit at Valvoline and moved on to tech juggernaut, Lycos, which had the fastest IPO in NASDAQ history and a stock surge of 3,100% before being sold for $4.5 billion. Then held CEO roles at Gemini Voice (acquired by Novo Networks), Gelazzi (bought by Big Freeze), Universal Energy (sold to PetroChoice) and served as the CMO at Turbine Games (acquired by Warner Bros). He is a member of NorthWestern Energy's board (NASDAQ: NWE) and recently completed work through MIT Sloan CSAIL (Comp Sci AI Lab) studying AI: Implications for Business Strategy.</p>
+                            <p>Horsfall was brought into Turbine Games™ (Boston) when the maker of Lord of the Rings Online and Dungeons and Dragons Online was losing $16 million per year. He helped lead the 380-person company through major change, including introducing the first free-to-play (F2P) premium game in North America and Europe. The result was a surge of users and a run rate of $55 million per year, before putting the company into play. Reacting to a stalking horse situation, restructured Turbine was sold to Warner Bros. Interactive Entertainment. Turbine is now WB Games Boston.</p>
                         </div>
                     </div>
                 </div>
@@ -756,7 +750,7 @@
                                 </div>
                             </div>
                             <div class="connection">
-                                <div class="entity">
+                               <div class="entity">
                                     <p>Athletes</p>
                                 </div>
                             </div>
@@ -1007,7 +1001,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Additional slides (26-33) -->
             <!-- Slide 26: Dream no small dreams -->
             <section class="slide" id="slide-26">
@@ -1202,43 +1196,43 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- JavaScript for slide navigation -->
             <script>
                 // Simple slide navigation script
                 let currentSlide = 1;
                 const totalSlides = document.querySelectorAll('.slide').length;
-                
+
                 function updateSlideCounter() {
                     document.getElementById('slide-counter').textContent = `${currentSlide} / ${totalSlides}`;
                 }
-                
+
                 function showSlide(slideNumber) {
                     // Hide all slides
                     document.querySelectorAll('.slide').forEach(slide => {
                         slide.classList.remove('slide-active');
                     });
-                    
+
                     // Show the current slide
                     document.getElementById(`slide-${slideNumber}`).classList.add('slide-active');
-                    
+
                     // Update the counter
                     currentSlide = slideNumber;
                     updateSlideCounter();
                 }
-                
+
                 function nextSlide() {
                     if (currentSlide < totalSlides) {
                         showSlide(currentSlide + 1);
                     }
                 }
-                
+
                 function prevSlide() {
                     if (currentSlide > 1) {
                         showSlide(currentSlide - 1);
                     }
                 }
-                
+
                 // Keyboard navigation
                 document.addEventListener('keydown', function(e) {
                     if (e.key === 'ArrowRight' || e.key === ' ') {
@@ -1247,7 +1241,7 @@
                         prevSlide();
                     }
                 });
-                
+
                 // Initialize counter
                 updateSlideCounter();
             </script>
