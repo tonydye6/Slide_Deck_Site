@@ -413,28 +413,47 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 0 10px;
 }
 
-.key-stats {
-    display: flex;
-    gap: var(--spacing-md);
-    flex: 1;
+.market-intro {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--sparq-white);
+    line-height: 1.4;
+    text-align: center;
 }
 
-.stat-column {
-    flex: 1;
-    background-color: rgba(51, 51, 51, 0.5);
-    padding: var(--spacing-md);
+.market-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.market-metric {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
     border-radius: 8px;
-    border-left: 4px solid var(--sparq-light-gray);
+    border-left: 3px solid var(--sparq-red);
 }
 
-.stat-column.accent {
-    border-left-color: var(--sparq-red);
+.market-metric:nth-child(even) {
+    border-left-color: var(--sparq-teal);
 }
 
-.stats-list li {
-    margin-bottom: var(--spacing-sm);
+.market-metric h3 {
+    font-size: 0.95rem;
+    margin: 0 0 5px 0;
+    color: var(--sparq-white);
+}
+
+.market-metric p {
+    color: var(--sparq-red);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 /* Slide 17: Diversity */
