@@ -2344,52 +2344,6 @@
                 
                 // Initialize counter
                 updateSlideCounter();
-                
-                // Replace all footer SVG logos with white skull image
-                function replaceFooterLogos() {
-                    const footers = document.querySelectorAll('.slide-footer');
-                    footers.forEach(footer => {
-                        // Hide SVG logo
-                        const svgLogo = footer.querySelector('.logo-skull-small');
-                        if (svgLogo) {
-                            svgLogo.style.display = 'none';
-                        }
-                        
-                        // Add image logo if not already there
-                        if (!footer.querySelector('.footer-logo-img')) {
-                            const imgLogo = document.createElement('img');
-                            imgLogo.src = 'attached_assets/Logo_Skull(White).png';
-                            imgLogo.alt = 'Sparq Logo';
-                            imgLogo.className = 'footer-logo-img';
-                            footer.insertBefore(imgLogo, footer.firstChild);
-                        }
-                    });
-                }
-                
-                // Run on page load
-                window.addEventListener('load', replaceFooterLogos);
-                
-                // Also run when changing slides
-                function showSlideWithLogos(slideNumber) {
-                    showSlide(slideNumber);
-                    setTimeout(replaceFooterLogos, 50); // Small delay to ensure DOM is updated
-                }
-                
-                // Override navigation functions
-                const originalNextSlide = nextSlide;
-                nextSlide = function() {
-                    originalNextSlide();
-                    setTimeout(replaceFooterLogos, 50);
-                };
-                
-                const originalPrevSlide = prevSlide;
-                prevSlide = function() {
-                    originalPrevSlide();
-                    setTimeout(replaceFooterLogos, 50);
-                };
-                
-                // Initial run
-                replaceFooterLogos();
             </script>
         </div>
     </div>
