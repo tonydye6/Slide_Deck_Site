@@ -540,6 +540,7 @@ ul li:before {
     height: 1.5rem;
     margin-right: 0.5rem;
     object-fit: contain;
+    filter: brightness(0.9); /* Slightly dim the white logo so it's not too bright */
 }
 
 .slide-footer .slide-footer-text {
