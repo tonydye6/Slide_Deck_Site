@@ -300,22 +300,59 @@
 /* Slide 15: Business Model */
 .model-content {
     display: flex;
-    gap: var(--spacing-lg);
+    flex-direction: column;
     flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: 0.9rem;
 }
 
-.revenue-streams, .market-opportunity {
-    flex: 1;
-    background-color: rgba(51, 51, 51, 0.5);
-    padding: var(--spacing-md);
-    border-radius: 8px;
+.model-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.model-content p {
+    margin-bottom: 15px;
 }
 
 .revenue-streams {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
     border-left: 4px solid var(--sparq-red);
 }
 
+.revenue-streams h3 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.revenue-streams ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.revenue-streams li {
+    margin-bottom: 5px;
+}
+
+.revenue-streams ul ul {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.revenue-streams ul ul li {
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
 .market-opportunity {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
     border-left: 4px solid var(--sparq-teal);
 }
 
@@ -524,6 +561,77 @@
     border-top: 4px solid var(--sparq-red);
 }
 
+/* Slide 7: College Sports */
+.college-sports {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.college-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.revenue-table {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.revenue-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.revenue-row:nth-child(odd) {
+    background-color: rgba(51, 51, 51, 0.3);
+}
+
+.revenue-row:nth-child(even) {
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+.revenue-row .league {
+    font-weight: bold;
+}
+
+.revenue-row .amount {
+    color: var(--sparq-red);
+    font-weight: bold;
+}
+
+.college-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.section {
+    background-color: rgba(51, 51, 51, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.section li {
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+}
+
 .stat-block h2 {
     color: var(--sparq-red);
     font-size: 2.5rem;
@@ -587,6 +695,48 @@
     background-color: rgba(51, 51, 51, 0.5);
     padding: var(--spacing-md);
     border-radius: 8px;
+}
+
+/* Slide 5: Web3 Games Failed to Match Web2 Mobile Game Success */
+.web3-games-failure {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.web3-failure-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.failure-reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reason {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.reason h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.reason ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.reason li {
+    margin-bottom: 3px;
+    font-size: 0.85rem;
 }
 
 .success-factor:nth-child(1) {
@@ -741,6 +891,73 @@
 /* Slide 30: Traction */
 .traction-content {
     flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: 0.9rem;
+}
+
+.traction-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.traction-content h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.traction-blocks {
+    margin-top: 15px;
+}
+
+.traction-block {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.screenshot {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.screenshot p {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.game-features, .timeline {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.game-features ul, .timeline ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.game-features li, .timeline li {
+    margin-bottom: 4px;
 }
 
 .metrics-overview {
