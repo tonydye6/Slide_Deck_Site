@@ -168,19 +168,71 @@
     display: flex;
     gap: var(--spacing-lg);
     flex: 1;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.ceo-image {
+    flex: 0 0 35%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.headshot {
+    width: 100%;
+    display: block;
 }
 
 .ceo-bio {
     flex: 1;
 }
 
+.ceo-bio h2 {
+    color: var(--sparq-red);
+    font-size: 1.8rem;
+    margin: 0 0 5px 0;
+}
+
+.ceo-bio h3 {
+    color: var(--sparq-white);
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    opacity: 0.8;
+}
+
+.ceo-bio h4 {
+    color: var(--sparq-teal);
+    font-size: 1.1rem;
+    margin: 15px 0 5px 0;
+}
+
 .quote {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-style: italic;
     color: var(--sparq-red);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 20px;
     font-family: 'Neodex', 'Georgia', serif;
+    line-height: 1.4;
+    border-left: 3px solid var(--sparq-red);
+    padding-left: 15px;
+}
+
+.experience, .expertise {
+    background-color: rgba(51, 51, 51, 0.4);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.experience ul, .expertise ul {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+}
+
+.experience li, .expertise li {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
 }
 
 /* Slide 11: Evolution */
@@ -385,7 +437,82 @@
     margin-bottom: var(--spacing-sm);
 }
 
-/* Slide 17: Go To Market */
+/* Slide 17: Diversity */
+.diversity-quote {
+    text-align: center;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large-quote {
+    font-size: 1.8rem;
+    font-family: 'Neodex', serif;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.quote-author {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.diversity-panel {
+    width: 100%;
+    max-width: 900px;
+}
+
+.diversity-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.diversity-stats .stat {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid var(--sparq-red);
+    width: 28%;
+}
+
+.diversity-stats h2 {
+    font-size: 2.5rem;
+    color: var(--sparq-red);
+    margin: 0 0 5px 0;
+}
+
+.diversity-stats p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.diversity-statement {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+    text-align: left;
+}
+
+.diversity-statement h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+}
+
+.diversity-statement p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Slide 18: Go To Market */
 .gtm-content {
     flex: 1;
 }
