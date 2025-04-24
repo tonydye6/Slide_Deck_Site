@@ -58,12 +58,10 @@
 
 .slide1-footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: calc(100% - 40px);
     z-index: 2;
 }
 
@@ -73,14 +71,4 @@
     max-width: 24px;
     max-height: 24px;
     object-fit: contain;
-}
-
-.year-text {
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 6px 12px;
-    border-radius: 4px;
 }
