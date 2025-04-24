@@ -58,7 +58,7 @@
 
 .slide1-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
     bottom: 60px;
@@ -67,26 +67,12 @@
     z-index: 2;
 }
 
-.ncaa-logo {
-    display: flex;
-    align-items: center;
-}
-
-.ncaa-logo-placeholder {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 8px 15px;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .year-text {
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
 }
