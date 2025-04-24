@@ -6,8 +6,7 @@
     left: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 40px);
+    width: auto;
     z-index: 10;
 }
 
@@ -16,8 +15,12 @@
     height: 24px !important;
     max-width: 24px !important;
     max-height: 24px !important;
-    margin-right: 0.5rem;
     object-fit: contain;
+}
+
+/* Hide the slide numbers */
+.slide-footer-text {
+    display: none;
 }
 
 /* Style for slide-1 specific footer */

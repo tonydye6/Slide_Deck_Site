@@ -67,12 +67,7 @@
     z-index: 2;
 }
 
-.skull-logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.skull-logo-container img {
+.slide1-footer .footer-logo-img {
     width: 24px;
     height: 24px;
     max-width: 24px;
