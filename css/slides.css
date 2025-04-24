@@ -1428,6 +1428,10 @@
     border-left-color: var(--sparq-teal);
 }
 
+.connection-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
 .connection-item h3 {
     font-size: 0.9rem;
     margin-bottom: 5px;
@@ -1645,4 +1649,2454 @@
     font-size: 0.9rem;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.full-image {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+/* Slide 29: Mission */
+.mission-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-statement {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: var(--spacing-lg);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+    color: var(--sparq-red);
+}
+
+.mission-pillars {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+}
+
+.pillar {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 4px solid var(--sparq-red);
+}
+
+.traction-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Slide 30: Traction */
+.traction-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: 0.9rem;
+}
+
+.traction-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--sparq-white);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.traction-milestones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.milestone {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.milestone:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.milestone h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.milestone ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.milestone li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.traction-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.traction-content h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.traction-blocks {
+    margin-top: 15px;
+}
+
+.traction-block {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.screenshot {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.screenshot p {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.game-features, .timeline {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.game-features ul, .timeline ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.game-features li, .timeline li {
+    margin-bottom: 4px;
+}
+
+.metrics-overview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.metric-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metric {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric.highlighted {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+.metric h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.partners-showcase, .milestones {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+/* Slide 31: Support Logos */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.logo-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 80px;
+}
+
+/* Slide 32: Contact */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sparq-logo-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-details {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    color: var(--sparq-white);
+    text-decoration: none;
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--sparq-red);
+}
+
+/* Slide 33: Thank You */
+.thank-you-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-size: 4rem;
+    color: var(--sparq-red);
+    margin: var(--spacing-lg) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--sparq-white);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+}
+
+/* Slide 17: Game Experienced CEO */
+.ceo-content {
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.ceo-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.ceo-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sparq-red);
+}
+
+/* Slide 18: Leadership */
+.leadership-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.leader {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.leader-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+}
+
+.leader h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.leader p {
+    font-size: 0.8rem;
+    color: var(--sparq-light-gray);
+}
+
+/* Slide 19: Deep Relationships */
+.relationships-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.relationship-leaders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.relationship-connections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.connection-item {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.connection-item:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.connection-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
+.connection-item h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.connection-item p {
+    font-size: 0.8rem;
+}
+
+/* Slide 20: Advisory Board */
+.advisory-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.advisory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Slide 21: Board of Directors */
+.board-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.board-member {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+}
+
+.board-member h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.board-member p {
+    font-size: 0.8rem;
+    color: var(--sparq-light-gray);
+}
+
+/* Slide 22: Token Experts */
+.token-experts-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.token-expert-profile {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+}
+
+.expert-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 50%;
+}
+
+.token-expert-profile h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.token-expert-profile p {
+    text-align: center;
+    color: var(--sparq-light-gray);
+    margin-bottom: 20px;
+}
+
+.token-details {
+    margin-top: 20px;
+}
+
+.token-details h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--sparq-red);
+}
+
+.token-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.token-details li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.token-distribution {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+}
+
+.token-distribution h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--sparq-red);
+}
+
+.distribution-chart {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sparq-light-gray);
+}
+
+.distribution-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Slide 23: Fundraise */
+.fundraise-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.fundraise-subheading {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--sparq-red);
+    line-height: 1.4;
+}
+
+.fundraise-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fundraise-item {
+    background-color: rgba(51, 51, 51, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.fundraise-item:nth-child(2) {
+    border-left-color: var(--sparq-teal);
+}
+
+.fundraise-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
+.fundraise-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--sparq-white);
+}
+
+.fundraise-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fundraise-item li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Slide 29: Mission */
+.mission-content.full-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-statement {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: var(--spacing-lg);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+    color: var(--sparq-red);
+}
+
+.mission-pillars {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+}
+
+.pillar {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 4px solid var(--sparq-red);
+}
+
+.traction-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Slide 30: Traction */
+.traction-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: 0.9rem;
+}
+
+.traction-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--sparq-white);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.traction-milestones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.milestone {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.milestone:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.milestone h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.milestone ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.milestone li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.traction-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.traction-content h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.traction-blocks {
+    margin-top: 15px;
+}
+
+.traction-block {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.screenshot {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.screenshot p {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.game-features, .timeline {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.game-features ul, .timeline ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.game-features li, .timeline li {
+    margin-bottom: 4px;
+}
+
+.metrics-overview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.metric-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metric {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric.highlighted {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+.metric h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.partners-showcase, .milestones {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+/* Slide 31: Support Logos */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.logo-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 80px;
+}
+
+/* Slide 32: Contact */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sparq-logo-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-details {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    color: var(--sparq-white);
+    text-decoration: none;
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--sparq-red);
+}
+
+/* Slide 33: Thank You */
+.thank-you-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-size: 4rem;
+    color: var(--sparq-red);
+    margin: var(--spacing-lg) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--sparq-white);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+}
+
+/* Slide 17: Game Experienced CEO */
+.ceo-content {
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.ceo-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.ceo-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sparq-red);
+}
+
+/* Slide 18: Leadership */
+.leadership-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.leader {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.leader-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+}
+
+.leader h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.leader p {
+    font-size: 0.8rem;
+    color: var(--sparq-light-gray);
+}
+
+/* Slide 19: Deep Relationships */
+.relationships-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.relationship-leaders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.relationship-connections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.connection-item {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.connection-item:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.connection-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
+.connection-item h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.connection-item p {
+    font-size: 0.8rem;
+}
+
+/* Slide 20: Advisory Board */
+.advisory-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.advisory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Slide 21: Board of Directors */
+.board-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.board-member {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+}
+
+.board-member h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.board-member p {
+    font-size: 0.8rem;
+    color: var(--sparq-light-gray);
+}
+
+/* Slide 22: Token Experts */
+.token-experts-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.token-expert-profile {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+}
+
+.expert-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 50%;
+}
+
+.token-expert-profile h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.token-expert-profile p {
+    text-align: center;
+    color: var(--sparq-light-gray);
+    margin-bottom: 20px;
+}
+
+.token-details {
+    margin-top: 20px;
+}
+
+.token-details h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--sparq-red);
+}
+
+.token-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.token-details li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.token-distribution {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+}
+
+.token-distribution h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--sparq-red);
+}
+
+.distribution-chart {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sparq-light-gray);
+}
+
+.distribution-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Slide 23: Fundraise */
+.fundraise-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.fundraise-subheading {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--sparq-red);
+    line-height: 1.4;
+}
+
+.fundraise-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fundraise-item {
+    background-color: rgba(51, 51, 51, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.fundraise-item:nth-child(2) {
+    border-left-color: var(--sparq-teal);
+}
+
+.fundraise-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
+.fundraise-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--sparq-white);
+}
+
+.fundraise-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fundraise-item li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Slide 24: Web3 Race */
+.web3-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-success-factors {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-factor {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+/* Slide 5: Web3 Games Failed to Match Web2 Mobile Game Success */
+.web3-games-failure {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.web3-failure-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.failure-reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reason {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.reason h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.reason ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.reason li {
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+}
+
+.success-factor:nth-child(1) {
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.success-factor:nth-child(2) {
+    border-left: 4px solid var(--sparq-red);
+}
+
+.market-potential {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-highlight {
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.stat-highlight h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Slide 25: Game Overview */
+.game-content {
+    flex: 1;
+}
+
+.game-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.feature {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+/* Slide 26: Platform */
+.platform-content {
+    flex: 1;
+}
+
+.platform-features {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.feature-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-red);
+}
+
+/* Slide 27: Web3 Simplified */
+.web3-simplified .web3-content {
+    flex: 1;
+}
+
+.simplified-approach {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.web3-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.web3-column.highlight {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+/* Slide 28: Core Values */
+.values-content {
+    flex: 1;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.value {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-teal);
+}
+
+/* Slide 29: Mission */
+.mission-content.full-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-statement {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 900px;
+    margin-bottom: var(--spacing-lg);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+    color: var(--sparq-red);
+}
+
+.mission-pillars {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+}
+
+.pillar {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    border-bottom: 4px solid var(--sparq-red);
+}
+
+.traction-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Slide 30: Traction */
+.traction-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: 0.9rem;
+}
+
+.traction-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--sparq-white);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.traction-milestones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.milestone {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.milestone:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.milestone h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.milestone ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.milestone li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.traction-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.traction-content h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.traction-blocks {
+    margin-top: 15px;
+}
+
+.traction-block {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.screenshot {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.screenshot p {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.game-features, .timeline {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.game-features ul, .timeline ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.game-features li, .timeline li {
+    margin-bottom: 4px;
+}
+
+.metrics-overview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.metric-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metric {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric.highlighted {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+.metric h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.partners-showcase, .milestones {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+/* Slide 31: Support Logos */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.logo-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 80px;
+}
+
+/* Slide 32: Contact */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sparq-logo-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-details {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    color: var(--sparq-white);
+    text-decoration: none;
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--sparq-red);
+}
+
+/* Slide 33: Thank You */
+.thank-you-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-size: 4rem;
+    color: var(--sparq-red);
+    margin: var(--spacing-lg) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--sparq-white);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
+}
+
+/* Slide 17: Game Experienced CEO */
+.ceo-content {
+    padding: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.ceo-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.ceo-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sparq-red);
+}
+
+/* Slide 18: Leadership */
+.leadership-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.leader {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.leader-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+}
+
+.leader h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.leader p {
+    font-size: 0.8rem;
+    color: var(--sparq-light-gray);
+}
+
+/* Slide 19: Deep Relationships */
+.relationships-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.relationship-leaders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.relationship-connections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.connection-item {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.connection-item:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.connection-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
+.connection-item h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.connection-item p {
+    font-size: 0.8rem;
+}
+
+/* Slide 20: Advisory Board */
+.advisory-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.advisory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Slide 21: Board of Directors */
+.board-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.board-member {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 5px;
+}
+
+.board-member h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--sparq-white);
+}
+
+.board-member p {
+    font-size: 0.8rem;
+    color: var(--sparq-light-gray);
+}
+
+/* Slide 22: Token Experts */
+.token-experts-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.token-expert-profile {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+}
+
+.expert-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    background-color: rgba(255, 0, 38, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 50%;
+}
+
+.token-expert-profile h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.token-expert-profile p {
+    text-align: center;
+    color: var(--sparq-light-gray);
+    margin-bottom: 20px;
+}
+
+.token-details {
+    margin-top: 20px;
+}
+
+.token-details h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--sparq-red);
+}
+
+.token-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.token-details li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.token-distribution {
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: 8px;
+}
+
+.token-distribution h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--sparq-red);
+}
+
+.distribution-chart {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sparq-light-gray);
+}
+
+.distribution-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Slide 23: Fundraise */
+.fundraise-content {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.fundraise-subheading {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--sparq-red);
+    line-height: 1.4;
+}
+
+.fundraise-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fundraise-item {
+    background-color: rgba(51, 51, 51, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.fundraise-item:nth-child(2) {
+    border-left-color: var(--sparq-teal);
+}
+
+.fundraise-item:nth-child(3) {
+    border-left-color: #FFD700;
+}
+
+.fundraise-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--sparq-white);
+}
+
+.fundraise-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fundraise-item li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Slide 24: Web3 Race */
+.web3-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-success-factors {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.success-factor {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+/* Slide 5: Web3 Games Failed to Match Web2 Mobile Game Success */
+.web3-games-failure {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.web3-failure-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.failure-reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reason {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.reason h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.reason ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.reason li {
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+}
+
+.success-factor:nth-child(1) {
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.success-factor:nth-child(2) {
+    border-left: 4px solid var(--sparq-red);
+}
+
+.market-potential {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-highlight {
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.stat-highlight h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Slide 25: Game Overview */
+.game-content {
+    flex: 1;
+}
+
+.game-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.feature {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+}
+
+/* Slide 26: Platform */
+.platform-content {
+    flex: 1;
+}
+
+.platform-features {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.feature-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-red);
+}
+
+/* Slide 27: Web3 Simplified */
+.web3-simplified .web3-content {
+    flex: 1;
+}
+
+.simplified-approach {
+    display: flex;
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.web3-column {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.web3-column.highlight {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+/* Slide 28: Core Values */
+.values-content {
+    flex: 1;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    height: 100%;
+}
+
+.value {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--sparq-teal);
+}
+
+/* Slide 29: Mission */
+.mission-content.full-image {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+/* Slide 30: Traction */
+.traction-content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: 0.9rem;
+}
+
+.traction-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--sparq-white);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.traction-milestones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.milestone {
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+.milestone:nth-child(even) {
+    border-left-color: var(--sparq-teal);
+}
+
+.milestone h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--sparq-white);
+    font-size: 1rem;
+}
+
+.milestone ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.milestone li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.traction-content h2 {
+    font-size: 1.4rem;
+    color: var(--sparq-red);
+    margin-bottom: 5px;
+}
+
+.traction-content h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.traction-blocks {
+    margin-top: 15px;
+}
+
+.traction-block {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--sparq-red);
+    margin-bottom: 15px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.screenshot {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 6px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.screenshot p {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.game-features, .timeline {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: 15px;
+    border-left: 4px solid var(--sparq-teal);
+}
+
+.game-features ul, .timeline ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.game-features li, .timeline li {
+    margin-bottom: 4px;
+}
+
+.metrics-overview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.metric-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metric {
+    flex: 1;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric.highlighted {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 2px solid var(--sparq-red);
+}
+
+.metric h2 {
+    color: var(--sparq-red);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.partners-showcase, .milestones {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+/* Slide 31: Support Logos */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.logo-placeholder {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 80px;
+}
+
+/* Slide 32: Contact */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.sparq-logo-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-details {
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-link {
+    color: var(--sparq-white);
+    text-decoration: none;
+    background-color: var(--sparq-gray);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: var(--sparq-red);
+}
+
+/* Slide 33: Thank You */
+.thank-you-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+}
+
+.thank-you-text {
+    font-size: 4rem;
+    color: var(--sparq-red);
+    margin: var(--spacing-lg) 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--sparq-white);
+    font-family: 'Neodex', 'Georgia', serif;
+    font-style: italic;
 }
