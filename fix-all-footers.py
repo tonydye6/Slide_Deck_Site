@@ -12,8 +12,8 @@ slide_count = 44  # Total number of slides
 
 def footer_replacement(match):
     slide_num = match.group(2)
-    # Create a properly formatted footer with correct logo and slide number
-    return f'{match.group(1)}\n                        <img src="attached_assets/Footer_Logo_Skull(White).png" alt="Sparq Skull Logo" class="footer-logo-img">\n                        <span class="slide-footer-text">{slide_num} / {slide_count}</span>\n                    {match.group(3)}'
+    # Create a properly formatted footer with correct logo and slide number with proper indentation
+    return f'{match.group(1)}\n                            <img src="attached_assets/Footer_Logo_Skull(White).png" alt="Sparq Skull Logo" class="footer-logo-img">\n                            <span class="slide-footer-text">{slide_num} / {slide_count}</span>\n                        {match.group(3)}'
 
 # Apply the replacements
 fixed_html = re.sub(slide_pattern, footer_replacement, html_content, flags=re.DOTALL)

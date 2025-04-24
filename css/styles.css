@@ -536,11 +536,13 @@ ul li:before {
 }
 
 .slide-footer .footer-logo-img {
-    width: 1.5rem;
+    width: 1.5rem; /* Small icon size as seen in your screenshot */
     height: 1.5rem;
     margin-right: 0.5rem;
     object-fit: contain;
     filter: brightness(0.9); /* Slightly dim the white logo so it's not too bright */
+    max-width: 24px !important; /* Ensure it's never larger than intended */
+    max-height: 24px !important;
 }
 
 .slide-footer .slide-footer-text {
