@@ -4578,15 +4578,17 @@
             <!-- JavaScript for slide navigation -->
             <script>
                 // Simple slide navigation script
-                let currentSlide = 1;
+                window.currentSlide = 1;
                 // Fixed total of 44 slides
                 const totalSlides = 44;
                 
-                function updateSlideCounter() {
+                // Make updateSlideCounter globally accessible
+                window.updateSlideCounter = function() {
                     document.getElementById('slide-counter').textContent = `${currentSlide} / ${totalSlides}`;
                 }
                 
-                function showSlide(slideNumber) {
+                // Make showSlide globally accessible
+                window.showSlide = function(slideNumber) {
                     // Hide all slides
                     document.querySelectorAll('.slide').forEach(slide => {
                         slide.classList.remove('slide-active');
@@ -4663,8 +4665,11 @@
     <!-- Add footer logo update script -->
     <script src="js/footer-update.js"></script>
     
-    <!-- Add jump menu script -->
-    <script src="js/jump-menu.js"></script>
+    <!-- Add jump menu script (with cache busting) -->
+    <script src="js/jump-menu.js?v=1"></script>
+    
+    <!-- Add new jump menu script (this will override the previous one) -->
+    <script src="js/new-jump-menu.js?v=1"></script>
     
     <!-- Add bullet point fixer script -->
     <script src="js/bullet-fixer.js"></script>

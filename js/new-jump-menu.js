@@ -1,5 +1,5 @@
 // Array of slide titles for the jump menu
-const slideTitles = [
+const newSlideTitles = [
     "Cover", // Slide 1
     "Mission", // Slide 2
     "Web3 Simplified", // Slide 3
@@ -49,30 +49,41 @@ const slideTitles = [
 
 // When the document is loaded, initialize the jump menu
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Jump menu loading with new titles...");
-    // Populate the jump menu with slide titles
-    populateJumpMenu();
+    console.log("NEW Jump menu loading with updated titles...");
+    // Wait a bit to override any other script
+    setTimeout(function() {
+        populateNewJumpMenu();
+    }, 500);
 });
 
 // Function to populate the jump menu with slide titles
-function populateJumpMenu() {
+function populateNewJumpMenu() {
     const jumpMenuContent = document.getElementById('jumpMenuContent');
+    
+    // If the element doesn't exist, try again later
+    if (!jumpMenuContent) {
+        console.log("Jump menu content element not found, retrying...");
+        setTimeout(populateNewJumpMenu, 500);
+        return;
+    }
+    
+    console.log("Populating jump menu with new titles");
     
     // Clear any existing content
     jumpMenuContent.innerHTML = '';
     
     // Add each slide title as a link
-    for (let i = 0; i < slideTitles.length; i++) {
+    for (let i = 0; i < newSlideTitles.length; i++) {
         const slideLink = document.createElement('a');
         slideLink.href = '#';
-        slideLink.textContent = `${i+1}. ${slideTitles[i]}`;
+        slideLink.textContent = `${i+1}. ${newSlideTitles[i]}`;
         slideLink.dataset.slideIndex = i + 1; // Store the slide index
         
         // Add click event to jump to the slide
         slideLink.addEventListener('click', function(e) {
             e.preventDefault();
             const slideIndex = parseInt(this.dataset.slideIndex);
-            jumpToSlide(slideIndex);
+            newJumpToSlide(slideIndex);
             toggleJumpMenu(); // Close the menu after selection
         });
         
@@ -80,14 +91,8 @@ function populateJumpMenu() {
     }
 }
 
-// Function to toggle the jump menu visibility
-function toggleJumpMenu() {
-    const jumpMenuContent = document.getElementById('jumpMenuContent');
-    jumpMenuContent.classList.toggle('show');
-}
-
 // Function to jump to a specific slide
-function jumpToSlide(slideIndex) {
+function newJumpToSlide(slideIndex) {
     // Handle special case for slide 38b (Allocation Cont.)
     if (slideIndex === 39) { // 39 is the index in the array for "Retention/Engagement", but we want to show slide-38b
         // Target the slide-38b element instead
@@ -98,9 +103,9 @@ function jumpToSlide(slideIndex) {
             });
             targetSlide.classList.add('slide-active');
             // Update currentSlide variable in the main script
-            currentSlide = 39;
+            window.currentSlide = 39;
             updateSlideCounter();
-            // Dispatch the slide change event
+            // Dispatch a slide change event
             document.dispatchEvent(new CustomEvent('slide-change', { detail: 39 }));
             return;
         }
@@ -116,26 +121,26 @@ function jumpToSlide(slideIndex) {
             });
             targetSlide.classList.add('slide-active');
             // Update currentSlide variable in the main script
-            currentSlide = 40;
+            window.currentSlide = 40;
             updateSlideCounter();
-            // Dispatch the slide change event
+            // Dispatch a slide change event
             document.dispatchEvent(new CustomEvent('slide-change', { detail: 40 }));
             return;
         }
     }
     
     // For other slides, use the existing showSlide function
-    showSlide(slideIndex);
+    if (window.showSlide) {
+        window.showSlide(slideIndex);
+    } else {
+        console.error("showSlide function not found");
+    }
 }
 
-// Close the menu when clicking outside
-window.addEventListener('click', function(e) {
-    const jumpMenu = document.querySelector('.jump-to-menu');
+// Function to toggle the jump menu visibility
+function toggleJumpMenu() {
     const jumpMenuContent = document.getElementById('jumpMenuContent');
-    
-    // If click is outside the menu and menu is open, close it
-    if (jumpMenuContent.classList.contains('show') && 
-        !jumpMenu.contains(e.target)) {
-        jumpMenuContent.classList.remove('show');
+    if (jumpMenuContent) {
+        jumpMenuContent.classList.toggle('show');
     }
-});
+}
