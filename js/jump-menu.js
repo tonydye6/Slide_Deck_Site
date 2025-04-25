@@ -37,13 +37,14 @@ const slideTitles = [
     "Raising Round", // Slide 35
     "Use of Funds", // Slide 36
     "Trusted by Athletes", // Slide 37
-    "Leadership Team", // Slide 38
+    "Allocation", // Slide 38
+    "Allocation [Continued]", // Slide 38b
     "Game Studio Team", // Slide 39
     "Advisors", // Slide 40
-    "Experienced CEO", // Slide 41
-    "Highlights & Milestones", // Slide 42
-    "Next Steps", // Slide 43
-    "Contact", // Slide 44
+    "The Locker Room: Enabling the Ecosystem", // Slide 41
+    "The Locker Room: Legacy Builder", // Slide 42
+    "Industry Leaders: Athlete Comp", // Slide 43
+    "Rise Together Fund", // Slide 44
 ];
 
 // When the document is loaded, initialize the jump menu
@@ -86,7 +87,43 @@ function toggleJumpMenu() {
 
 // Function to jump to a specific slide
 function jumpToSlide(slideIndex) {
-    // Use the existing showSlide function from the main navigation script
+    // Handle special case for slide 38b (Allocation [Continued])
+    if (slideIndex === 41) { // 41 is the index in the array for Allocation [Continued]
+        // Target the slide-38b element instead
+        const targetSlide = document.getElementById('slide-38b');
+        if (targetSlide) {
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('slide-active');
+            });
+            targetSlide.classList.add('slide-active');
+            // Update currentSlide variable in the main script
+            currentSlide = 41;
+            updateSlideCounter();
+            // Dispatch the slide change event
+            document.dispatchEvent(new CustomEvent('slide-change', { detail: 41 }));
+            return;
+        }
+    }
+    
+    // Handle special case for slide 43a (Retention and Engagement)
+    if (slideIndex === 45) { // This shouldn't happen with our new menu, but just in case
+        // Target the slide-43a element instead
+        const targetSlide = document.getElementById('slide-43a');
+        if (targetSlide) {
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('slide-active');
+            });
+            targetSlide.classList.add('slide-active');
+            // Update currentSlide variable in the main script
+            currentSlide = 45;
+            updateSlideCounter();
+            // Dispatch the slide change event
+            document.dispatchEvent(new CustomEvent('slide-change', { detail: 45 }));
+            return;
+        }
+    }
+    
+    // For other slides, use the existing showSlide function
     showSlide(slideIndex);
 }
 
