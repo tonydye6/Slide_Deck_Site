@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/Fans_Background.png');
+    background-image: url('Fans_Background.png');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -46,30 +46,45 @@
 }
 
 .college-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing-md);
     height: calc(100% - 120px);
 }
 
-.college-content > p {
+.college-intro {
+    grid-column: 1 / -1;
+}
+
+.college-intro p {
     font-family: 'Inter', sans-serif;
     font-size: calc(var(--body-size) * 1.1);
     line-height: 1.4;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     max-width: 90%;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+.college-left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.college-right-column {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Revenue table styling */
 .revenue-section {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
 .revenue-section h3 {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--heading-size) * 0.9);
+    font-size: calc(var(--heading-size) * 0.8);
     color: var(--sparq-white);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
     border-bottom: 1px solid rgba(255, 215, 0, 0.3);
     padding-bottom: 5px;
 }
@@ -156,19 +171,13 @@
 }
 
 /* College sections */
-.college-sections {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-sm);
-}
-
 .section {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: var(--spacing-sm);
     display: flex;
     flex-direction: column;
+    margin-bottom: var(--spacing-sm);
 }
 
 .section h3 {
@@ -196,7 +205,7 @@
 
 .section li::before {
     content: '';
-    background-image: url('/attached_assets/Logo_Skull(Red).png');
+    background-image: url('attached_assets/Logo_Skull(Red).png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
