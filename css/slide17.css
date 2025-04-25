@@ -1,4 +1,4 @@
-/* Slide 17: Game Experienced CEO - Styling (Single Column Layout) */
+/* Slide 17: Game Experienced CEO - Styling */
 
 :root {
     --sparq-red: #FF0026;
@@ -15,23 +15,40 @@
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(135deg, var(--sparq-carbon) 0%, var(--sparq-steel) 100%);
-    padding: 0 var(--spacing-sm);
 }
 
-/* Single column layout */
-#slide-17 .single-column-layout {
+/* Two-column layout container */
+#slide-17 .two-column-layout {
     display: flex;
-    flex-direction: column;
     position: relative;
     z-index: 1;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    gap: var(--spacing-sm);
 }
 
-/* Header section */
-#slide-17 .header-section {
-    text-align: center;
-    margin-bottom: calc(var(--spacing-sm) * 0.9);
+/* Left column - Headshot Only */
+#slide-17 .left-column {
+    width: 32%;
+    padding-right: calc(var(--spacing-sm) * 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Right column - Content */
+#slide-17 .right-column {
+    width: 68%;
+    padding-left: calc(var(--spacing-sm) * 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+/* Header styling for right column */
+#slide-17 .header {
+    position: relative;
+    margin-bottom: calc(var(--spacing-xs) * 0.8);
 }
 
 #slide-17 .title {
@@ -39,163 +56,174 @@
     font-size: calc(var(--title-size) * 0.9);
     font-weight: bold;
     color: var(--sparq-teal);
-    margin-bottom: 0.1em;
+    margin-bottom: 0.05em;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #slide-17 .ceo-name {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--heading-size) * 0.95);
+    font-size: calc(var(--heading-size) * 1);
     color: var(--sparq-white);
     margin-top: 0;
-    margin-bottom: calc(var(--spacing-sm) * 0.8);
     text-transform: uppercase;
+    margin-bottom: calc(var(--spacing-sm) * 0.5);
 }
 
+/* CEO Headshot styling */
 #slide-17 .headshot-container {
+    width: 90%;
+    height: 80%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 #slide-17 .ceo-headshot {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 65px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(0, 161, 156, 0.4);
+    border: 2px solid rgba(0, 161, 156, 0.3);
 }
 
-/* Sections container */
-#slide-17 .sections-container {
+/* Bio sections styling */
+#slide-17 .bio-container {
     display: flex;
     flex-direction: column;
-    gap: 0; /* No gap as we're using borders & margins for separation */
-    width: 100%;
+    gap: calc(var(--spacing-xs) * 0.7);
+    flex: 1;
     overflow-y: hidden;
 }
 
-/* Career section styling */
-#slide-17 .career-section {
-    position: relative;
-    padding: calc(var(--spacing-sm) * 0.6) 0;
+#slide-17 .bio-section {
+    padding: calc(var(--spacing-sm) * 0.5);
+    border-radius: 6px;
+    border-left: 3px solid var(--sparq-red);
+    background-color: rgba(0, 0, 0, 0.15);
     margin-bottom: calc(var(--spacing-xs) * 0.5);
-    border-top: 2px solid var(--sparq-teal);
 }
 
-#slide-17 .career-section.red-border {
-    border-top-color: var(--sparq-red);
+#slide-17 .section-title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--body-size) * 0.85);
+    color: var(--sparq-teal);
+    margin: 0 0 calc(var(--spacing-xs) * 0.4) 0;
+    text-transform: uppercase;
+}
+
+#slide-17 .bio-section:nth-child(even) .section-title {
+    color: var(--sparq-red);
+}
+
+#slide-17 .section-content {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.75);
+    color: var(--sparq-white);
+    line-height: 1.25;
+    margin: 0;
 }
 
 #slide-17 .section-content-wrapper {
     display: flex;
     align-items: flex-start;
-    gap: calc(var(--spacing-sm) * 0.8);
+    gap: calc(var(--spacing-xs) * 0.7);
 }
 
-#slide-17 .section-text {
+#slide-17 .section-content-wrapper > div {
     flex: 1;
 }
 
-#slide-17 .section-visuals {
-    display: flex;
-    align-items: center;
-    gap: calc(var(--spacing-xs) * 0.8);
-    flex-shrink: 0;
-}
-
-#slide-17 .section-content {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    color: var(--sparq-white);
-    line-height: 1.2;
-    margin: 0;
-}
-
 #slide-17 .inline-image {
-    width: 65px;
-    height: 65px;
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    background-color: transparent;
-}
-
-#slide-17 .grayscale-image {
-    filter: grayscale(100%);
-    opacity: 0.85;
+    margin-top: 3px;
 }
 
 #slide-17 .small-logo {
-    width: 40px;
-    height: 28px;
-    background-color: rgba(255, 255, 255, 0.95);
+    max-width: 60px;
+    max-height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
     padding: 3px;
-    margin-right: 2px;
-    object-fit: contain;
+    margin: 0 3px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #slide-17 .text-logo {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    padding: 1px 4px;
+    padding: 2px 6px;
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--body-size) * 0.6);
+    font-size: calc(var(--body-size) * 0.65);
     color: var(--sparq-white);
-    margin-right: 3px;
+    margin: 0 3px;
+    vertical-align: middle;
+}
+
+#slide-17 .highlight {
+    color: var(--sparq-teal);
+    font-weight: bold;
 }
 
 #slide-17 .achievement {
     display: inline-block;
     background-color: rgba(255, 0, 38, 0.15);
-    padding: 2px 4px;
-    border-radius: 3px;
+    padding: 2px 6px;
+    border-radius: 4px;
     margin: 0 2px;
     font-weight: 600;
     color: var(--sparq-white);
-    font-size: 12px;
 }
 
-#slide-17 .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+#slide-17 .mini-logo-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: calc(var(--spacing-xs) * 0.3);
-    margin-top: calc(var(--spacing-xs) * 0.6);
-    width: 100%;
+    margin-top: calc(var(--spacing-xs) * 0.4);
+    justify-content: flex-start;
 }
 
-#slide-17 .logo-grid .text-logo {
-    font-size: calc(var(--body-size) * 0.55);
-    padding: 2px 3px;
+#slide-17 .mini-logo-grid .text-logo {
+    font-size: calc(var(--body-size) * 0.6);
+    padding: 2px 4px;
     margin: 0;
-    text-align: center;
 }
 
-/* Small screens */
+/* Responsive adjustments */
 @media (max-width: 1200px) {
-    #slide-17 .header-section {
-        margin-bottom: calc(var(--spacing-sm) * 0.7);
-    }
-    
-    #slide-17 .section-content-wrapper {
+    #slide-17 .two-column-layout {
         flex-direction: column;
-        gap: calc(var(--spacing-xs) * 0.6);
     }
     
-    #slide-17 .section-visuals {
+    #slide-17 .left-column, 
+    #slide-17 .right-column {
         width: 100%;
-        justify-content: center;
-        margin-top: calc(var(--spacing-xs) * 0.5);
+        padding: 0;
+    }
+    
+    #slide-17 .left-column {
+        margin-bottom: calc(var(--spacing-md) * 0.8);
+    }
+    
+    #slide-17 .headshot-container {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    
+    #slide-17 .inline-image {
+        max-width: 60px;
     }
 }
 
-/* Low height screens */
 @media (max-height: 720px) {
-    #slide-17 .header-section {
-        margin-bottom: calc(var(--spacing-xs) * 0.7);
+    #slide-17 .header {
+        margin-bottom: calc(var(--spacing-xs) * 0.6);
     }
     
     #slide-17 .title {
@@ -207,33 +235,28 @@
         margin-bottom: calc(var(--spacing-sm) * 0.5);
     }
     
-    #slide-17 .ceo-headshot {
-        width: 90px;
-        height: 90px;
+    #slide-17 .bio-section {
+        padding: calc(var(--spacing-sm) * 0.4);
+        margin-bottom: calc(var(--spacing-xs) * 0.4);
     }
     
-    #slide-17 .career-section {
-        padding: calc(var(--spacing-sm) * 0.4) 0;
+    #slide-17 .section-title {
+        font-size: calc(var(--body-size) * 0.8);
         margin-bottom: calc(var(--spacing-xs) * 0.3);
     }
     
     #slide-17 .section-content {
-        font-size: 12px;
-        line-height: 1.15;
-    }
-    
-    #slide-17 .logo-grid {
-        gap: calc(var(--spacing-xs) * 0.25);
-        margin-top: calc(var(--spacing-xs) * 0.4);
+        font-size: calc(var(--body-size) * 0.7);
+        line-height: 1.2;
     }
     
     #slide-17 .inline-image {
-        width: 55px;
-        height: 55px;
+        max-width: 70px;
+        max-height: 70px;
     }
     
     #slide-17 .small-logo {
-        width: 35px;
-        height: 25px;
+        max-width: 50px;
+        max-height: 30px;
     }
 }
