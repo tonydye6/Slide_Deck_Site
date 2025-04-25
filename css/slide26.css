@@ -1,11 +1,11 @@
 /* Slide 26: Appendix */
-#slide-29 {
+#slide-26 {
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, var(--sparq-red) 0%, var(--sparq-teal) 100%);
 }
 
-#slide-29 .content {
+#slide-26 .content {
     position: relative;
     z-index: 2;
     display: flex;
@@ -18,7 +18,7 @@
     color: var(--sparq-white);
 }
 
-#slide-29 .character-grid {
+#slide-26 .character-grid {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,19 +33,19 @@
     padding: 20px;
 }
 
-#slide-29 .character-grid img {
+#slide-26 .character-grid img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-#slide-29 .title-container {
+#slide-26 .title-container {
     position: relative;
     margin-bottom: 40px;
 }
 
-#slide-29 .title {
+#slide-26 .title {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
     font-size: 72px;
     font-weight: bold;
@@ -61,7 +61,7 @@
         0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#slide-29 .subtitle {
+#slide-26 .subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 24px;
     font-weight: 500;
@@ -70,7 +70,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#slide-29 .topics-list {
+#slide-26 .topics-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +80,7 @@
     list-style: none;
 }
 
-#slide-29 .topic-item {
+#slide-26 .topic-item {
     display: flex;
     align-items: center;
     font-family: 'Inter', sans-serif;
@@ -90,7 +90,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#slide-29 .bullet-icon {
+#slide-26 .bullet-icon {
     width: 24px;
     height: 24px;
     margin-right: 15px;
@@ -99,56 +99,56 @@
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    #slide-29 .title {
+    #slide-26 .title {
         font-size: 64px;
     }
     
-    #slide-29 .subtitle {
+    #slide-26 .subtitle {
         font-size: 22px;
     }
     
-    #slide-29 .topic-item {
+    #slide-26 .topic-item {
         font-size: 22px;
     }
 }
 
 @media (max-width: 992px) {
-    #slide-29 .title {
+    #slide-26 .title {
         font-size: 56px;
     }
     
-    #slide-29 .subtitle {
+    #slide-26 .subtitle {
         font-size: 20px;
     }
     
-    #slide-29 .topic-item {
+    #slide-26 .topic-item {
         font-size: 20px;
     }
     
-    #slide-29 .character-grid {
+    #slide-26 .character-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-height: 700px) {
-    #slide-29 .title {
+    #slide-26 .title {
         font-size: 52px;
     }
     
-    #slide-29 .subtitle {
+    #slide-26 .subtitle {
         font-size: 18px;
         margin: 15px 0 30px;
     }
     
-    #slide-29 .topics-list {
+    #slide-26 .topics-list {
         gap: 15px;
     }
     
-    #slide-29 .topic-item {
+    #slide-26 .topic-item {
         font-size: 18px;
     }
     
-    #slide-29 .bullet-icon {
+    #slide-26 .bullet-icon {
         width: 20px;
         height: 20px;
         margin-right: 12px;
