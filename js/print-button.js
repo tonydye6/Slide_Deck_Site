@@ -10,27 +10,53 @@ document.addEventListener('DOMContentLoaded', function() {
     const printButton = document.createElement('button');
     printButton.id = 'print-button';
     printButton.className = 'nav-btn';
-    printButton.textContent = '🖨️ PDF';
-    printButton.style.marginLeft = '10px';
+    
+    // Create a more professional printer icon using SVG, matching the image provided
+    const iconSVG = `
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 12v2H8v-4h8v2zm2-2v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/>
+        </svg>
+        <span style="font-size: 12px; margin-top: 2px; letter-spacing: 0.5px;">PDF</span>
+    </div>
+    `;
+    
+    printButton.innerHTML = iconSVG;
     printButton.style.cursor = 'pointer';
     
-    // Style the button to match the presentation
+    // Style the button to match the image provided
     printButton.style.backgroundColor = '#2B2842'; // Carbon color
     printButton.style.color = 'white';
-    printButton.style.border = '1px solid #00A19C'; // Grit Teal
-    printButton.style.borderRadius = '4px';
-    printButton.style.padding = '5px 10px';
+    printButton.style.border = '2px solid #FF0026'; // Outlaw Red border
+    printButton.style.borderRadius = '50%'; // Make it circular
+    printButton.style.width = '50px';
+    printButton.style.height = '50px';
+    printButton.style.display = 'flex';
+    printButton.style.alignItems = 'center';
+    printButton.style.justifyContent = 'center';
     printButton.style.fontFamily = "'ADAM.CG PRO', Arial, sans-serif";
+    printButton.style.padding = '0';
+    printButton.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.3)'; // Add subtle shadow
     
-    // Add hover effects
+    // Add hover and active effects to match the image
     printButton.addEventListener('mouseover', function() {
-        this.style.backgroundColor = '#00A19C'; // Grit Teal
-        this.style.borderColor = '#FFD700'; // Victory Gold
+        this.style.backgroundColor = '#3B3852'; // Slightly lighter Carbon color
+        this.style.borderColor = '#FF0026'; // Keep Outlaw Red border
+        this.style.transform = 'scale(1.05)'; // Slight scale effect
     });
     
     printButton.addEventListener('mouseout', function() {
         this.style.backgroundColor = '#2B2842'; // Carbon color
-        this.style.borderColor = '#00A19C'; // Grit Teal
+        this.style.borderColor = '#FF0026'; // Outlaw Red
+        this.style.transform = 'scale(1)'; // Reset scale
+    });
+    
+    printButton.addEventListener('mousedown', function() {
+        this.style.transform = 'scale(0.95)'; // Scale down slightly when pressed
+    });
+    
+    printButton.addEventListener('mouseup', function() {
+        this.style.transform = 'scale(1.05)'; // Return to hover scale
     });
     
     // Add click functionality
@@ -38,40 +64,38 @@ document.addEventListener('DOMContentLoaded', function() {
         printAllSlides();
     });
     
-    // Find the right place to insert the button
-    const navControls = document.querySelector('.nav-controls');
+    // Create a container for the print button that will be positioned on the far right
+    const printButtonContainer = document.createElement('div');
+    printButtonContainer.id = 'print-button-container';
+    printButtonContainer.style.position = 'absolute';
+    printButtonContainer.style.right = '20px';
+    printButtonContainer.style.top = '20px';
+    printButtonContainer.style.zIndex = '1000';
     
-    if (navControls) {
-        // Try to insert after the slide counter
-        const slideCounter = document.getElementById('slide-counter');
-        
-        if (slideCounter) {
-            slideCounter.insertAdjacentElement('afterend', printButton);
-            console.log('Print button added after slide counter');
-        } else {
-            // Fallback to appending to nav controls
-            navControls.appendChild(printButton);
-            console.log('Print button added to nav controls');
-        }
+    // Add the button to this container
+    printButtonContainer.appendChild(printButton);
+    
+    // Add the container to the presentation container
+    const presentationContainer = document.querySelector('.presentation-container');
+    if (presentationContainer) {
+        presentationContainer.appendChild(printButtonContainer);
+        console.log('Print button added to far right of presentation');
     } else {
-        // If nav controls not found, try adding near jump menu
-        const jumpMenu = document.querySelector('.jump-to-menu');
-        
-        if (jumpMenu) {
-            // Create a wrapper for the print button
-            const wrapper = document.createElement('div');
-            wrapper.style.display = 'inline-block';
-            wrapper.style.marginRight = '10px';
-            
-            // Add the print button to the wrapper
-            wrapper.appendChild(printButton);
-            
-            // Insert before the jump menu
-            jumpMenu.parentNode.insertBefore(wrapper, jumpMenu);
-            console.log('Print button added before jump menu');
+        // Fallback method: try to add near the navigation controls
+        const navControls = document.querySelector('.nav-controls');
+        if (navControls) {
+            // Position after the next slide button, which is typically the last element
+            navControls.appendChild(printButton);
+            console.log('Print button added to nav controls (fallback)');
         } else {
-            // Last resort - add to the body
-            console.error('Could not find suitable location for print button');
+            // Last resort: try adding near jump menu
+            const jumpMenu = document.querySelector('.jump-to-menu');
+            if (jumpMenu) {
+                jumpMenu.parentNode.insertBefore(printButtonContainer, jumpMenu.nextSibling);
+                console.log('Print button added after jump menu (last resort)');
+            } else {
+                console.error('Could not find suitable location for print button');
+            }
         }
     }
 });
