@@ -1,4 +1,4 @@
-/* Slide 17: Game Experienced CEO - Styling */
+/* Slide 17: Game Experienced CEO - Styling (Single Column Layout) */
 
 :root {
     --sparq-red: #FF0026;
@@ -15,42 +15,23 @@
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(135deg, var(--sparq-carbon) 0%, var(--sparq-steel) 100%);
+    padding: 0 var(--spacing-sm);
 }
 
-/* Two-column layout container */
-#slide-17 .two-column-layout {
+/* Single column layout */
+#slide-17 .single-column-layout {
     display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 1;
-    height: 100%;
     width: 100%;
-    gap: var(--spacing-sm);
+    height: 100%;
 }
 
-/* Left column - Images */
-#slide-17 .left-column {
-    width: 32%;
-    padding-right: calc(var(--spacing-sm) * 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--spacing-sm);
-}
-
-/* Right column - Content */
-#slide-17 .right-column {
-    width: 68%;
-    padding-left: calc(var(--spacing-sm) * 0.5);
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden;
-}
-
-/* Header styling for right column */
-#slide-17 .header {
-    position: relative;
-    margin-bottom: calc(var(--spacing-xs) * 0.7);
+/* Header section */
+#slide-17 .header-section {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-sm) * 0.9);
 }
 
 #slide-17 .title {
@@ -58,195 +39,163 @@
     font-size: calc(var(--title-size) * 0.9);
     font-weight: bold;
     color: var(--sparq-teal);
-    margin-bottom: 0.05em;
+    margin-bottom: 0.1em;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #slide-17 .ceo-name {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--heading-size) * 1);
+    font-size: calc(var(--heading-size) * 0.95);
     color: var(--sparq-white);
     margin-top: 0;
+    margin-bottom: calc(var(--spacing-sm) * 0.8);
     text-transform: uppercase;
-    margin-bottom: calc(var(--spacing-sm) * 0.4);
 }
 
-/* CEO Images styling */
 #slide-17 .headshot-container {
-    width: 100%;
-    max-width: 220px;
+    display: flex;
+    justify-content: center;
 }
 
 #slide-17 .ceo-headshot {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 65px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(0, 161, 156, 0.3);
+    border: 2px solid rgba(0, 161, 156, 0.4);
 }
 
-#slide-17 .nasdaq-container {
-    width: 100%;
-    max-width: 200px;
-}
-
-#slide-17 .nasdaq-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    filter: grayscale(100%);
-    opacity: 0.9;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Bio sections styling */
-#slide-17 .bio-container {
+/* Sections container */
+#slide-17 .sections-container {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing-xs) * 0.6);
-    flex: 1;
+    gap: 0; /* No gap as we're using borders & margins for separation */
+    width: 100%;
     overflow-y: hidden;
 }
 
-#slide-17 .bio-section {
-    padding: calc(var(--spacing-sm) * 0.45);
-    border-radius: 6px;
-    border-left: 3px solid var(--sparq-red);
-    background-color: rgba(0, 0, 0, 0.15);
-    margin-bottom: calc(var(--spacing-xs) * 0.4);
+/* Career section styling */
+#slide-17 .career-section {
+    position: relative;
+    padding: calc(var(--spacing-sm) * 0.6) 0;
+    margin-bottom: calc(var(--spacing-xs) * 0.5);
+    border-top: 2px solid var(--sparq-teal);
 }
 
-#slide-17 .section-title {
-    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--body-size) * 0.85);
-    color: var(--sparq-teal);
-    margin: 0 0 calc(var(--spacing-xs) * 0.3) 0;
-    text-transform: uppercase;
+#slide-17 .career-section.red-border {
+    border-top-color: var(--sparq-red);
 }
 
-#slide-17 .bio-section:nth-child(even) .section-title {
-    color: var(--sparq-red);
+#slide-17 .section-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(var(--spacing-sm) * 0.8);
+}
+
+#slide-17 .section-text {
+    flex: 1;
+}
+
+#slide-17 .section-visuals {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing-xs) * 0.8);
+    flex-shrink: 0;
 }
 
 #slide-17 .section-content {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--sparq-white);
     line-height: 1.2;
     margin: 0;
 }
 
-#slide-17 .logo-display {
-    display: flex;
-    align-items: center;
-    margin-top: calc(var(--spacing-xs) * 0.6);
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-}
-
-#slide-17 .logo-group {
-    display: flex;
-    align-items: center;
-    gap: calc(var(--spacing-xs) * 0.6);
-}
-
 #slide-17 .inline-image {
-    max-width: 65px;
-    max-height: 65px;
+    width: 65px;
+    height: 65px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     background-color: transparent;
 }
 
+#slide-17 .grayscale-image {
+    filter: grayscale(100%);
+    opacity: 0.85;
+}
+
 #slide-17 .small-logo {
-    max-width: 40px;
-    max-height: 28px;
+    width: 40px;
+    height: 28px;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 4px;
     padding: 3px;
-    margin-right: 4px;
-    display: inline-block;
-    vertical-align: middle;
+    margin-right: 2px;
+    object-fit: contain;
 }
 
 #slide-17 .text-logo {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    padding: 2px 5px;
+    padding: 1px 4px;
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--body-size) * 0.65);
+    font-size: calc(var(--body-size) * 0.6);
     color: var(--sparq-white);
-    margin-right: 4px;
-    vertical-align: middle;
-}
-
-#slide-17 .highlight {
-    color: var(--sparq-teal);
-    font-weight: bold;
+    margin-right: 3px;
 }
 
 #slide-17 .achievement {
     display: inline-block;
     background-color: rgba(255, 0, 38, 0.15);
-    padding: 2px 6px;
-    border-radius: 4px;
+    padding: 2px 4px;
+    border-radius: 3px;
     margin: 0 2px;
     font-weight: 600;
     color: var(--sparq-white);
+    font-size: 12px;
 }
 
 #slide-17 .logo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: calc(var(--spacing-xs) * 0.4);
+    gap: calc(var(--spacing-xs) * 0.3);
     margin-top: calc(var(--spacing-xs) * 0.6);
     width: 100%;
 }
 
 #slide-17 .logo-grid .text-logo {
     font-size: calc(var(--body-size) * 0.55);
-    padding: 2px 4px;
+    padding: 2px 3px;
     margin: 0;
     text-align: center;
 }
 
-/* Responsive adjustments */
+/* Small screens */
 @media (max-width: 1200px) {
-    #slide-17 .two-column-layout {
+    #slide-17 .header-section {
+        margin-bottom: calc(var(--spacing-sm) * 0.7);
+    }
+    
+    #slide-17 .section-content-wrapper {
         flex-direction: column;
+        gap: calc(var(--spacing-xs) * 0.6);
     }
     
-    #slide-17 .left-column, 
-    #slide-17 .right-column {
+    #slide-17 .section-visuals {
         width: 100%;
-        padding: 0;
-    }
-    
-    #slide-17 .left-column {
-        margin-bottom: calc(var(--spacing-md) * 0.8);
-        flex-direction: row;
         justify-content: center;
-        gap: var(--spacing-md);
-    }
-    
-    #slide-17 .headshot-container,
-    #slide-17 .nasdaq-container {
-        max-width: 150px;
-    }
-    
-    #slide-17 .inline-image {
-        max-width: 55px;
-        max-height: 55px;
+        margin-top: calc(var(--spacing-xs) * 0.5);
     }
 }
 
+/* Low height screens */
 @media (max-height: 720px) {
-    #slide-17 .header {
-        margin-bottom: calc(var(--spacing-xs) * 0.5);
+    #slide-17 .header-section {
+        margin-bottom: calc(var(--spacing-xs) * 0.7);
     }
     
     #slide-17 .title {
@@ -255,40 +204,36 @@
     
     #slide-17 .ceo-name {
         font-size: calc(var(--heading-size) * 0.9);
-        margin-bottom: calc(var(--spacing-sm) * 0.3);
+        margin-bottom: calc(var(--spacing-sm) * 0.5);
     }
     
-    #slide-17 .bio-section {
-        padding: calc(var(--spacing-sm) * 0.35);
+    #slide-17 .ceo-headshot {
+        width: 90px;
+        height: 90px;
+    }
+    
+    #slide-17 .career-section {
+        padding: calc(var(--spacing-sm) * 0.4) 0;
         margin-bottom: calc(var(--spacing-xs) * 0.3);
     }
     
-    #slide-17 .section-title {
-        font-size: calc(var(--body-size) * 0.8);
-        margin-bottom: calc(var(--spacing-xs) * 0.2);
-    }
-    
     #slide-17 .section-content {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.15;
     }
     
-    #slide-17 .logo-display {
-        margin-top: calc(var(--spacing-xs) * 0.4);
-    }
-    
     #slide-17 .logo-grid {
-        gap: calc(var(--spacing-xs) * 0.3);
+        gap: calc(var(--spacing-xs) * 0.25);
         margin-top: calc(var(--spacing-xs) * 0.4);
     }
     
     #slide-17 .inline-image {
-        max-width: 55px;
-        max-height: 55px;
+        width: 55px;
+        height: 55px;
     }
     
     #slide-17 .small-logo {
-        max-width: 35px;
-        max-height: 25px;
+        width: 35px;
+        height: 25px;
     }
 }
