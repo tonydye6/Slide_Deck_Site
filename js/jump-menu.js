@@ -86,26 +86,8 @@ function toggleJumpMenu() {
 
 // Function to jump to a specific slide
 function jumpToSlide(slideIndex) {
-    // Get all slides
-    const slides = document.querySelectorAll('.slide');
-    
-    // Ensure the index is within bounds
-    if (slideIndex < 1) slideIndex = 1;
-    if (slideIndex > slides.length) slideIndex = slides.length;
-    
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('slide-active');
-    }
-    
-    // Show the selected slide
-    slides[slideIndex - 1].classList.add('slide-active');
-    
-    // Update the slide counter
-    document.getElementById('slide-counter').textContent = `${slideIndex} / ${slides.length}`;
-    
-    // Update current slide index for the navigation controls
-    window.currentSlideIndex = slideIndex;
+    // Use the existing showSlide function from the main navigation script
+    showSlide(slideIndex);
 }
 
 // Close the menu when clicking outside
