@@ -205,7 +205,7 @@
 
 .section li::before {
     content: '';
-    background-image: url('attached_assets/Logo_Skull(Red).png');
+    background-image: url('../attached_assets/Logo_Skull(Red).png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
