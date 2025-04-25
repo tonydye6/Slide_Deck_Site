@@ -1,0 +1,45 @@
+Objective: Regenerate Slide 8 ("Sparq Gaming Ecosystem™") of the Sparq Games pitch deck HTML with a completely new, more dynamic layout to increase visual impact and align better with the design document (sparq_deck_design_doc_v2) and INK Games inspiration. Replace the previous version of Slide 8 entirely.
+
+Target: Slide 8 ("Sparq Gaming Ecosystem™") of the HTML pitch deck.
+
+Specific Instructions for New Layout:
+
+Overall Structure: Implement a two-section vertical layout (e.g., Left section ~55-60% width, Right section ~45-40% width).
+
+Background: Apply a subtle dynamic background (e.g., Carbon to Grit Teal gradient, or Background2.jpg/Background3.jpg with an 80-90% dark overlay like Carbon). Ensure text readability.
+
+Left Section (Text Content):
+
+Place the main title "Sparq Gaming Ecosystem™" (ADAM.CG PRO, Large, Grit Teal) and subtitle "Crossing the Chasm to Web3" (Inter, Medium, White) at the top of this section.
+
+Below the titles, add the main descriptive paragraphs ("We're crossing the chasm...", "Sparq develops..."). Use Inter font, White, ensuring readability.
+
+Format the list of three core strategies ("Building large-scale...", "Seamlessly transitioning...", "Creating enhanced...") using Logo_Skull(Red).png as the primary bullet icon (small size). Use standard nested bullets (disc/square) for the sub-points under each main point. Ensure correct indentation.
+
+Right Section (Visual Flow Diagram & Logo):
+
+Create a visually distinct flow diagram showing the progression: Web2 -> Locker Room -> Web3.
+
+Use three clearly defined shapes/containers (e.g., rounded rectangles with Grit Teal borders or Steel backgrounds) for:
+
+"Web2 Games (Mass Appeal)" + Simple Controller Icon
+
+"Sparq Locker Room™ (Bridge)" + Simple Locker/Bridge Icon
+
+"Web3 Rewards/Collectibles" + Simple Token/Trophy Icon
+
+Arrange these blocks vertically or slightly offset.
+
+Connect the blocks with prominent, stylized arrows (e.g., thicker, Outlaw Red or Grit Teal color) indicating the flow direction.
+
+Place the NCAA_Logo2.png clearly within this right section, likely below the diagram. Size appropriately (e.g., 60-80px height).
+
+Typography: Strictly adhere to the font rules: ADAM.CG PRO (Main Title), Neodex (Optional Accent Headings - maybe for diagram block titles if desired), Inter (All body text, subtitles, diagram labels).
+
+Color: Actively use Outlaw Red and Grit Teal for titles, icons, arrows, and container accents against the dark background.
+
+Spacing & Polish: Ensure adequate padding within the slide and sections. Align elements cleanly. Ensure the Sparq Skull footer logo is present in the bottom-left.
+
+Content Fit: Ensure all text content from Updated_Pitch_Deck_Content.txt for Slide 8 is included and fully visible without overflow. Adjust font sizes (Inter body text, min 12px) or spacing slightly if necessary.
+
+Reference: This new layout should feel more structured and visually engaging, drawing inspiration from the INK Games deck's use of diagrams and visual blocks, while adhering to the specifics in sparq_deck_design_doc_v2. Replace the existing Slide 8 code.
