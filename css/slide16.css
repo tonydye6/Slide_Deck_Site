@@ -1,0 +1,285 @@
+/* Slide 16: Traction - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-steel: #1E1E24;
+    --sparq-white: #FFFFFF;
+    --sparq-gold: #FFD700;
+}
+
+#slide-16 .content.traction {
+    background-image: url('../Background1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay to ensure text readability */
+#slide-16 .content.traction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(43, 40, 66, 0.9) 0%, rgba(255, 0, 38, 0.75) 100%);
+    z-index: 0;
+}
+
+#slide-16 .header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-16 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-gold);
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slide-16 .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--heading-size) * 0.8);
+    color: var(--sparq-white);
+    margin-top: 0;
+    font-weight: 500;
+}
+
+#slide-16 .traction-content {
+    position: relative;
+    z-index: 1;
+}
+
+#slide-16 .traction-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 1.1);
+    color: var(--sparq-white);
+    margin-bottom: var(--spacing-md);
+    max-width: 90%;
+}
+
+/* Track visualization */
+#slide-16 .track-visualization {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        var(--sparq-carbon) 0%, 
+        var(--sparq-carbon) 48%,
+        var(--sparq-gold) 48%,
+        var(--sparq-gold) 52%,
+        var(--sparq-teal) 52%,
+        var(--sparq-teal) 100%
+    );
+    z-index: 1;
+    opacity: 0.7;
+}
+
+#slide-16 .track-marker {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: var(--sparq-red);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 0, 38, 0.7);
+    z-index: 2;
+}
+
+#slide-16 .track-flag {
+    position: absolute;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 12px;
+    color: var(--sparq-gold);
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    background-color: rgba(43, 40, 66, 0.7);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+/* Milestone grid layout */
+#slide-16 .traction-milestones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: calc(var(--spacing-lg) * 1.5);
+}
+
+#slide-16 .milestone {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--spacing-sm) * 1.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    position: relative;
+}
+
+#slide-16 .milestone.double-width {
+    grid-column: span 2;
+}
+
+#slide-16 .milestone:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 0, 38, 0.2);
+}
+
+#slide-16 .milestone-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--sparq-red);
+    padding-bottom: var(--spacing-xs);
+}
+
+#slide-16 .milestone-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    stroke: var(--sparq-red);
+    fill: none;
+}
+
+#slide-16 .milestone h3 {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--heading-size) * 0.7);
+    color: var(--sparq-red);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Make key metrics stand out */
+#slide-16 .key-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+#slide-16 .metric-number {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--heading-size) * 1.5);
+    color: var(--sparq-gold);
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+#slide-16 .metric-label {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.8);
+    color: var(--sparq-white);
+    margin: var(--spacing-xs) 0 0 0;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Logo/Partner styling */
+#slide-16 .partner-logo {
+    max-width: 120px;
+    max-height: 40px;
+    margin: 0 auto var(--spacing-sm) auto;
+    display: block;
+}
+
+#slide-16 .partner-text {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.9);
+    color: var(--sparq-white);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Bullet point styling */
+#slide-16 .milestone-content {
+    flex: 1;
+}
+
+#slide-16 .milestone-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#slide-16 .milestone-content li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.9);
+    color: var(--sparq-white);
+    line-height: 1.4;
+}
+
+#slide-16 .milestone-content li img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-16 .traction-milestones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #slide-16 .traction-milestones {
+        grid-template-columns: 1fr;
+    }
+    
+    #slide-16 .milestone.double-width {
+        grid-column: auto;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-16 .header {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-16 .traction-intro {
+        font-size: calc(var(--body-size) * 1);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-16 .traction-milestones {
+        margin-top: var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+    
+    #slide-16 .milestone {
+        padding: var(--spacing-sm);
+    }
+    
+    #slide-16 .metric-number {
+        font-size: calc(var(--heading-size) * 1.2);
+    }
+    
+    #slide-16 .metric-label {
+        font-size: calc(var(--body-size) * 0.75);
+    }
+}
