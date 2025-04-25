@@ -103,7 +103,7 @@
 
 .reason li::before {
     content: '';
-    background-image: url('attached_assets/Bulletpoint_Logo_Skull(Red) copy.png');
+    background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
