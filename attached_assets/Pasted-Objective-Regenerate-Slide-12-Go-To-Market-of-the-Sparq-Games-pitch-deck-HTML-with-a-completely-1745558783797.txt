@@ -1,0 +1,45 @@
+Objective: Regenerate Slide 12 ("Go To Market") of the Sparq Games pitch deck HTML with a completely new, dynamic "Angled Flow Grid" layout inspired by the INK Games deck. Ensure all content fits without overflow. Replace the previous version of Slide 12 entirely.
+
+Target: Slide 12 ("Go To Market") of the HTML pitch deck.
+
+Specific Instructions for New Design:
+
+Background: Apply Gameplay1.png (from Support_Images_Grid.pdf) as the background image with a dark overlay (Carbon #2B2842 at 85-90% opacity) ensuring text readability.
+
+Top Section:
+
+Place the main title "GO TO MARKET" (ADAM.CG PRO, Large, Uppercase, Grit Teal) at the top.
+
+Place the introductory paragraph ("AAA IP mobile sports games...") below the title, spanning the width (Inter, Medium, White).
+
+Component Grid (Angled Flow):
+
+Layout: Arrange the 6 strategy components (Premium Sports IP, Team + AI, Proprietary Engine, Sparq Locker Room, Community Growth, Tokenomics) in a flexible 2x3 grid below the intro text (e.g., use Tailwind: grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6).
+
+Containers: Style each grid item as a distinct visual container. Use parallelograms or rectangles with angled top/bottom edges. Apply a subtle background (Steel #1E1E24) or a border (Outlaw Red or Grit Teal). Ensure consistent angling/style.
+
+Flow Indicators: Add subtle, stylized arrows (e.g., chevrons in Outlaw Red) between containers if possible to suggest a logical flow (e.g., top-left to bottom-right).
+
+Content within Containers:
+
+Icon: Place a specific, simple line icon for each component (Trophy, Brain+Team, Engine/Cog, Locker, People Network, Token) inside its container (top-left or above title). Use Grit Teal or White for icons.
+
+Title: Display the component title (e.g., "PREMIUM SPORTS IP PORTFOLIO") using ADAM.CG PRO or Neodex (Medium, White or Grit Teal).
+
+Description: Display the descriptive text using Inter font (Small-Medium, White). Use the custom bullet attached_assets/Bulletpoint_Logo_Skull(Red) copy.png for first-level list items within descriptions (ensure CSS from previous prompt is applied or re-apply if needed). Use standard nested bullets (disc/square) for deeper levels.
+
+Content Fit & Responsiveness (CRITICAL):
+
+Ensure all text, including nested bullets, is fully visible within its container without overflowing.
+
+Containers must resize vertically to accommodate their content.
+
+Use flexible layouts and text wrapping.
+
+If necessary to prevent overflow, slightly reduce the font size of the Inter description text (minimum 12px).
+
+Typography & Color: Strictly adhere to the font rules (ADAM.CG PRO, Inter, Neodex accents) and Sparq color palette as defined in the main design document (sparq_deck_design_doc_v2).
+
+Polish: Ensure clean alignment, consistent spacing between grid items, and proper placement of the Sparq Skull footer logo.
+
+Reference: This new layout should be significantly more dynamic and visually structured than the previous version, drawing inspiration from the INK Games deck's energy while ensuring all content from Updated_Pitch_Deck_Content.txt for Slide 12 is included and readable. Replace the existing Slide 12 code.

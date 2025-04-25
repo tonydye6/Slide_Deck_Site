@@ -1,0 +1,283 @@
+/* Slide 12: Go To Market - Angled Flow Grid Layout */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-steel: #1E1E24;
+    --sparq-white: #FFFFFF;
+}
+
+#slide-12 .content.go-to-market-angled {
+    background-image: url("../Gameplay1.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay to ensure text readability */
+#slide-12 .content.go-to-market-angled::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 40, 66, 0.85); /* Carbon at 85% opacity */
+    z-index: 0;
+}
+
+#slide-12 .header {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+#slide-12 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-teal);
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#slide-12 .gtm-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#slide-12 .gtm-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 1.1);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slide-12 .angled-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Adjust grid layout for smaller screens */
+@media (max-width: 1200px) {
+    #slide-12 .angled-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/* Adjust grid layout for even smaller screens */
+@media (max-width: 768px) {
+    #slide-12 .angled-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+}
+
+#slide-12 .strategy-item {
+    background-color: var(--sparq-steel);
+    border: 1px solid rgba(0, 161, 156, 0.5);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    clip-path: polygon(
+        0 0,                    /* top-left */
+        100% 0,                 /* top-right */
+        95% 100%,               /* bottom-right */
+        5% 100%                 /* bottom-left */
+    );
+}
+
+/* Add flow indicators - angled arrow shapes */
+#slide-12 .strategy-item::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 10%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--sparq-red);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 2;
+    opacity: 0.8;
+}
+
+/* Remove arrows from the last row */
+#slide-12 .strategy-item:nth-child(4)::after,
+#slide-12 .strategy-item:nth-child(5)::after,
+#slide-12 .strategy-item:nth-child(6)::after {
+    display: none;
+}
+
+#slide-12 .strategy-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--spacing-sm);
+}
+
+#slide-12 .strategy-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+#slide-12 .strategy-title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    color: var(--sparq-teal);
+    font-size: calc(var(--heading-size) * 0.65);
+    margin: 0;
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+#slide-12 .strategy-content {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.9);
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+#slide-12 .strategy-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: var(--spacing-xs);
+    margin-bottom: 0;
+}
+
+#slide-12 .strategy-content li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+}
+
+#slide-12 .strategy-content li img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+#slide-12 .strategy-content li ul {
+    margin-top: var(--spacing-xs);
+    margin-left: 14px;
+}
+
+#slide-12 .strategy-content li ul li {
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+    list-style-type: disc;
+}
+
+/* SVG icons for strategy items */
+#slide-12 .icon-trophy {
+    fill: none;
+    stroke: var(--sparq-teal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#slide-12 .icon-brain {
+    fill: none;
+    stroke: var(--sparq-teal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#slide-12 .icon-cog {
+    fill: none;
+    stroke: var(--sparq-teal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#slide-12 .icon-locker {
+    fill: none;
+    stroke: var(--sparq-teal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#slide-12 .icon-community {
+    fill: none;
+    stroke: var(--sparq-teal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#slide-12 .icon-token {
+    fill: none;
+    stroke: var(--sparq-teal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-12 .strategy-title {
+        font-size: calc(var(--heading-size) * 0.6);
+    }
+    
+    #slide-12 .strategy-content {
+        font-size: calc(var(--body-size) * 0.85);
+    }
+    
+    #slide-12 .strategy-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-12 .header {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-12 .gtm-intro {
+        font-size: calc(var(--body-size) * 1);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    #slide-12 .angled-grid {
+        gap: 15px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-12 .strategy-item {
+        padding: 12px;
+    }
+    
+    #slide-12 .strategy-content {
+        font-size: calc(var(--body-size) * 0.8);
+    }
+    
+    #slide-12 .strategy-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
+    }
+}
