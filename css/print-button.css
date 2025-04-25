@@ -50,3 +50,15 @@
         display: none !important;
     }
 }
+
+/* Updated PDF button styles */
+#print-button {
+    opacity: 0.7;
+    transform: scale(0.85);
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+#print-button:hover {
+    opacity: 1;
+    transform: scale(0.9);
+}
