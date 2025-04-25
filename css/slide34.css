@@ -1,0 +1,217 @@
+/* Slide 34: Catalyst for Bitcoin Market Cycles */
+#slide-34 {
+    background-color: var(--sparq-carbon);
+}
+
+#slide-34 .content {
+    padding: 30px;
+    position: relative;
+    color: var(--sparq-white);
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#slide-34 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#slide-34 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--sparq-gold);
+    margin: 0;
+}
+
+#slide-34 .appendix-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--sparq-teal);
+    padding: 3px 6px;
+    border: 1px solid var(--sparq-teal);
+    border-radius: 4px;
+}
+
+#slide-34 .catalyst-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+#slide-34 .text-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#slide-34 .key-observations {
+    margin-bottom: 15px;
+}
+
+#slide-34 .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--sparq-red);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+#slide-34 .bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#slide-34 .bullet-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+#slide-34 .bullet-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+#slide-34 .bullet-text {
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+#slide-34 .cycle-timing {
+    margin-top: auto;
+}
+
+#slide-34 .visualization-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#slide-34 .visualization {
+    background-color: rgba(0, 161, 156, 0.1);
+    border: 1px dashed var(--sparq-teal);
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#slide-34 .timeline-viz {
+    flex: 1;
+}
+
+#slide-34 .price-chart-viz {
+    flex: 1;
+}
+
+#slide-34 .viz-placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--sparq-teal);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-34 .catalyst-content {
+        gap: 15px;
+    }
+    
+    #slide-34 .section-title {
+        font-size: 15px;
+    }
+    
+    #slide-34 .bullet-text {
+        font-size: 13px;
+    }
+    
+    #slide-34 .viz-placeholder {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide-34 .catalyst-content {
+        gap: 10px;
+    }
+    
+    #slide-34 .title {
+        font-size: 26px;
+    }
+    
+    #slide-34 .bullet-icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+    }
+    
+    #slide-34 .bullet-text {
+        font-size: 12px;
+        line-height: 1.25;
+    }
+    
+    #slide-34 .viz-placeholder {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-34 .content {
+        padding: 20px;
+    }
+    
+    #slide-34 .header {
+        margin-bottom: 15px;
+    }
+    
+    #slide-34 .title {
+        font-size: 24px;
+    }
+    
+    #slide-34 .bullet-item {
+        margin-bottom: 5px;
+    }
+    
+    #slide-34 .bullet-icon {
+        margin-top: 2px;
+    }
+    
+    #slide-34 .bullet-text {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+    
+    #slide-34 .section-title {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    #slide-34 .key-observations {
+        margin-bottom: 10px;
+    }
+    
+    #slide-34 .visualization {
+        padding: 10px;
+    }
+    
+    #slide-34 .viz-placeholder {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+}
