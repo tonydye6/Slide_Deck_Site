@@ -1,45 +1,48 @@
-
 /* Slide 42: The Locker Room: Legacy Builder */
 .legacy-builder-content {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 100px);
-    padding: 0 30px;
+    height: calc(100% - 120px);
+    padding: 0 40px;
 }
 
 .legacy-builder-content h2 {
     font-family: 'ADAM.CG PRO', sans-serif;
     color: #FF0026; /* Outlaw Red */
     text-align: center;
-    margin-bottom: 8px;
-    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-size: 2.2em;
 }
 
 .legacy-builder-content h3 {
     font-family: 'ADAM.CG PRO', sans-serif;
     color: #00A19C; /* Grit Teal */
-    margin-bottom: 10px;
-    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .legacy-builder-container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex: 1;
-    min-height: 0; /* Prevents flex container from overflowing */
 }
 
-.legacy-content-left, .legacy-content-right {
+.legacy-content-left {
     flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+}
+
+.legacy-content-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .legacy-description {
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    line-height: 1.3;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .benefits-list, .cross-game-items {
@@ -51,17 +54,22 @@
 .benefit-item, .item-type {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 12px;
-    gap: 8px;
+    margin-bottom: 15px;
+    gap: 10px;
 }
 
 .benefit-icon, .item-icon {
-    width: 18px;
-    height: 18px;
-    min-width: 18px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.benefit-icon img, .item-icon img {
+    width: 100%;
+    height: 100%;
 }
 
 .benefit-content, .item-content {
@@ -73,94 +81,87 @@
     font-weight: bold;
     font-family: 'ADAM.CG PRO', sans-serif;
     color: #FFD700; /* Victory Gold */
-    font-size: 0.9rem;
-    margin-bottom: 4px;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
 .benefit-description, .item-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.progression-indicators {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.progression-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.indicator-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2B2842; /* Carbon */
+    border: 2px solid #00A19C; /* Grit Teal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.indicator-label {
+    text-align: center;
     font-size: 0.85rem;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .case-study {
-    background-color: rgba(43, 40, 66, 0.7);
-    border-left: 3px solid #FF0026;
-    padding: 12px;
-    margin-top: 15px;
+    background-color: rgba(43, 40, 66, 0.7); /* Carbon with transparency */
+    border-left: 4px solid #FF0026; /* Outlaw Red */
+    padding: 15px;
+    margin-top: 20px;
 }
 
 .case-study h4 {
-    color: #FFD700;
+    color: #FFD700; /* Victory Gold */
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-family: 'ADAM.CG PRO', sans-serif;
-    font-size: 0.9rem;
 }
 
 .cross-game-header {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .divider {
     height: 2px;
-    background-color: #00A19C;
-    margin: 12px 0;
+    background-color: #00A19C; /* Grit Teal */
+    margin: 15px 0;
 }
 
+/* Quote section */
 .legacy-quote {
-    background-color: rgba(0, 161, 156, 0.15);
-    padding: 12px;
+    background-color: rgba(0, 161, 156, 0.15); /* Grit Teal with transparency */
+    padding: 15px;
     border-radius: 5px;
     margin-top: auto;
-    margin-bottom: 10px;
 }
 
 .legacy-quote p {
     font-style: italic;
-    padding-left: 15px;
-    border-left: 3px solid #FF0026;
+    padding-left: 20px;
+    border-left: 3px solid #FF0026; /* Outlaw Red */
     margin: 0;
-    font-size: 0.85rem;
-    line-height: 1.3;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .legacy-builder-content {
-        padding: 0 20px;
-    }
-    
-    .legacy-builder-content h2 {
-        font-size: 1.6em;
-    }
-    
-    .legacy-builder-content h3 {
-        font-size: 1.2em;
-    }
-    
-    .benefit-title, .item-title {
-        font-size: 0.85rem;
-    }
-    
-    .benefit-description, .item-description {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-height: 800px) {
-    .legacy-builder-content {
-        height: calc(100% - 80px);
-    }
-    
-    .legacy-builder-container {
-        gap: 15px;
-    }
-    
-    .benefit-item, .item-type {
-        margin-bottom: 8px;
-    }
-    
-    .legacy-quote {
-        padding: 10px;
-    }
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
