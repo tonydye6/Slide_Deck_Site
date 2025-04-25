@@ -1,0 +1,26 @@
+Slide 43: Industry Leaders: Athlete Comp
+Objective: Detail Sparq's athlete compensation model compared to competitors (Appendix).
+Content Source: Updated_Pitch_Deck_Content.txt - Slide 43
+Layout: Comparison table, explanation of Sparq's model, benefits list.
+Background: Solid Carbon (#2B2842).
+Title: "Industry Leaders: Athlete Comp" - ADAM.CG PRO, Large, Uppercase, Grit Teal (#00A19C), top-left. Mark as Appendix (top-right label).
+"The Competition" Table:
+Layout: 3-column table comparing EA, Pathway Sports, Sparq Crown U.
+Rows: Base Payment, Revenue Sharing, Community Component, Future Value.
+Font: Inter, Small-Medium, White. Use Grit Teal for headers. Highlight Sparq's advantages using bold or Victory Gold.
+"Our Hybrid Fixed + Escalating Model" Section:
+Heading: ADAM.CG PRO or Neodex, Medium, Outlaw Red.
+Bullet Points: Use Logo_Skull(Red).png. Font: Inter, Small-Medium, White.
+"Benefits Over Competing Models" Section:
+Heading: ADAM.CG PRO or Neodex, Medium, Grit Teal.
+Bullet Points: Use Logo_Skull(Red).png. Font: Inter, Small-Medium, White.
+Footer Logo: Logo_Skull(Red).png, bottom-left.
+Slide 44: Rise Together Fund
+Objective: Explain the Rise Together Fund program (Appendix).
+Content Source: Updated_Pitch_Deck_Content.txt - Slide 44
+Layout: Explain concept, principles, mechanics, impact, and include quote.
+Background: Solid Carbon (#2B2842) or a background suggesting community/support (e.g., subtle network graphic).
+Title: "Rise Together Fund" - ADAM.CG PRO, Large, Uppercase, Grit Teal (#00A19C), top-left. Subtitle: "Collective Success for All Athletes" - Inter, Medium, White. Mark as Appendix (top-right label).
+Sections: Use clear headings (ADAM.CG PRO or Neodex, Medium, Outlaw Red/Grit Teal) for "Core Principles", "How It Works", "The Impact".
+Bullet Points: Use Logo_Skull(Red).png. Font: Inter, Small-Medium, White.
+Quote: Format the final quote distinctively (Inter, Italic, Medium, White), perhaps in a colored box (Grit Teal background, low opacity).
