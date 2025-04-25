@@ -40,6 +40,16 @@ li::before {
     display: none !important;
 }
 
+/* Slide 9 (The Playbook) */
+.playbook-steps li::before {
+    display: none !important;
+}
+
+/* Slide 10 (Use AI Everywhere) */
+.ai-applications-list li::before {
+    display: none !important;
+}
+
 /* Any other bullet-containing sections */
 .feature-list li::before,
 .business-section li::before,
@@ -58,7 +68,14 @@ li::before {
 .monetization-model li::before,
 .marketing-strategy li::before,
 .use-cases li::before,
-.platform-benefits li::before {
+.platform-benefits li::before,
+.ai-benefits li::before,
+.strategy-content li::before,
+.core-values li::before,
+.tokenomics-list li::before,
+.benefits-list li::before,
+.investor-benefits li::before,
+.roadmap-milestone li::before {
     display: none !important;
 }
 
@@ -70,6 +87,21 @@ li img[src*="Bulletpoint_Logo_Skull(Red) copy.png"] {
 /* Reset any list styles that might be overriding our custom bullets */
 ul {
     list-style-type: none !important;
+}
+
+/* Make sure our regular lists don't have any bullets */
+ul.sparq-bullet-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+/* Make sure the images used as bullets in the list items are positioned correctly */
+li img[src*="Bulletpoint_Logo_Skull(Red) copy.png"] {
+    position: absolute !important;
+    left: 0 !important;
+    top: 4px !important;
+    width: 16px !important;
+    height: 16px !important;
 }
 
 /* Fix any specific positioning issues */

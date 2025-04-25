@@ -1,78 +1,95 @@
 // Function to replace all bullet points with skull images
 document.addEventListener('DOMContentLoaded', function() {
-    // Find all ul elements with sparq-bullet-list class
-    const allListElements = document.querySelectorAll('ul.sparq-bullet-list');
+    // Fix for any bare li elements without the custom bullet styling
+    fixBulletPoints();
     
-    // Process each list
-    allListElements.forEach(function(ulElement) {
-        // Get all li elements inside this ul
-        const liElements = ulElement.querySelectorAll('li');
+    // Run again after a slight delay to catch any dynamically loaded elements
+    setTimeout(fixBulletPoints, 500);
+});
+
+function fixBulletPoints() {
+    // First handle any plain li without our custom bullet
+    const allLiElements = document.querySelectorAll('li');
+    
+    allLiElements.forEach(function(liElement) {
+        // Skip if this li already has our custom bullet
+        if (liElement.querySelector('img[src*="Bulletpoint_Logo_Skull(Red) copy.png"]')) {
+            return;
+        }
         
-        // Process each li element
-        liElements.forEach(function(liElement) {
-            // Store the original text content
-            const originalText = liElement.textContent.trim();
-            
-            // Set inline styles directly
-            liElement.style.position = 'relative';
-            liElement.style.paddingLeft = '28px';
-            liElement.style.marginBottom = '8px';
-            liElement.style.listStyle = 'none';
-            
-            // Clear the content and add our custom bullet with the original text
-            liElement.innerHTML = `
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" 
-                     style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                ${originalText}
-            `;
-        });
+        // Skip if this is within a nested sub-list that might have different styling needs
+        const parentUl = liElement.parentElement;
+        if (parentUl && parentUl.parentElement && parentUl.parentElement.tagName === 'LI') {
+            if (parentUl.classList.contains('preserve-bullets')) {
+                return;
+            }
+        }
         
-        // Set styles for the ul element
-        ulElement.style.listStyle = 'none';
-        ulElement.style.paddingLeft = '0';
+        // Store original HTML to preserve any nested elements and formatting
+        const originalHTML = liElement.innerHTML;
+        
+        // Set inline styles directly
+        liElement.style.position = 'relative';
+        liElement.style.paddingLeft = '28px';
+        liElement.style.marginBottom = '8px';
+        liElement.style.listStyle = 'none';
+        
+        // Add our custom bullet but preserve the original HTML content
+        liElement.innerHTML = `
+            <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" 
+                 style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
+            ${originalHTML}
+        `;
     });
     
-    // Also process any ul elements in specific containers that might not have the class
-    const otherContainers = [
+    // Find all ul elements with sparq-bullet-list class or in specific containers
+    const specificSelectors = [
+        'ul.sparq-bullet-list',
+        '.section ul',
         '.feature-list',
         '.business-section ul',
         '.milestone ul', 
         '.market-intro ul',
         '.traction-milestones ul',
         '.economic-factors ul',
-        '.media-outlets ul'
+        '.media-outlets ul',
+        '.playbook-steps ul',
+        '.ai-applications-list',
+        '.ecosystem-text ul',
+        '.locker-room-content ul',
+        '.platform-features ul',
+        '.investment-bullet ul',
+        '.solution-content ul',
+        '.team-section ul',
+        '.game-mechanics ul',
+        '.game-features ul',
+        '.monetization-model ul',
+        '.marketing-strategy ul',
+        '.use-cases ul',
+        '.platform-benefits ul',
+        '.ai-benefits ul',
+        '.strategy-content ul',
+        '.core-values ul',
+        '.tokenomics-list ul',
+        '.benefits-list ul',
+        '.investor-benefits ul',
+        '.roadmap-milestone ul'
     ];
     
-    otherContainers.forEach(function(selector) {
-        const containers = document.querySelectorAll(selector);
+    specificSelectors.forEach(function(selector) {
+        const listElements = document.querySelectorAll(selector);
         
-        containers.forEach(function(container) {
-            // Skip if it already has the sparq-bullet-list class (to avoid duplicating work)
-            if (container.classList.contains('sparq-bullet-list')) {
-                return;
+        listElements.forEach(function(ulElement) {
+            // Set styles for the ul element
+            ulElement.style.listStyle = 'none';
+            ulElement.style.paddingLeft = '0';
+            
+            // Add the sparq-bullet-list class if it doesn't have it
+            if (!ulElement.classList.contains('sparq-bullet-list')) {
+                ulElement.classList.add('sparq-bullet-list');
             }
-            
-            const liElements = container.querySelectorAll('li');
-            
-            liElements.forEach(function(liElement) {
-                const originalText = liElement.textContent.trim();
-                
-                liElement.style.position = 'relative';
-                liElement.style.paddingLeft = '28px';
-                liElement.style.marginBottom = '8px';
-                liElement.style.listStyle = 'none';
-                
-                liElement.innerHTML = `
-                    <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" 
-                         style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                    ${originalText}
-                `;
-            });
-            
-            container.style.listStyle = 'none';
-            container.style.paddingLeft = '0';
         });
     });
     
     console.log("Bullet points have been replaced with skull images");
-});
+}
