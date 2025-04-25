@@ -1,0 +1,59 @@
+Objective: Regenerate Slide 15 ("Business Model") of the Sparq Games pitch deck HTML with a completely new, visually structured "Dual Engine" layout. Ensure all content fits without overflow and the design is more imaginative. Replace the previous version of Slide 15 entirely.
+
+Target: Slide 15 ("Business Model") of the HTML pitch deck.
+
+Specific Instructions for New Design:
+
+Background: Apply Gameplay1.png or Background3.jpg (from Support_Images_Grid.pdf) as the background image with a dark overlay (Carbon #2B2842 at 85-90% opacity) ensuring text readability. Alternatively, use a Carbon to Grit Teal gradient.
+
+Top Section:
+
+Place the main title "BUSINESS MODEL" (ADAM.CG PRO, Large, Uppercase, Grit Teal) at the top.
+
+Add the subtitle "Diversified Revenue Across Web2 & Web3" (Inter, Medium, White) below the title.
+
+Include the introductory paragraph "Combining two large revenue models..." below the subtitle (Inter, Medium, White).
+
+"Dual Engine" Layout:
+
+Below the intro text, create two distinct, visually connected sections side-by-side (use flexbox or grid, allow stacking on smaller screens).
+
+Left Section ("Web2 Gaming Engine"):
+
+Add a clear heading (e.g., "Web2 Gaming Engine") using ADAM.CG PRO or Neodex (Medium, Outlaw Red).
+
+List the 3 Web2 revenue streams (Microtransactions, Ad Sales, Subscription & VIP Packages) vertically within this section.
+
+Right Section ("Web3 & Platform Engine"):
+
+Add a clear heading (e.g., "Web3 & Platform Engine") using ADAM.CG PRO or Neodex (Medium, Grit Teal).
+
+List the 5 Web3/Platform streams (Web3 Sales & Royalties, Brand Partnerships, Data & Analytics, DeFi Revenue, Licensing Fees) vertically within this section.
+
+Visual Connection: Add stylized graphic elements (lines, pipes, energy flows using Outlaw Red and Grit Teal) visually linking the two sections.
+
+Content within Engine Sections:
+
+For each revenue stream:
+
+Icon: Include a relevant simple line icon (Cart, Play Button, VIP/Crown, Token, Handshake/Megaphone, Graph, Chain Links, Briefcase/License) using White or the section's accent color.
+
+Title: Display the stream title (e.g., "Microtransactions") using ADAM.CG PRO or Neodex (Small-Medium, White).
+
+Description: Display the descriptive text using Inter font (Small, White or light grey #E0E0E0).
+
+Arrange items neatly within each section using consistent spacing.
+
+Content Fit & Responsiveness (CRITICAL):
+
+Ensure all text is fully visible without overflowing. Use text wrapping.
+
+The two main sections must stack vertically on smaller screens.
+
+If necessary to prevent overflow, slightly reduce the font size of the Inter description text (minimum 12px).
+
+Typography & Color: Strictly adhere to the font rules (ADAM.CG PRO, Inter, Neodex accents) and Sparq color palette (Outlaw Red, Grit Teal, Carbon, Steel, White, Victory Gold) as defined in the main design document (sparq_deck_design_doc_v2). Ensure custom bullet CSS is applied if any lists are used (though source has none here).
+
+Polish: Ensure clean alignment, consistent spacing, and proper placement of the Sparq Skull footer logo.
+
+Reference: This new layout should provide clear structure and visual interest, separating the revenue streams logically while feeling more dynamic than the previous list format. Align with sparq_deck_design_doc_v2. Replace the existing Slide 15 code.
