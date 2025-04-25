@@ -19,7 +19,21 @@
     height: 20px;
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Ensure bullet points work in specific slides */
+.mass-adoption-playbook ul > li::before,
+.ecosystem-text ul > li::before,
+.web3-games-failure ul > li::before {
+    content: '';
+    background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png');
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Styling for secondary/nested list items */
