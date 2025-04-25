@@ -1,0 +1,29 @@
+
+/* Slide 44: Rise Together Fund */
+.rtf-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 120px);
+    padding: 0 40px;
+}
+
+.rtf-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.principle-card {
+    background: rgba(43, 40, 66, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #00A19C;
+}
+
+.impact-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 0, 38, 0.1);
+    border-radius: 8px;
+}

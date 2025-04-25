@@ -1,0 +1,32 @@
+
+/* Slide 43: Industry-Leading Athlete Compensation */
+.athlete-comp-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 120px);
+    padding: 0 40px;
+}
+
+.compensation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.company-comparison {
+    background: rgba(43, 40, 66, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #FF0026;
+}
+
+.comparison-header {
+    color: #FFD700;
+    font-family: 'ADAM.CG PRO', sans-serif;
+    margin-bottom: 10px;
+}
+
+.comparison-details {
+    font-size: 0.9rem;
+}

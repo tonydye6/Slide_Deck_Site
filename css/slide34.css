@@ -215,3 +215,32 @@
         line-height: 1.2;
     }
 }
+/* Slide 34: Bitcoin Market Cycles */
+.market-cycles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cycle-timeline {
+    background: rgba(43, 40, 66, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    height: 200px;
+}
+
+.timeline-marker {
+    position: absolute;
+    width: 2px;
+    background: #FF0026;
+    height: 100%;
+}
+
+.cycle-chart {
+    height: 300px;
+    background: rgba(43, 40, 66, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+}
