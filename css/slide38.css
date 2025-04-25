@@ -58,7 +58,7 @@
 }
 
 #slide-38 .chart-container {
-    height: 370px; /* Adjust as needed */
+    height: 370px;
     margin-bottom: 20px;
     position: relative;
     border: 1px solid rgba(0, 161, 156, 0.3);
@@ -77,167 +77,211 @@
 }
 
 #slide-38 .stacked-chart {
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 24px); /* Adjust based on chart title and padding */
     position: relative;
+    height: calc(100% - 70px);
+    box-sizing: border-box;
 }
 
-#slide-38 .chart-y-axis {
+#slide-38 .chart-axes {
     position: absolute;
     left: 0;
     top: 0;
-    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#slide-38 .y-axis {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 25px;
     width: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    padding-right: 5px;
+    padding-right: 8px;
+}
+
+#slide-38 .y-label {
     font-family: 'Inter', sans-serif;
     font-size: 10px;
     color: var(--sparq-white);
+    white-space: nowrap;
 }
 
-#slide-38 .chart-x-axis {
+#slide-38 .x-axis {
     position: absolute;
     left: 60px;
-    right: 0;
+    right: 10px;
     bottom: 0;
-    height: 20px;
+    height: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#slide-38 .x-label {
     font-family: 'Inter', sans-serif;
     font-size: 10px;
     color: var(--sparq-white);
+    transform: translateX(-50%);
 }
 
-#slide-38 .chart-grid {
+#slide-38 .y-title, #slide-38 .x-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--sparq-white);
+    position: absolute;
+}
+
+#slide-38 .y-title {
+    transform: rotate(-90deg) translateX(-50%);
+    left: -25px;
+    top: 50%;
+}
+
+#slide-38 .x-title {
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slide-38 .grid-lines {
     position: absolute;
     left: 60px;
-    right: 0;
+    right: 10px;
     top: 0;
-    bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    bottom: 25px;
 }
 
-#slide-38 .grid-line {
-    width: 100%;
+#slide-38 .horizontal-line {
+    position: absolute;
+    left: 0;
+    right: 0;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#slide-38 .chart-bars {
+#slide-38 .chart-content {
     position: absolute;
     left: 60px;
-    right: 0;
+    right: 10px;
     top: 0;
-    bottom: 20px;
+    bottom: 25px;
     display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
 }
 
-#slide-38 .chart-bar {
-    flex: 1;
+#slide-38 .stacked-bars {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 0 1px;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#slide-38 .bar-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: 100%;
+    width: 18px;
 }
 
 #slide-38 .bar-segment {
     width: 100%;
 }
 
-#slide-38 .segment-foundation {
-    background-color: var(--sparq-red);
-}
-
-#slide-38 .segment-liquidity {
-    background-color: var(--sparq-teal);
-}
-
-#slide-38 .segment-marketing {
-    background-color: var(--sparq-gold);
-}
-
-#slide-38 .segment-partners {
-    background-color: #9C27B0; /* Purple */
+/* Assign colors as per specifications */
+#slide-38 .segment-tokensale {
+    background-color: var(--sparq-teal);  /* #00A19C */
 }
 
 #slide-38 .segment-team {
-    background-color: #2196F3; /* Blue */
+    background-color: var(--sparq-red);   /* #EB0028 */
 }
 
-#slide-38 .segment-tokensale {
-    background-color: #4CAF50; /* Green */
+#slide-38 .segment-partners {
+    background-color: #FF3864;
+}
+
+#slide-38 .segment-marketing {
+    background-color: #404BF2;
 }
 
 #slide-38 .segment-nftholders {
-    background-color: #FF9800; /* Orange */
+    background-color: var(--sparq-gold);  /* #FFD700 */
 }
 
 #slide-38 .segment-ecosystem {
-    background-color: #607D8B; /* Blue Grey */
+    background-color: #A0522D;  /* SaddleBrown */
+}
+
+#slide-38 .segment-liquidity {
+    background-color: #C0F2EA;
+}
+
+#slide-38 .segment-foundation {
+    background-color: #DAA520;  /* Goldenrod */
 }
 
 #slide-38 .chart-legend {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 5px;
-    gap: 15px;
+    padding: 5px 0;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 #slide-38 .legend-item {
     display: flex;
     align-items: center;
-    margin-right: 15px;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
     color: var(--sparq-white);
+    white-space: nowrap;
 }
 
 #slide-38 .legend-color {
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
     border-radius: 2px;
 }
 
-#slide-38 .legend-foundation {
-    background-color: var(--sparq-red);
-}
-
-#slide-38 .legend-liquidity {
-    background-color: var(--sparq-teal);
-}
-
-#slide-38 .legend-marketing {
-    background-color: var(--sparq-gold);
-}
-
-#slide-38 .legend-partners {
-    background-color: #9C27B0; /* Purple */
+/* Legend color classes */
+#slide-38 .legend-tokensale {
+    background-color: var(--sparq-teal);  /* #00A19C */
 }
 
 #slide-38 .legend-team {
-    background-color: #2196F3; /* Blue */
+    background-color: var(--sparq-red);   /* #EB0028 */
 }
 
-#slide-38 .legend-tokensale {
-    background-color: #4CAF50; /* Green */
+#slide-38 .legend-partners {
+    background-color: #FF3864;
+}
+
+#slide-38 .legend-marketing {
+    background-color: #404BF2;
 }
 
 #slide-38 .legend-nftholders {
-    background-color: #FF9800; /* Orange */
+    background-color: var(--sparq-gold);  /* #FFD700 */
 }
 
 #slide-38 .legend-ecosystem {
-    background-color: #607D8B; /* Blue Grey */
+    background-color: #A0522D;  /* SaddleBrown */
+}
+
+#slide-38 .legend-liquidity {
+    background-color: #C0F2EA;
+}
+
+#slide-38 .legend-foundation {
+    background-color: #DAA520;  /* Goldenrod */
 }
 
 #slide-38 .description {

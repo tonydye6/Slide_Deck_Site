@@ -3471,188 +3471,253 @@
                         <div class="chart-container">
                             <h3 class="chart-title">$SPARQ Token Release Schedule (Weeks 0-60)</h3>
                             <div class="stacked-chart">
-                                <!-- Y-axis labels -->
-                                <div class="chart-y-axis">
-                                    <span>1,000M</span>
-                                    <span>800M</span>
-                                    <span>600M</span>
-                                    <span>400M</span>
-                                    <span>200M</span>
-                                    <span>0</span>
+                                <!-- Chart axes -->
+                                <div class="chart-axes">
+                                    <!-- Y-axis with labels -->
+                                    <div class="y-axis">
+                                        <div class="y-label">1B</div>
+                                        <div class="y-label">800M</div>
+                                        <div class="y-label">600M</div>
+                                        <div class="y-label">400M</div>
+                                        <div class="y-label">200M</div>
+                                        <div class="y-label">0</div>
+                                    </div>
+                                    
+                                    <!-- X-axis with labels -->
+                                    <div class="x-axis">
+                                        <div class="x-label">0</div>
+                                        <div class="x-label">3</div>
+                                        <div class="x-label">6</div>
+                                        <div class="x-label">9</div>
+                                        <div class="x-label">24</div>
+                                        <div class="x-label">27</div>
+                                        <div class="x-label">30</div>
+                                        <div class="x-label">33</div>
+                                        <div class="x-label">36</div>
+                                        <div class="x-label">39</div>
+                                        <div class="x-label">42</div>
+                                        <div class="x-label">45</div>
+                                        <div class="x-label">48</div>
+                                        <div class="x-label">51</div>
+                                        <div class="x-label">54</div>
+                                        <div class="x-label">57</div>
+                                        <div class="x-label">60</div>
+                                    </div>
+                                    
+                                    <!-- Axis titles -->
+                                    <div class="y-title">Finite Token Supply</div>
+                                    <div class="x-title">Weeks</div>
                                 </div>
                                 
-                                <!-- X-axis labels -->
-                                <div class="chart-x-axis">
-                                    <span>0</span>
-                                    <span>10</span>
-                                    <span>20</span>
-                                    <span>30</span>
-                                    <span>40</span>
-                                    <span>50</span>
-                                    <span>60</span>
+                                <!-- Grid lines for better readability -->
+                                <div class="grid-lines">
+                                    <div class="horizontal-line" style="bottom: 0%;"></div>
+                                    <div class="horizontal-line" style="bottom: 20%;"></div>
+                                    <div class="horizontal-line" style="bottom: 40%;"></div>
+                                    <div class="horizontal-line" style="bottom: 60%;"></div>
+                                    <div class="horizontal-line" style="bottom: 80%;"></div>
+                                    <div class="horizontal-line" style="bottom: 100%;"></div>
                                 </div>
                                 
-                                <!-- Grid lines -->
-                                <div class="chart-grid">
-                                    <div class="grid-line"></div>
-                                    <div class="grid-line"></div>
-                                    <div class="grid-line"></div>
-                                    <div class="grid-line"></div>
-                                    <div class="grid-line"></div>
-                                </div>
-                                
-                                <!-- Chart bars (stacked) -->
-                                <div class="chart-bars">
-                                    <!-- Week 0 - Initial Release - Just Public Portion -->
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 4%;"></div>
-                                    </div>
-                                    
-                                    <!-- Weeks 1-8 - Very limited release -->
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 5%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 1%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 6%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 2%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 7%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 3%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 8%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 3%;"></div>
-                                    </div>
-                                    
-                                    <!-- Weeks 9-16 - Private sale begins unlocking -->
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 10%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 4%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 3%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 5%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 4%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 6%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 5%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 17%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 7%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 5%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 3%;"></div>
-                                    </div>
-                                    
-                                    <!-- Weeks 17-36 - Majority Unlock Period -->
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 19%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 8%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 6%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 4%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 5%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 21%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 7%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 5%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 8%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 5%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 23%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 7%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 10%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 8%;"></div>
-                                        <div class="bar-segment segment-nftholders" style="height: 5%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 10%;"></div>
-                                        <div class="bar-segment segment-nftholders" style="height: 7%;"></div>
-                                    </div>
-                                    
-                                    <!-- Weeks 37-60 - Team & Treasury Unlocking -->
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 10%;"></div>
-                                        <div class="bar-segment segment-nftholders" style="height: 7%;"></div>
-                                        <div class="bar-segment segment-team" style="height: 5%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 12%;"></div>
-                                        <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
-                                        <div class="bar-segment segment-team" style="height: 7%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 14%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 13%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
-                                        <div class="bar-segment segment-team" style="height: 10%;"></div>
-                                    </div>
-                                    <div class="chart-bar">
-                                        <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
-                                        <div class="bar-segment segment-ecosystem" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-liquidity" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-marketing" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-partners" style="height: 15%;"></div>
-                                        <div class="bar-segment segment-foundation" style="height: 17%;"></div>
-                                        <div class="bar-segment segment-nftholders" style="height: 9%;"></div>
-                                        <div class="bar-segment segment-team" style="height: 15%;"></div>
+                                <!-- The actual chart content with bars -->
+                                <div class="chart-content">
+                                    <div class="stacked-bars">
+                                        <!-- Week 0 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 5%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 3 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 2%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 6 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 10%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 3%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 2%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 9 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 12%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 5%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 3%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 1%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 24 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 18%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 5%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 4%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 5%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 27 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 20%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 18%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 10%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 6%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 5%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 7%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 5%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 30 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 22%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 20%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 12%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 7%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 6%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 7%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 33 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 13%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 7%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 9%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 36 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 30%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 10%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 11%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 39 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 32%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 12%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 12%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 3%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 42 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 33%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 13%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 13%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 6%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 45 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 34%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 8%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 48 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 35%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 14%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 10%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 51 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 35%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 16%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 12%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 54 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 36%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 17%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 13%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 57 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 36%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 18%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 14%;"></div>
+                                        </div>
+                                        
+                                        <!-- Week 60 -->
+                                        <div class="bar-container">
+                                            <div class="bar-segment segment-tokensale" style="height: 25%;"></div>
+                                            <div class="bar-segment segment-ecosystem" style="height: 36%;"></div>
+                                            <div class="bar-segment segment-liquidity" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-marketing" style="height: 9%;"></div>
+                                            <div class="bar-segment segment-nftholders" style="height: 8%;"></div>
+                                            <div class="bar-segment segment-partners" style="height: 15%;"></div>
+                                            <div class="bar-segment segment-foundation" style="height: 19%;"></div>
+                                            <div class="bar-segment segment-team" style="height: 15%;"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <!-- Chart Legend -->
+                            <!-- Legend for the chart, in stacking order -->
                             <div class="chart-legend">
                                 <div class="legend-item">
-                                    <div class="legend-color legend-foundation"></div>
-                                    <span>Foundation</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color legend-liquidity"></div>
-                                    <span>Liquidity</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color legend-marketing"></div>
-                                    <span>Marketing</span>
-                                </div>
-                                <div class="legend-item">
-                                    <div class="legend-color legend-partners"></div>
-                                    <span>Partners</span>
+                                    <div class="legend-color legend-tokensale"></div>
+                                    <span>Token Sale</span>
                                 </div>
                                 <div class="legend-item">
                                     <div class="legend-color legend-team"></div>
                                     <span>Team</span>
                                 </div>
                                 <div class="legend-item">
-                                    <div class="legend-color legend-tokensale"></div>
-                                    <span>Token Sale</span>
+                                    <div class="legend-color legend-partners"></div>
+                                    <span>Partners</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color legend-marketing"></div>
+                                    <span>Marketing</span>
                                 </div>
                                 <div class="legend-item">
                                     <div class="legend-color legend-nftholders"></div>
@@ -3661,6 +3726,14 @@
                                 <div class="legend-item">
                                     <div class="legend-color legend-ecosystem"></div>
                                     <span>Ecosystem</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color legend-liquidity"></div>
+                                    <span>Liquidity</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color legend-foundation"></div>
+                                    <span>Foundation</span>
                                 </div>
                             </div>
                         </div>
