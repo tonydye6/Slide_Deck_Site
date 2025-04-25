@@ -1,0 +1,49 @@
+Objective: Regenerate Slide 23 ("Fundraise") of the Sparq Games pitch deck HTML with a completely new, visually distinct two-panel layout. The design should be imaginative, align with Sparq branding, and ensure all content fits without overflow or scroll bars. Replace the previous version of Slide 23 entirely.
+
+Target: Slide 23 ("Fundraise") of the HTML pitch deck.
+
+Specific Instructions for New Design:
+
+Background: Use a clean dark background (Carbon #2B2842 or Steel #1E1E24) or a subtle gradient (e.g., Carbon to Grit Teal). Alternatively use Background3.jpg with an 85-90% Carbon overlay.
+
+Top Section:
+
+Place the main title "FUNDRAISE" (ADAM.CG PRO, Large, Uppercase, Victory Gold) at the top.
+
+Place the introductory sentence ("Opportunities to invest...") below the title, spanning the width (Inter, Medium, White).
+
+Two-Panel Layout: Below the intro, create two distinct vertical panels side-by-side (use flexbox or grid, ensure they stack vertically on smaller screens). Apply consistent padding inside each panel (e.g., p-6).
+
+Left Panel (SAFE Offering):
+
+Optional: Apply a subtle background (Steel) or a left/top border (border-l-4 border-teal-500 or border-t-4 border-teal-500 using Tailwind colors approximating Grit Teal).
+
+Add a large "SAFE" title (Neodex or ADAM.CG PRO, Extra Large, Grit Teal) at the top. Below it, add "Sparq Inc. Offering" (Inter, Medium, White).
+
+Structure the terms ($100M cap, 20% discount, $100k min, $10M limit) using key-value pairs or a definition list. Highlight values (ADAM.CG PRO/Neodex, Bold, Victory Gold or White). Use Inter for labels.
+
+Add the additional descriptive points ("Accepting investments...", "Targeting...", "Currently...", "Lead investor...") using a list with the custom Sparq Skull bullet points (<ul class="sparq-list">). Use Inter font (Small-Medium, White).
+
+Right Panel (SAFT Offering):
+
+Optional: Apply a subtle background (Steel) or a left/top border (border-l-4 border-red-600 or border-t-4 border-red-600 using Tailwind colors approximating Outlaw Red).
+
+Add a large "$SPARQ" or "SAFT" title (Neodex or ADAM.CG PRO, Extra Large, Outlaw Red) at the top. Below it, add "$SPARQ Offering" (Inter, Medium, White).
+
+Structure the terms ($20M cap, $50k min, cliff, unvest, $1M limit, TGE target, $525k raised, Remaining allocation) using key-value pairs or a definition list. Highlight values (ADAM.CG PRO/Neodex, Bold, Victory Gold or White). Use Inter for labels and descriptions. Use nested bullets if needed for Token Distribution Terms.
+
+Content Fit & Readability (CRITICAL):
+
+Ensure ALL text content for Slide 23 fits entirely within the slide boundaries without overflow or scroll bars. This is the absolute priority.
+
+Use text wrapping within panels.
+
+Mandatory: Adjust font sizes (Inter descriptions/labels, min 12px) and line spacing (leading-snug) as needed to fit content.
+
+Ensure high contrast between text and backgrounds.
+
+Typography & Color: Strictly adhere to the font rules (ADAM.CG PRO, Inter, Neodex accents) and Sparq color palette (Outlaw Red, Grit Teal, Carbon, Steel, White, Victory Gold) as defined in the main design document (sparq_deck_design_doc_v2). Ensure custom bullet CSS is applied correctly.
+
+Polish: Ensure clean alignment within panels, consistent spacing, and proper placement of the Sparq Skull footer logo.
+
+Reference: This new layout should make the fundraise information clear, visually engaging, and professional, drawing inspiration from structured financial slides while fitting the Sparq brand. Align with sparq_deck_design_doc_v2. Replace the existing Slide 23 code.

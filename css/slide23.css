@@ -1,4 +1,4 @@
-/* Slide 23: Fundraise - Styling */
+/* Slide 23: Fundraise - Styling with advanced two-panel layout */
 
 :root {
     --sparq-red: #FF0026;
@@ -10,35 +10,52 @@
 }
 
 #slide-23 .content.fundraise {
-    background-color: var(--sparq-carbon);
+    background: linear-gradient(135deg, var(--sparq-carbon) 0%, var(--sparq-steel) 100%);
     color: var(--sparq-white);
     position: relative;
     overflow: hidden;
 }
 
+#slide-23 .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Background3.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
 #slide-23 .header {
     position: relative;
     z-index: 1;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #slide-23 .title {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 34px;
+    font-size: 40px;
     font-weight: bold;
     color: var(--sparq-gold);
     margin-bottom: 0.2em;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
 }
 
 #slide-23 .fundraise-subheading {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--sparq-white);
     margin-bottom: 25px;
     max-width: 90%;
     font-weight: 500;
+    margin: 0 auto;
+    line-height: 1.4;
 }
 
 #slide-23 .fundraise-content {
@@ -49,77 +66,131 @@
     z-index: 1;
 }
 
-#slide-23 .fundraise-sections {
+#slide-23 .panels-container {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
 }
 
-#slide-23 .fundraise-section {
+#slide-23 .panel {
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    background-color: rgba(30, 30, 36, 0.7);
+    border-radius: 12px;
     padding: 20px;
-    border-left: 3px solid var(--sparq-teal);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
-#slide-23 .section-heading {
-    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 22px;
-    color: var(--sparq-teal);
+#slide-23 .safe-panel {
+    border-top: 4px solid var(--sparq-teal);
+}
+
+#slide-23 .saft-panel {
+    border-top: 4px solid var(--sparq-red);
+}
+
+#slide-23 .panel-header {
     margin-bottom: 15px;
-    text-transform: uppercase;
+    position: relative;
 }
 
-#slide-23 .bullet-list {
+#slide-23 .panel-title {
+    font-family: 'Neodex', 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#slide-23 .safe-panel .panel-title {
+    color: var(--sparq-teal);
+}
+
+#slide-23 .saft-panel .panel-title {
+    color: var(--sparq-red);
+}
+
+#slide-23 .panel-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--sparq-white);
+    font-weight: 500;
+}
+
+#slide-23 .terms-list {
     list-style-type: none;
     padding-left: 0;
-    margin-top: 5px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
-#slide-23 .bullet-list li {
-    padding-left: 26px;
-    position: relative;
-    margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 1.4;
+#slide-23 .terms-item {
+    margin-bottom: 10px;
+}
+
+#slide-23 .term-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: flex-start;
+    line-height: 1.4;
+    padding-left: 24px;
+    position: relative;
 }
 
-#slide-23 .bullet-list li img {
+#slide-23 .term-label img {
     width: 16px;
     height: 16px;
     position: absolute;
     left: 0;
-    top: 4px;
+    top: 3px;
 }
 
-#slide-23 .nested-bullet-list {
+#slide-23 .term-value {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 16px;
+    color: var(--sparq-gold);
+    font-weight: bold;
+    margin-left: 5px;
+    display: inline;
+}
+
+#slide-23 .sub-list {
     list-style-type: none;
-    padding-left: 26px;
-    margin-top: 6px;
-    margin-bottom: 0;
+    padding-left: 24px;
+    margin-top: 5px;
+    margin-bottom: 8px;
 }
 
-#slide-23 .nested-bullet-list li {
-    padding-left: 15px;
+#slide-23 .sub-item {
     position: relative;
-    margin-bottom: 6px;
-    font-size: 14px;
+    padding-left: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 4px;
     line-height: 1.3;
 }
 
-#slide-23 .nested-bullet-list li::before {
+#slide-23 .sub-item::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 8px;
-    width: 6px;
-    height: 6px;
+    top: 6px;
+    width: 5px;
+    height: 5px;
     background-color: var(--sparq-teal);
     border-radius: 50%;
+}
+
+#slide-23 .saft-panel .sub-item::before {
+    background-color: var(--sparq-red);
 }
 
 #slide-23 .highlight {
@@ -127,16 +198,40 @@
     font-weight: 600;
 }
 
+#slide-23 .panel-graphic {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.1;
+}
+
+#slide-23 .safe-panel .panel-graphic {
+    color: var(--sparq-teal);
+}
+
+#slide-23 .saft-panel .panel-graphic {
+    color: var(--sparq-red);
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    #slide-23 .fundraise-sections {
+    #slide-23 .panels-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
     
-    #slide-23 .fundraise-section {
+    #slide-23 .panel {
         width: 100%;
-        max-width: none;
+    }
+    
+    #slide-23 .title {
+        font-size: 34px;
+    }
+    
+    #slide-23 .panel-title {
+        font-size: 24px;
     }
 }
 
@@ -146,30 +241,45 @@
     }
     
     #slide-23 .title {
-        font-size: 30px;
+        font-size: 32px;
     }
     
     #slide-23 .fundraise-subheading {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
-    
-    #slide-23 .fundraise-sections {
-        gap: 20px;
-    }
-    
-    #slide-23 .section-heading {
-        font-size: 20px;
+        font-size: 14px;
         margin-bottom: 10px;
     }
     
-    #slide-23 .bullet-list li {
-        margin-bottom: 6px;
-        font-size: 15px;
+    #slide-23 .panels-container {
+        gap: 15px;
     }
     
-    #slide-23 .nested-bullet-list li {
-        margin-bottom: 4px;
+    #slide-23 .panel {
+        padding: 15px;
+    }
+    
+    #slide-23 .panel-title {
+        font-size: 22px;
+        margin-bottom: 2px;
+    }
+    
+    #slide-23 .panel-subtitle {
+        font-size: 14px;
+    }
+    
+    #slide-23 .term-label {
         font-size: 13px;
+    }
+    
+    #slide-23 .term-value {
+        font-size: 14px;
+    }
+    
+    #slide-23 .sub-item {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+    
+    #slide-23 .terms-item {
+        margin-bottom: 8px;
     }
 }
