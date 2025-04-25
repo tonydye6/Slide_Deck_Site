@@ -4,45 +4,48 @@
     flex-direction: column;
     height: calc(100% - 120px);
     padding: 0 40px;
+    overflow: hidden; /* Prevent any overflow */
 }
 
 .legacy-builder-content h2 {
     font-family: 'ADAM.CG PRO', sans-serif;
     color: #FF0026; /* Outlaw Red */
     text-align: center;
-    margin-bottom: 10px;
-    font-size: 2.2em;
+    margin-bottom: 5px; /* Reduced from 10px */
+    font-size: 1.8em; /* Reduced from 2.2em */
 }
 
 .legacy-builder-content h3 {
     font-family: 'ADAM.CG PRO', sans-serif;
     color: #00A19C; /* Grit Teal */
-    margin-bottom: 15px;
-    font-size: 1.5em;
+    margin-bottom: 8px; /* Reduced from 15px */
+    font-size: 1.3em; /* Reduced from 1.5em */
 }
 
 .legacy-builder-container {
     display: flex;
-    gap: 30px;
+    gap: 20px; /* Reduced from 30px */
     flex: 1;
+    max-height: calc(100% - 40px); /* Ensure container doesn't overflow */
+    overflow: hidden; /* Prevent overflow */
 }
 
-.legacy-content-left {
+.legacy-content-left, .legacy-content-right {
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-.legacy-content-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .legacy-description {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    line-height: 1.4;
+    margin-bottom: 10px; /* Reduced from 20px */
+    font-size: 0.85rem; /* Reduced from 1rem */
+    line-height: 1.3; /* Reduced from 1.4 */
+}
+
+.legacy-description p {
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .benefits-list, .cross-game-items {
@@ -54,14 +57,14 @@
 .benefit-item, .item-type {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 15px;
-    gap: 10px;
+    margin-bottom: 8px; /* Reduced from 15px */
+    gap: 8px; /* Reduced from 10px */
 }
 
 .benefit-icon, .item-icon {
-    width: 20px;
-    height: 20px;
-    min-width: 20px;
+    width: 16px; /* Reduced from 20px */
+    height: 16px; /* Reduced from 20px */
+    min-width: 16px; /* Reduced from 20px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,87 +84,101 @@
     font-weight: bold;
     font-family: 'ADAM.CG PRO', sans-serif;
     color: #FFD700; /* Victory Gold */
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-size: 0.9rem; /* Reduced from 1rem */
+    margin-bottom: 3px; /* Reduced from 5px */
 }
 
 .benefit-description, .item-description {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.8rem; /* Reduced from 0.9rem */
+    line-height: 1.2; /* Reduced from 1.4 */
 }
 
 .progression-indicators {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px; /* Reduced from 20px */
+    margin-bottom: 10px; /* Reduced from 20px */
 }
 
 .progression-indicator {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 120px;
+    width: 90px; /* Reduced from 120px */
 }
 
 .indicator-circle {
-    width: 60px;
-    height: 60px;
+    width: 45px; /* Reduced from 60px */
+    height: 45px; /* Reduced from 60px */
     border-radius: 50%;
     background-color: #2B2842; /* Carbon */
     border: 2px solid #00A19C; /* Grit Teal */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced from 10px */
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced from 1.2rem */
 }
 
 .indicator-label {
     text-align: center;
-    font-size: 0.85rem;
-    line-height: 1.2;
+    font-size: 0.75rem; /* Reduced from 0.85rem */
+    line-height: 1.1; /* Reduced from 1.2 */
 }
 
 .case-study {
     background-color: rgba(43, 40, 66, 0.7); /* Carbon with transparency */
     border-left: 4px solid #FF0026; /* Outlaw Red */
-    padding: 15px;
-    margin-top: 20px;
+    padding: 10px; /* Reduced from 15px */
+    margin-top: 10px; /* Reduced from 20px */
 }
 
 .case-study h4 {
     color: #FFD700; /* Victory Gold */
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced from 10px */
     font-family: 'ADAM.CG PRO', sans-serif;
+    font-size: 0.9rem; /* Added size reduction */
+}
+
+.case-study p {
+    margin: 0;
+    font-size: 0.8rem; /* Reduced text size */
+    line-height: 1.2; /* Tighter line height */
 }
 
 .cross-game-header {
-    margin-bottom: 15px;
+    margin-bottom: 8px; /* Reduced from 15px */
+}
+
+.cross-game-header p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 0.85rem; /* Reduced font size */
+    line-height: 1.2; /* Tighter line height */
 }
 
 .divider {
-    height: 2px;
+    height: 1px; /* Reduced from 2px */
     background-color: #00A19C; /* Grit Teal */
-    margin: 15px 0;
+    margin: 8px 0; /* Reduced from 15px 0 */
 }
 
 /* Quote section */
 .legacy-quote {
     background-color: rgba(0, 161, 156, 0.15); /* Grit Teal with transparency */
-    padding: 15px;
+    padding: 10px; /* Reduced from 15px */
     border-radius: 5px;
-    margin-top: auto;
+    margin-top: 8px; /* Changed from auto to a fixed value */
 }
 
 .legacy-quote p {
     font-style: italic;
-    padding-left: 20px;
-    border-left: 3px solid #FF0026; /* Outlaw Red */
+    padding-left: 15px; /* Reduced from 20px */
+    border-left: 2px solid #FF0026; /* Reduced from 3px */
     margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.75rem; /* Reduced from 0.9rem */
+    line-height: 1.2; /* Reduced from 1.4 */
 }
