@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/slide11.css">
     <link rel="stylesheet" href="css/slide12-new.css">
     <link rel="stylesheet" href="css/slide13.css">
+    <link rel="stylesheet" href="css/slide14.css">
     <link rel="stylesheet" href="css/global-bullets.css">
     <link rel="stylesheet" href="css/footer-fixes.css">
     <link rel="stylesheet" href="css/bullet-overrides.css">
@@ -1158,45 +1159,130 @@
             <!-- Slide 14: Market Opportunity -->
             <section class="slide" id="slide-14">
                 <div class="content market-opportunity">
+                    <!-- Venn Diagram Background Visual -->
+                    <svg class="venn-diagram-bg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="80" fill="#FF0026" opacity="0.25"/>
+                        <circle cx="200" cy="100" r="80" fill="#00A19C" opacity="0.25"/>
+                        <circle cx="150" cy="180" r="80" fill="#FFD700" opacity="0.25"/>
+                        <circle cx="150" cy="120" r="40" fill="#FFFFFF" opacity="0.3"/>
+                    </svg>
+                    
                     <div class="header">
-                        <h1 class="title">Market Opportunity</h1>
+                        <h1 class="title font-adam">MARKET OPPORTUNITY</h1>
+                        <h2 class="subtitle">Intersection of High-Growth Markets</h2>
                     </div>
                     <div class="opportunity-content">
                         <p class="market-intro">Massive-sized, high-CAGR worlds of Web2 gaming, AI, sports business, and Web3 utility tokens intersect to create a simple, beautiful, two-headed unicorn</p>
                         
                         <div class="market-metrics">
+                            <!-- Web3 Market -->
                             <div class="market-metric">
-                                <h3>Web3 market growing to $229 billion by 2034</h3>
-                                <p>44.9% CAGR</p>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 22L12 2L22 22H2Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">Web3 Market</span>
+                                </h3>
+                                <p>Growing to <span class="highlight">$229 billion</span> by 2034</p>
+                                <p class="cagr"><span class="highlight">44.9% CAGR</span></p>
                             </div>
                             
+                            <!-- AI Market -->
                             <div class="market-metric">
-                                <h3>AI market will grow to $1.3 trillion by 2030</h3>
-                                <p>35.7% CAGR</p>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 15C7.44772 15 7 14.5523 7 14C7 13.4477 7.44772 13 8 13C8.55228 13 9 13.4477 9 14C9 14.5523 8.55228 15 8 15Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16 15C15.4477 15 15 14.5523 15 14C15 13.4477 15.4477 13 16 13C16.5523 13 17 13.4477 17 14C17 14.5523 16.5523 15 16 15Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 6C13.6569 6 15 7.34315 15 9C15 10.6569 13.6569 12 12 12C10.3431 12 9 10.6569 9 9C9 7.34315 10.3431 6 12 6Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 19C7.02944 19 3 14.9706 3 10V6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V10C21 14.9706 16.9706 19 12 19Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">AI Market</span>
+                                </h3>
+                                <p>Will grow to <span class="highlight">$1.3 trillion</span> by 2030</p>
+                                <p class="cagr"><span class="highlight">35.7% CAGR</span></p>
                             </div>
                             
+                            <!-- Mobile Gaming Market -->
                             <div class="market-metric">
-                                <h3>Mobile game market will grow to $775.7 billion by 2032</h3>
-                                <p>18.2% CAGR</p>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 18H12.01M8 21H16C17.1046 21 18 20.1046 18 19V5C18 3.89543 17.1046 3 16 3H8C6.89543 3 6 3.89543 6 5V19C6 20.1046 6.89543 21 8 21Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">Mobile Games</span>
+                                </h3>
+                                <p>Market will grow to <span class="highlight">$775.7 billion</span> by 2032</p>
+                                <p class="cagr"><span class="highlight">18.2% CAGR</span></p>
                             </div>
                             
+                            <!-- NIL Market -->
                             <div class="market-metric">
-                                <h3>NIL payments to student-athletes are projected to grow to $2.55 billion by 2026</h3>
-                                <p>29% CAGR</p>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 15L12 15.01M7 4V4.01M17 4V4.01M12 4V4.01M7 8V8.01M17 8V8.01M12 8V8.01M12 12V12.01M7 12V12.01M17 12V12.01M8 20H16M12 15V20" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">NIL Payments</span>
+                                </h3>
+                                <p>Student-athletes payments projected to grow to <span class="highlight">$2.55 billion</span> by 2026</p>
+                                <p class="cagr"><span class="highlight">29% CAGR</span></p>
                             </div>
                             
+                            <!-- Sports Analytics Market -->
                             <div class="market-metric">
-                                <h3>The broader sports analytics market, which would include platforms like SPARQ, is projected to reach $8.4 billion by 2026</h3>
-                                <p>27.3% CAGR</p>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 12H21M12 16V21M3 12H8M12 3V8M20 16L16 20M20 8L16 4M4 20L8 16M4 4L8 8" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">Sports Analytics</span>
+                                </h3>
+                                <p>Market projected to reach <span class="highlight">$8.4 billion</span> by 2026</p>
+                                <p class="cagr"><span class="highlight">27.3% CAGR</span></p>
                             </div>
                             
+                            <!-- College Fan Base -->
                             <div class="market-metric">
-                                <h3>65% of Americans over the age of 12 have a favorite college sports team</h3>
-                                <p>225.4 million fans in U.S. alone</p>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18 15C19.6569 15 21 13.6569 21 12C21 10.3431 19.6569 9 18 9C16.3431 9 15 10.3431 15 12C15 13.6569 16.3431 15 18 15Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 9C13.6569 9 15 7.65685 15 6C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6C9 7.65685 10.3431 9 12 9Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 21C13.6569 21 15 19.6569 15 18C15 16.3431 13.6569 15 12 15C10.3431 15 9 16.3431 9 18C9 19.6569 10.3431 21 12 21Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">College Fans</span>
+                                </h3>
+                                <div class="fan-stat">
+                                    <img src="attached_assets/Logo_Skull(Red).png" alt="Sparq Skull">
+                                    <p><span class="highlight">65%</span> of Americans (age 12+) have a favorite college sports team</p>
+                                </div>
+                                <div class="fan-stat">
+                                    <img src="attached_assets/Logo_Skull(Red).png" alt="Sparq Skull">
+                                    <p><span class="highlight">225.4 million</span> fans in U.S. alone</p>
+                                </div>
                             </div>
                             
+                            <!-- College Gaming -->
                             <div class="market-metric">
-                                <h3>70% of college students play video games</h3>
+                                <h3>
+                                    <svg class="market-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 11H10M8 9V13M15 12H15.01M18 10H18.01M17.32 5H6.68C5.69065 5.00078 4.7347 5.374 4.00111 6.04814C3.26753 6.72229 2.80965 7.64229 2.73 8.63L2 16.56C1.97563 16.9355 2.03306 17.3125 2.16835 17.6649C2.30364 18.0173 2.51323 18.3363 2.78249 18.6018C3.05175 18.8673 3.37518 19.0727 3.72902 19.2033C4.08286 19.3339 4.46065 19.3864 4.836 19.357C5.15666 19.3361 5.46556 19.246 5.739 19.094C6.01245 18.9419 6.24525 18.7328 6.42 18.482L7.34 17.138C7.42675 17.0076 7.5405 16.899 7.674 16.82C7.80749 16.741 7.9574 16.6939 8.111 16.682H15.889C16.0426 16.6939 16.1925 16.741 16.326 16.82C16.4595 16.899 16.5732 17.0076 16.66 17.138L17.58 18.482C17.7548 18.7328 17.9875 18.9419 18.261 19.094C18.5344 19.246 18.8433 19.3361 19.164 19.357C19.5394 19.3864 19.9171 19.3339 20.271 19.2033C20.6248 19.0727 20.9483 18.8673 21.2175 18.6018C21.4868 18.3363 21.6964 18.0173 21.8317 17.6649C21.9669 17.3125 22.0244 16.9355 22 16.56L21.27 8.63C21.1904 7.64229 20.7325 6.72229 19.9989 6.04814C19.2653 5.37399 18.3093 5.00078 17.32 5Z" stroke="#00A19C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="market-title">College Gaming</span>
+                                </h3>
+                                <div class="fan-stat">
+                                    <img src="attached_assets/Logo_Skull(Red).png" alt="Sparq Skull">
+                                    <p><span class="highlight">70%</span> of college students play video games</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Market Overlap Visualization -->
+                        <div class="market-overlap">
+                            <div class="circle gaming-circle">Gaming</div>
+                            <div class="circle web3-circle">Web3</div>
+                            <div class="circle sports-circle">Sports</div>
+                            <div class="circle ai-circle">AI</div>
+                            <div class="center-overlap">
+                                <img src="attached_assets/Logo_Skull(Red).png" alt="Sparq at the intersection">
                             </div>
                         </div>
                     </div>
