@@ -1,0 +1,225 @@
+/* Slide 17: Game Experienced CEO - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-steel: #1E1E24;
+    --sparq-white: #FFFFFF;
+    --sparq-gold: #FFD700;
+}
+
+#slide-17 .content.ceo-profile {
+    background-color: var(--sparq-carbon);
+    background-image: linear-gradient(135deg, var(--sparq-carbon) 0%, rgba(30, 30, 36, 0.95) 100%);
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+#slide-17 .header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+#slide-17 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-teal);
+    margin-bottom: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slide-17 .ceo-name {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--heading-size) * 1.2);
+    color: var(--sparq-white);
+    margin-top: 0;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-17 .ceo-content {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+#slide-17 .ceo-bio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+#slide-17 .ceo-images {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+#slide-17 .headshot-container {
+    width: 100%;
+    position: relative;
+}
+
+#slide-17 .ceo-headshot {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 161, 156, 0.3);
+}
+
+#slide-17 .supporting-images {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+#slide-17 .supporting-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#slide-17 .supporting-image:hover {
+    transform: scale(1.02);
+}
+
+/* Career sections styling */
+#slide-17 .career-section {
+    padding: var(--spacing-sm);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-teal);
+    margin-bottom: var(--spacing-sm);
+}
+
+#slide-17 .career-section:last-child {
+    margin-bottom: 0;
+}
+
+#slide-17 .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+#slide-17 .company-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: var(--spacing-sm);
+    background-color: var(--sparq-white);
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 12px;
+    color: var(--sparq-carbon);
+    font-weight: bold;
+}
+
+#slide-17 .company-name {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--body-size) * 1.2);
+    color: var(--sparq-teal);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#slide-17 .section-content {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.9);
+    color: var(--sparq-white);
+    line-height: 1.5;
+    margin: 0;
+}
+
+#slide-17 .achievement {
+    display: inline-block;
+    background-color: rgba(0, 161, 156, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 0 2px;
+    font-weight: 600;
+}
+
+#slide-17 .game-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-right: var(--spacing-sm);
+    float: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-17 .ceo-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    #slide-17 .ceo-images {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #slide-17 .headshot-container {
+        width: 200px;
+    }
+    
+    #slide-17 .supporting-images {
+        flex-direction: row;
+        width: auto;
+    }
+    
+    #slide-17 .supporting-image {
+        width: 180px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-17 .header {
+        margin-bottom: calc(var(--spacing-sm) * 0.5);
+    }
+    
+    #slide-17 .ceo-name {
+        margin-bottom: calc(var(--spacing-md) * 0.5);
+    }
+    
+    #slide-17 .career-section {
+        padding: calc(var(--spacing-sm) * 0.7);
+        margin-bottom: calc(var(--spacing-sm) * 0.7);
+    }
+    
+    #slide-17 .company-logo {
+        width: 30px;
+        height: 30px;
+        margin-right: calc(var(--spacing-sm) * 0.7);
+    }
+    
+    #slide-17 .company-name {
+        font-size: calc(var(--body-size) * 1.1);
+    }
+    
+    #slide-17 .section-content {
+        font-size: calc(var(--body-size) * 0.85);
+        line-height: 1.4;
+    }
+}
