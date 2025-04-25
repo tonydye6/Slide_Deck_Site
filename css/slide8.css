@@ -226,25 +226,36 @@
     z-index: 3;
 }
 
-.ncaa-logo {
-    width: 120px;
-    height: auto;
-    opacity: 0.9;
-}
-
-/* For NCAA placeholder if needed */
-.ncaa-logo-placeholder {
-    width: 120px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+/* Styled NCAA logo */
+.ncaa-styled-logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'ADAM-CG-PRO', sans-serif;
-    font-size: 16px;
-    color: var(--sparq-white);
-    letter-spacing: 2px;
+    background-color: #0a2f5c; /* NCAA blue */
+    color: #ffffff;
+    width: 120px;
+    height: 70px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffffff;
+}
+
+.ncaa-text {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.ncaa-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 3px;
 }
 
 /* Responsive adjustments */
@@ -375,14 +386,17 @@
         font-size: calc(var(--body-size) * 0.7);
     }
     
-    .ncaa-logo {
+    .ncaa-styled-logo {
         width: 100px;
+        height: 60px;
     }
     
-    .ncaa-logo-placeholder {
-        width: 100px;
-        height: 40px;
-        font-size: 14px;
+    .ncaa-text {
+        font-size: 20px;
+    }
+    
+    .ncaa-tagline {
+        font-size: 8px;
     }
 }
 
@@ -455,14 +469,16 @@
         bottom: 70px;
     }
     
-    .ncaa-logo {
+    .ncaa-styled-logo {
         width: 80px;
+        height: 50px;
     }
     
-    .ncaa-logo-placeholder {
-        width: 80px;
-        height: 35px;
-        font-size: 12px;
-        letter-spacing: 1px;
+    .ncaa-text {
+        font-size: 16px;
+    }
+    
+    .ncaa-tagline {
+        font-size: 7px;
     }
 }
