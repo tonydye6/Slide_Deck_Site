@@ -11,215 +11,264 @@
 
 #slide-17 .content.ceo-profile {
     background-color: var(--sparq-carbon);
-    background-image: linear-gradient(135deg, var(--sparq-carbon) 0%, rgba(30, 30, 36, 0.95) 100%);
     color: var(--sparq-white);
     position: relative;
     overflow: hidden;
 }
 
-#slide-17 .header {
+/* Background image as watermark */
+#slide-17 .bg-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../attached_assets/Jan_Nasdaq(Experienced_CEO_Slide).png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+/* Add overlay to enhance text readability */
+#slide-17 .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(43, 40, 66, 0.9) 0%, rgba(30, 30, 36, 0.95) 100%);
+    z-index: 0;
+}
+
+/* Two-column layout container */
+#slide-17 .two-column-layout {
+    display: flex;
     position: relative;
     z-index: 1;
-    margin-bottom: var(--spacing-sm);
+    height: 100%;
+    width: 100%;
+    gap: var(--spacing-sm);
+}
+
+/* Left column - Images and Logos */
+#slide-17 .left-column {
+    width: 33%;
+    padding-right: calc(var(--spacing-sm) * 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-sm) * 0.8);
+}
+
+/* Right column - Content */
+#slide-17 .right-column {
+    width: 67%;
+    padding-left: calc(var(--spacing-sm) * 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling for right column */
+#slide-17 .header {
+    position: relative;
+    margin-bottom: calc(var(--spacing-xs) * 0.8);
 }
 
 #slide-17 .title {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: var(--title-size);
+    font-size: calc(var(--title-size) * 0.9);
     font-weight: bold;
     color: var(--sparq-teal);
-    margin-bottom: 0.1em;
+    margin-bottom: 0.05em;
     text-transform: uppercase;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #slide-17 .ceo-name {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--heading-size) * 1.2);
+    font-size: calc(var(--heading-size) * 1);
     color: var(--sparq-white);
     margin-top: 0;
     text-transform: uppercase;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: calc(var(--spacing-sm) * 0.7);
 }
 
-#slide-17 .ceo-content {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-    position: relative;
-    z-index: 1;
-}
-
-#slide-17 .ceo-bio {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-#slide-17 .ceo-images {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: center;
-}
-
+/* CEO Headshot styling */
 #slide-17 .headshot-container {
     width: 100%;
-    position: relative;
+    margin-bottom: calc(var(--spacing-xs) * 0.8);
 }
 
 #slide-17 .ceo-headshot {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid rgba(0, 161, 156, 0.3);
 }
 
-#slide-17 .supporting-images {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    width: 100%;
-}
-
-#slide-17 .supporting-image {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-#slide-17 .supporting-image:hover {
-    transform: scale(1.02);
-}
-
-/* Career sections styling */
-#slide-17 .career-section {
-    padding: var(--spacing-sm);
-    background-color: rgba(0, 0, 0, 0.2);
+/* Company logos section */
+#slide-17 .company-logos-container {
+    background-color: var(--sparq-steel);
     border-radius: 8px;
-    border-left: 3px solid var(--sparq-teal);
-    margin-bottom: var(--spacing-sm);
+    padding: calc(var(--spacing-sm) * 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#slide-17 .career-section:last-child {
-    margin-bottom: 0;
+#slide-17 .logos-title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--body-size) * 0.8);
+    color: var(--sparq-teal);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: calc(var(--spacing-xs) * 0.8);
+    text-align: center;
 }
 
-#slide-17 .section-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--spacing-xs);
+#slide-17 .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--spacing-xs) * 0.7);
 }
 
 #slide-17 .company-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: var(--spacing-sm);
-    background-color: var(--sparq-white);
-    border-radius: 4px;
-    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 6px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 12px;
-    color: var(--sparq-carbon);
-    font-weight: bold;
+    font-size: 8px;
+    color: var(--sparq-white);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
-#slide-17 .company-name {
+#slide-17 .company-logo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Bio sections styling */
+#slide-17 .bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-xs) * 0.7);
+    flex: 1;
+}
+
+#slide-17 .bio-section {
+    padding: calc(var(--spacing-sm) * 0.6);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border-left: 3px solid var(--sparq-red);
+}
+
+#slide-17 .section-title {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--body-size) * 1.2);
+    font-size: calc(var(--body-size) * 0.9);
     color: var(--sparq-teal);
-    margin: 0;
+    margin: 0 0 calc(var(--spacing-xs) * 0.5) 0;
     text-transform: uppercase;
 }
 
 #slide-17 .section-content {
     font-family: 'Inter', sans-serif;
-    font-size: calc(var(--body-size) * 0.9);
+    font-size: calc(var(--body-size) * 0.8);
     color: var(--sparq-white);
-    line-height: 1.5;
+    line-height: 1.3;
     margin: 0;
+}
+
+#slide-17 .highlight {
+    color: var(--sparq-teal);
+    font-weight: bold;
 }
 
 #slide-17 .achievement {
     display: inline-block;
-    background-color: rgba(0, 161, 156, 0.2);
+    background-color: rgba(255, 0, 38, 0.15);
     padding: 2px 6px;
     border-radius: 4px;
     margin: 0 2px;
     font-weight: 600;
-}
-
-#slide-17 .game-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    margin-right: var(--spacing-sm);
-    float: left;
+    color: var(--sparq-white);
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    #slide-17 .ceo-content {
+    #slide-17 .two-column-layout {
         flex-direction: column;
-        gap: var(--spacing-sm);
     }
     
-    #slide-17 .ceo-images {
+    #slide-17 .left-column, 
+    #slide-17 .right-column {
         width: 100%;
-        flex-direction: row;
-        justify-content: center;
+        padding: 0;
+    }
+    
+    #slide-17 .left-column {
+        margin-bottom: var(--spacing-md);
     }
     
     #slide-17 .headshot-container {
-        width: 200px;
+        max-width: 200px;
+        margin: 0 auto;
     }
     
-    #slide-17 .supporting-images {
-        flex-direction: row;
-        width: auto;
-    }
-    
-    #slide-17 .supporting-image {
-        width: 180px;
+    #slide-17 .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 720px) {
     #slide-17 .header {
-        margin-bottom: calc(var(--spacing-sm) * 0.5);
+        margin-bottom: calc(var(--spacing-xs) * 0.8);
+    }
+    
+    #slide-17 .title {
+        font-size: calc(var(--title-size) * 0.9);
     }
     
     #slide-17 .ceo-name {
-        margin-bottom: calc(var(--spacing-md) * 0.5);
-    }
-    
-    #slide-17 .career-section {
-        padding: calc(var(--spacing-sm) * 0.7);
+        font-size: calc(var(--heading-size) * 1);
         margin-bottom: calc(var(--spacing-sm) * 0.7);
     }
     
-    #slide-17 .company-logo {
-        width: 30px;
-        height: 30px;
-        margin-right: calc(var(--spacing-sm) * 0.7);
+    #slide-17 .two-column-layout {
+        gap: calc(var(--spacing-sm) * 0.7);
     }
     
-    #slide-17 .company-name {
-        font-size: calc(var(--body-size) * 1.1);
+    #slide-17 .bio-container {
+        gap: calc(var(--spacing-xs) * 0.9);
+    }
+    
+    #slide-17 .bio-section {
+        padding: calc(var(--spacing-sm) * 0.7);
+    }
+    
+    #slide-17 .section-title {
+        font-size: calc(var(--body-size) * 1);
+        margin-bottom: calc(var(--spacing-xs) * 0.5);
     }
     
     #slide-17 .section-content {
-        font-size: calc(var(--body-size) * 0.85);
-        line-height: 1.4;
+        font-size: calc(var(--body-size) * 0.8);
+        line-height: 1.3;
+    }
+    
+    #slide-17 .company-logos-container {
+        padding: calc(var(--spacing-sm) * 0.8);
+    }
+    
+    #slide-17 .logo-grid {
+        gap: calc(var(--spacing-xs) * 0.8);
+    }
+    
+    #slide-17 .company-logo {
+        height: 35px;
+        font-size: 9px;
     }
 }
