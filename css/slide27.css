@@ -1,0 +1,196 @@
+/* Slide 27: Why Web3 Matters */
+#slide-27 {
+    background-color: var(--sparq-carbon);
+}
+
+#slide-27 .content {
+    padding: 40px;
+}
+
+#slide-27 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#slide-27 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--sparq-teal);
+    margin: 0;
+}
+
+#slide-27 .appendix-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--sparq-teal);
+    padding: 4px 8px;
+    border: 1px solid var(--sparq-teal);
+    border-radius: 4px;
+}
+
+#slide-27 .web3-content {
+    color: var(--sparq-white);
+}
+
+#slide-27 .main-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+#slide-27 .recap-section {
+    grid-column: span 2;
+    margin-bottom: 20px;
+}
+
+#slide-27 .web-evolution {
+    display: flex;
+    justify-content: space-between;
+}
+
+#slide-27 .web-column {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+#slide-27 .web-column.highlight {
+    background-color: rgba(255, 0, 38, 0.1);
+    border: 1px solid rgba(255, 0, 38, 0.3);
+}
+
+#slide-27 h3 {
+    font-family: 'Neodex', 'Arial', sans-serif;
+    color: var(--sparq-teal);
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#slide-27 h3.highlight {
+    color: var(--sparq-red);
+}
+
+#slide-27 .section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--sparq-white);
+}
+
+#slide-27 .key-term {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    color: var(--sparq-teal);
+    font-size: 14px;
+}
+
+#slide-27 .imagine-section, 
+#slide-27 .value-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#slide-27 ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#slide-27 li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#slide-27 li img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+#slide-27 .web-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+#slide-27 .feature-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-27 .main-sections {
+        gap: 20px;
+    }
+    
+    #slide-27 li {
+        font-size: 13px;
+    }
+    
+    #slide-27 .section-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide-27 .content {
+        padding: 30px;
+    }
+    
+    #slide-27 .title {
+        font-size: 32px;
+    }
+    
+    #slide-27 h3 {
+        font-size: 16px;
+    }
+    
+    #slide-27 .web-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-27 .content {
+        padding: 20px;
+    }
+    
+    #slide-27 .header {
+        margin-bottom: 15px;
+    }
+    
+    #slide-27 .title {
+        font-size: 28px;
+    }
+    
+    #slide-27 .main-sections {
+        gap: 15px;
+    }
+    
+    #slide-27 li {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    
+    #slide-27 .section-title {
+        margin-bottom: 8px;
+    }
+}
