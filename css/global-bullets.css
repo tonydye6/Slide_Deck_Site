@@ -1,91 +1,94 @@
-/* Global custom bullet points styling for primary list items */
+/* Global custom bullet points styling using the sparq-bullet-list class */
 
-/* Primary list items (first level) */
-.slide .content ul > li {
-    list-style: none;
-    padding-left: 32px;
-    position: relative;
-    margin-bottom: 10px;
+/* Main bullet list styles */
+ul.sparq-bullet-list {
+  list-style: none !important; /* Force removal of default bullets */
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
-/* Custom red skull bullet for primary items */
-.slide .content ul > li::before {
+/* Style direct children list items */
+ul.sparq-bullet-list > li {
+  padding-left: 28px !important; /* Space for bullet + margin */
+  position: relative !important; /* Needed for positioning ::before */
+  margin-bottom: 8px !important; /* Space between items */
+}
+
+/* Create the custom bullet using ::before */
+ul.sparq-bullet-list > li::before {
+  content: '' !important; /* Use empty content with background-image */
+  background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  width: 16px !important; /* Bullet width */
+  height: 16px !important; /* Bullet height */
+  position: absolute !important;
+  left: 0 !important;
+  top: 4px !important; /* Adjust for vertical alignment */
+}
+
+/* --- Styling for NESTED Lists --- */
+/* Ensure nested lists revert to standard bullets */
+ul.sparq-bullet-list ul {
+  list-style: disc !important; /* Use standard disc for nested */
+  padding-left: 20px !important; /* Indentation for nested */
+  margin-left: 10px !important; /* Adjust margin if needed */
+  margin-top: 8px !important; /* Space before nested list */
+}
+
+/* Remove custom bullet from nested list items */
+ul.sparq-bullet-list ul li::before {
+  content: none !important;
+  background-image: none !important;
+  display: none !important; /* Hide the pseudo-element entirely */
+}
+
+/* Reset padding for nested list items */
+ul.sparq-bullet-list ul li {
+  padding-left: 0 !important;
+  position: static !important;
+  margin-bottom: 4px !important; /* Adjust spacing */
+}
+
+/* Legacy fallback for slides that might not have the class applied */
+.slide .content ul:not(.sparq-bullet-list) > li {
+    list-style: none;
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.slide .content ul:not(.sparq-bullet-list) > li::before {
     content: '';
     background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 4px;
 }
 
-/* Styling for secondary/nested list items */
-.slide .content ul > li > ul > li {
-    list-style: none;
-    padding-left: 20px;
+/* Styling for secondary/nested list items in legacy lists */
+.slide .content ul:not(.sparq-bullet-list) > li > ul > li {
+    list-style: disc;
+    padding-left: 0;
+    margin-left: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-/* Standard bullet for secondary/nested items */
-.slide .content ul > li > ul > li::before {
-    content: '•';
-    background-image: none;
-    color: var(--sparq-red);
-    width: auto;
-    height: auto;
-    font-size: 18px;
-    position: absolute;
-    left: 5px;
-    top: -2px;
+.slide .content ul:not(.sparq-bullet-list) > li > ul > li::before {
+    display: none;
 }
 
-/* Exceptions for specific slides that need custom styling */
+/* Slide 8 specific overrides to ensure consistency */
 .ecosystem-text ul > li::before {
-    /* Slide 8 already has custom bullets in its own CSS */
-    background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png');
-}
-
-/* Adjustments for responsive layouts */
-@media (max-height: 700px) {
-    .slide .content ul > li {
-        padding-left: 28px;
-    }
-    
-    .slide .content ul > li::before {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .slide .content ul > li > ul > li {
-        padding-left: 16px;
-    }
-    
-    .slide .content ul > li > ul > li::before {
-        font-size: 16px;
-        left: 3px;
-    }
-}
-
-@media (max-height: 600px) {
-    .slide .content ul > li {
-        padding-left: 24px;
-    }
-    
-    .slide .content ul > li::before {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .slide .content ul > li > ul > li {
-        padding-left: 14px;
-    }
-    
-    .slide .content ul > li > ul > li::before {
-        font-size: 14px;
-        left: 2px;
-    }
+    background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png') !important;
+    width: 16px !important;
+    height: 16px !important;
+    top: 4px !important;
 }
