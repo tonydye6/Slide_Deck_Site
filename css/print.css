@@ -1,0 +1,100 @@
+/**
+ * Print-specific styles for Sparq Games Pitch Deck
+ * These styles will only be applied when printing or in print preview
+ */
+
+@media print {
+    /* Hide on-screen elements not needed for printing */
+    .navigation-controls, 
+    .jump-to-menu, 
+    #jumpMenuContent,
+    #print-button {
+        display: none !important;
+    }
+    
+    /* Body styles for printing */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+        font-size: 12pt !important;
+    }
+    
+    /* Ensure each slide prints on its own page */
+    .slide {
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 100vh !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        border: none !important;
+        position: relative !important;
+        overflow: hidden !important;
+        display: block !important;
+    }
+    
+    /* Make sure content is black for better printing */
+    .slide-content {
+        color: black !important;
+    }
+    
+    /* Ensure headings don't break across pages */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Make sure links print with their URLs */
+    a:after {
+        content: " (" attr(href) ")" !important;
+        font-size: 90% !important;
+    }
+    
+    /* Ensure all backgrounds print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    /* Adjust image sizes for printing */
+    img, svg {
+        max-width: 100% !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Ensure bullet points print clearly */
+    ul, ol {
+        page-break-inside: avoid !important;
+    }
+    
+    li {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Special handling for charts and graphs */
+    .chart, .graph {
+        page-break-inside: avoid !important;
+        max-height: 500px !important;
+    }
+    
+    /* Ensure tables print properly */
+    table {
+        page-break-inside: avoid !important;
+    }
+    
+    /* Ensure slide footers are visible */
+    .slide-footer {
+        position: absolute !important;
+        bottom: 20px !important;
+        left: 20px !important;
+        right: 20px !important;
+    }
+    
+    /* Hide any elements with the no-print class */
+    .no-print {
+        display: none !important;
+    }
+}

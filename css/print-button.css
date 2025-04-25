@@ -1,0 +1,52 @@
+/**
+ * Styles for the Print to PDF button
+ */
+
+/* Print button base styles */
+.print-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    background-color: #2B2842; /* Carbon color from Sparq brand */
+    color: white;
+    border: 1px solid #00A19C; /* Grit Teal from Sparq brand */
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-family: 'ADAM.CG PRO', Arial, sans-serif;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* Print button hover state */
+.print-control:hover {
+    background-color: #00A19C; /* Grit Teal */
+    border-color: #FFD700; /* Victory Gold */
+    color: white;
+}
+
+/* Print icon styles */
+.print-icon {
+    margin-right: 4px;
+    font-size: 16px;
+}
+
+/* Active state for print button */
+.print-control:active {
+    transform: scale(0.95);
+    background-color: #FF0026; /* Outlaw Red */
+}
+
+/* Print button focus styles */
+.print-control:focus {
+    outline: 2px solid #FFD700; /* Victory Gold */
+    outline-offset: 2px;
+}
+
+/* Hide print button in print mode */
+@media print {
+    .print-control {
+        display: none !important;
+    }
+}
