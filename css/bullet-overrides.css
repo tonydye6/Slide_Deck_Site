@@ -1,39 +1,78 @@
 /* Override all slide-specific bullet styles */
 
-/* Slide 3 overrides */
+/* GLOBAL OVERRIDE: Turn off all ::before pseudo-elements used for bullets */
+li::before {
+    display: none !important;
+    content: none !important;
+    background-image: none !important;
+}
+
+/* Slide-specific overrides for known styles */
+
+/* Slide 2 (Mission) */
+.value-text li::before {
+    display: none !important;
+}
+
+/* Slide 3 (Web3 Simplified) */
 .web-column li::before {
     display: none !important;
 }
 
-/* Slide 5 overrides */
+/* Slide 5 (Web3 Games Failed) */
 .reason li::before {
     display: none !important;
 }
 
-/* Slide 6 overrides */
+/* Slide 6 (Mobile Gaming) */
 .recession-insights li::before {
     display: none !important;
 }
 
-/* Slide 7 overrides */
+/* Slide 7 (Revenue Potential) */
 .section li::before {
     display: none !important;
 }
 
-/* Slide 8 overrides */
-.ecosystem-text li::before {
-    display: none !important;
-}
+/* Slide 8 (Ecosystem) */
+.ecosystem-text li::before,
 .ecosystem-text li li::before {
     display: none !important;
 }
 
-/* Generic override for any other slide-specific bullet styles */
-li::before {
+/* Any other bullet-containing sections */
+.feature-list li::before,
+.business-section li::before,
+.milestone li::before,
+.market-intro li::before,
+.traction-milestones li::before,
+.economic-factors li::before,
+.media-outlets li::before,
+.locker-room-content li::before,
+.platform-features li::before,
+.investment-bullet li::before,
+.solution-content li::before,
+.team-section li::before,
+.game-mechanics li::before,
+.game-features li::before,
+.monetization-model li::before,
+.marketing-strategy li::before,
+.use-cases li::before,
+.platform-benefits li::before {
     display: none !important;
 }
 
 /* Make sure our custom bullets are visible */
 li img[src*="Bulletpoint_Logo_Skull(Red) copy.png"] {
     display: block !important;
+}
+
+/* Reset any list styles that might be overriding our custom bullets */
+ul {
+    list-style-type: none !important;
+}
+
+/* Fix any specific positioning issues */
+li {
+    position: relative !important;
 }
