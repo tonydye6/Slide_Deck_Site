@@ -1,0 +1,282 @@
+/* Slide 33: Bitcoin Price After Halving */
+#slide-33 {
+    background-color: var(--sparq-carbon);
+}
+
+#slide-33 .content {
+    padding: 40px;
+    position: relative;
+    color: var(--sparq-white);
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#slide-33 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#slide-33 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--sparq-gold);
+    margin: 0;
+}
+
+#slide-33 .appendix-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--sparq-teal);
+    padding: 4px 8px;
+    border: 1px solid var(--sparq-teal);
+    border-radius: 4px;
+}
+
+#slide-33 .halving-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: hidden;
+    flex: 1;
+}
+
+#slide-33 .section {
+    display: flex;
+    align-items: flex-start;
+}
+
+#slide-33 .section-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    color: var(--sparq-teal);
+    flex-shrink: 0;
+}
+
+#slide-33 .section-content {
+    flex: 1;
+}
+
+#slide-33 .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sparq-white);
+    margin: 0 0 10px 0;
+}
+
+#slide-33 .bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#slide-33 .bullet-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+#slide-33 .bullet-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+#slide-33 .bullet-text {
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#slide-33 .nested-list {
+    list-style: none;
+    padding-left: 26px;
+    margin: 10px 0 0 0;
+}
+
+#slide-33 .nested-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+#slide-33 .nested-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+#slide-33 .nested-text {
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#slide-33 .highlight {
+    color: var(--sparq-gold);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-33 .title {
+        font-size: 32px;
+    }
+    
+    #slide-33 .section-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 12px;
+    }
+    
+    #slide-33 .section-title {
+        font-size: 17px;
+    }
+    
+    #slide-33 .bullet-text {
+        font-size: 15px;
+    }
+    
+    #slide-33 .nested-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide-33 .content {
+        padding: 30px;
+    }
+    
+    #slide-33 .header {
+        margin-bottom: 20px;
+    }
+    
+    #slide-33 .title {
+        font-size: 28px;
+    }
+    
+    #slide-33 .halving-content {
+        gap: 15px;
+    }
+    
+    #slide-33 .section-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+    
+    #slide-33 .section-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    #slide-33 .bullet-item {
+        margin-bottom: 8px;
+    }
+    
+    #slide-33 .bullet-icon {
+        margin-top: 3px;
+    }
+    
+    #slide-33 .bullet-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    #slide-33 .nested-list {
+        padding-left: 22px;
+        margin-top: 8px;
+    }
+    
+    #slide-33 .nested-item {
+        margin-bottom: 6px;
+    }
+    
+    #slide-33 .nested-text {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-33 .content {
+        padding: 25px;
+    }
+    
+    #slide-33 .header {
+        margin-bottom: 15px;
+    }
+    
+    #slide-33 .title {
+        font-size: 24px;
+    }
+    
+    #slide-33 .appendix-label {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    #slide-33 .halving-content {
+        gap: 12px;
+    }
+    
+    #slide-33 .section-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+    
+    #slide-33 .section-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    
+    #slide-33 .bullet-item {
+        margin-bottom: 6px;
+    }
+    
+    #slide-33 .bullet-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+        margin-top: 2px;
+    }
+    
+    #slide-33 .bullet-text {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+    
+    #slide-33 .nested-list {
+        padding-left: 20px;
+        margin-top: 6px;
+    }
+    
+    #slide-33 .nested-item {
+        margin-bottom: 5px;
+    }
+    
+    #slide-33 .nested-icon {
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+        margin-top: 3px;
+    }
+    
+    #slide-33 .nested-text {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+}
