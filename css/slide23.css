@@ -1,0 +1,175 @@
+/* Slide 23: Fundraise - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-steel: #1E1E24;
+    --sparq-white: #FFFFFF;
+    --sparq-gold: #FFD700;
+}
+
+#slide-23 .content.fundraise {
+    background-color: var(--sparq-carbon);
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+#slide-23 .header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+#slide-23 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--sparq-gold);
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slide-23 .fundraise-subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: var(--sparq-white);
+    margin-bottom: 25px;
+    max-width: 90%;
+    font-weight: 500;
+}
+
+#slide-23 .fundraise-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#slide-23 .fundraise-sections {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+#slide-23 .fundraise-section {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 3px solid var(--sparq-teal);
+}
+
+#slide-23 .section-heading {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 22px;
+    color: var(--sparq-teal);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#slide-23 .bullet-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#slide-23 .bullet-list li {
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+}
+
+#slide-23 .bullet-list li img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+#slide-23 .nested-bullet-list {
+    list-style-type: none;
+    padding-left: 26px;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+#slide-23 .nested-bullet-list li {
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+#slide-23 .nested-bullet-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--sparq-teal);
+    border-radius: 50%;
+}
+
+#slide-23 .highlight {
+    color: var(--sparq-gold);
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-23 .fundraise-sections {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #slide-23 .fundraise-section {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-23 .header {
+        margin-bottom: 10px;
+    }
+    
+    #slide-23 .title {
+        font-size: 30px;
+    }
+    
+    #slide-23 .fundraise-subheading {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    #slide-23 .fundraise-sections {
+        gap: 20px;
+    }
+    
+    #slide-23 .section-heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #slide-23 .bullet-list li {
+        margin-bottom: 6px;
+        font-size: 15px;
+    }
+    
+    #slide-23 .nested-bullet-list li {
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+}
