@@ -1,4 +1,4 @@
-// Array of slide titles for the jump menu
+// Array of slide titles for the jump menu - EXACT titles as provided by the user
 const slideTitles = [
     "Cover", // Slide 1
     "Mission", // Slide 2
@@ -38,13 +38,12 @@ const slideTitles = [
     "Deflationary Core", // Slide 36
     "Token Allocation", // Slide 37
     "Allocation Cont.", // Slide 38
-    "Retention/Engagement", // Slide 38b
-    "Trojan Horse", // Slide 39
-    "The Locker Room (1)", // Slide 40
-    "The Locker Room (2)", // Slide 41
-    "The Locker Room (3)", // Slide 42
+    "Retention/Engagement", // Slide 39
+    "Trojan Horse", // Slide 40
+    "The Locker Room (1)", // Slide 41
+    "The Locker Room (2)", // Slide 42
     "Athlete Comp", // Slide 43
-    "R.T.F.", // Slide 44
+    "R.T.F." // Slide 44
 ];
 
 // When the document is loaded, initialize the jump menu
@@ -88,44 +87,52 @@ function toggleJumpMenu() {
 
 // Function to jump to a specific slide
 function jumpToSlide(slideIndex) {
-    // Handle special case for slide 38b (Allocation Cont.)
-    if (slideIndex === 39) { // 39 is the index in the array for "Retention/Engagement", but we want to show slide-38b
-        // Target the slide-38b element instead
+    console.log("Jumping to slide index:", slideIndex, "Title:", slideTitles[slideIndex-1]);
+    
+    // Handle special mappings based on the updated titles
+    
+    // Mapping for "Allocation Cont." (slide 38)
+    if (slideIndex === 39) { // "Retention/Engagement" in the menu is slide 39
+        // We want to show the slide-38b element
         const targetSlide = document.getElementById('slide-38b');
         if (targetSlide) {
             document.querySelectorAll('.slide').forEach(slide => {
                 slide.classList.remove('slide-active');
             });
             targetSlide.classList.add('slide-active');
-            // Update currentSlide variable in the main script
-            currentSlide = 39;
-            updateSlideCounter();
-            // Dispatch the slide change event
+            // Update currentSlide variable
+            window.currentSlide = 39;
+            window.updateSlideCounter();
+            // Dispatch event
             document.dispatchEvent(new CustomEvent('slide-change', { detail: 39 }));
             return;
         }
     }
     
-    // Handle special case for slide 43a (Retention/Engagement)
-    if (slideIndex === 40) { // 40 is the index for "Trojan Horse", but we want to show slide-43a
-        // Target the slide-43a element instead
+    // Mapping for "Retention/Engagement" (slide 39)
+    if (slideIndex === 40) { // "Trojan Horse" in the menu is slide 40
+        // We want to show the slide-43a element for "Retention/Engagement"
         const targetSlide = document.getElementById('slide-43a');
         if (targetSlide) {
             document.querySelectorAll('.slide').forEach(slide => {
                 slide.classList.remove('slide-active');
             });
             targetSlide.classList.add('slide-active');
-            // Update currentSlide variable in the main script
-            currentSlide = 40;
-            updateSlideCounter();
-            // Dispatch the slide change event
+            // Update currentSlide
+            window.currentSlide = 40;
+            window.updateSlideCounter();
+            // Dispatch event
             document.dispatchEvent(new CustomEvent('slide-change', { detail: 40 }));
             return;
         }
     }
     
-    // For other slides, use the existing showSlide function
-    showSlide(slideIndex);
+    // For standard slides, use the global showSlide function
+    if (window.showSlide) {
+        window.showSlide(slideIndex);
+    } else {
+        console.error("showSlide function not available globally");
+    }
 }
 
 // Close the menu when clicking outside
