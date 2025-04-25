@@ -1,0 +1,39 @@
+/* Override all slide-specific bullet styles */
+
+/* Slide 3 overrides */
+.web-column li::before {
+    display: none !important;
+}
+
+/* Slide 5 overrides */
+.reason li::before {
+    display: none !important;
+}
+
+/* Slide 6 overrides */
+.recession-insights li::before {
+    display: none !important;
+}
+
+/* Slide 7 overrides */
+.section li::before {
+    display: none !important;
+}
+
+/* Slide 8 overrides */
+.ecosystem-text li::before {
+    display: none !important;
+}
+.ecosystem-text li li::before {
+    display: none !important;
+}
+
+/* Generic override for any other slide-specific bullet styles */
+li::before {
+    display: none !important;
+}
+
+/* Make sure our custom bullets are visible */
+li img[src*="Bulletpoint_Logo_Skull(Red) copy.png"] {
+    display: block !important;
+}
