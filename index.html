@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/slide7.css">
     <link rel="stylesheet" href="css/slide8-new.css">
     <link rel="stylesheet" href="css/slide9.css">
+    <link rel="stylesheet" href="css/slide10.css">
     <link rel="stylesheet" href="css/global-bullets.css">
     <link rel="stylesheet" href="css/footer-fixes.css">
     <link rel="stylesheet" href="css/bullet-overrides.css">
@@ -823,37 +824,51 @@
             <section class="slide" id="slide-10">
                 <div class="content ai-efficiency">
                     <div class="header">
-                        <h1 class="title">Use AI Everywhere to Be Fast and Ultra-Efficient</h1>
+                        <h1 class="title font-adam">USE AI EVERYWHERE TO BE FAST AND ULTRA-EFFICIENT</h1>
                     </div>
                     <div class="ai-content">
-                        <ul class="ai-applications-list sparq-bullet-list" style="list-style: none; padding-left: 0;">
-                            <li style="padding-left: 28px; position: relative; margin-bottom: 8px; list-style: none;">
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                Game Genre Selection
-            </li>
-                            <li style="padding-left: 28px; position: relative; margin-bottom: 8px; list-style: none;">
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                Ad Monetization & Optimization
-            </li>
-                            <li style="padding-left: 28px; position: relative; margin-bottom: 8px; list-style: none;">
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                Game Development
-            </li>
-                            <li style="padding-left: 28px; position: relative; margin-bottom: 8px; list-style: none;">
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                Business Development
-            </li>
-                            <li style="padding-left: 28px; position: relative; margin-bottom: 8px; list-style: none;">
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                Organic & Paid User Acquisition
-            </li>
-                            <li style="padding-left: 28px; position: relative; margin-bottom: 8px; list-style: none;">
-                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" style="width: 16px; height: 16px; position: absolute; left: 0; top: 4px;">
-                Competitive Intelligence
-            </li>
-                        </ul>
+                        <div class="ai-hub-container">
+                            <!-- Central AI Core -->
+                            <div class="ai-core">
+                                <img src="attached_assets/Logo_Skull(Red).png" alt="AI Core">
+                                <div class="ai-core-label">AI ENGINE</div>
+                            </div>
+                            
+                            <!-- AI Application Points in circular arrangement -->
+                            <div class="ai-point">
+                                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" alt="Skull Icon" class="ai-point-icon">
+                                <p class="ai-point-label">Game Genre Selection</p>
+                            </div>
+                            
+                            <div class="ai-point">
+                                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" alt="Skull Icon" class="ai-point-icon">
+                                <p class="ai-point-label">Ad Monetization & Optimization</p>
+                            </div>
+                            
+                            <div class="ai-point">
+                                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" alt="Skull Icon" class="ai-point-icon">
+                                <p class="ai-point-label">Game Development</p>
+                            </div>
+                            
+                            <div class="ai-point">
+                                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" alt="Skull Icon" class="ai-point-icon">
+                                <p class="ai-point-label">Business Development</p>
+                            </div>
+                            
+                            <div class="ai-point">
+                                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" alt="Skull Icon" class="ai-point-icon">
+                                <p class="ai-point-label">Organic & Paid User Acquisition</p>
+                            </div>
+                            
+                            <div class="ai-point">
+                                <img src="attached_assets/Bulletpoint_Logo_Skull(Red) copy.png" alt="Skull Icon" class="ai-point-icon">
+                                <p class="ai-point-label">Competitive Intelligence</p>
+                            </div>
+                            
+                            <!-- Connecting lines will be added by JavaScript -->
+                        </div>
                         
-                        <p>A.I. can enhance hundreds of aspects of game development and publishing, from design to monetization to partnerships</p>
+                        <p class="ai-conclusion">A.I. can enhance hundreds of aspects of game development and publishing, from design to monetization to partnerships</p>
                     </div>
                     
                     <!-- Slide Footer with Skull Logo -->
@@ -2865,6 +2880,9 @@
                         // Update the counter
                         currentSlide = slideNumber;
                         updateSlideCounter();
+                        
+                        // Dispatch a slide change event
+                        document.dispatchEvent(new CustomEvent('slide-change', { detail: slideNumber }));
                     } else {
                         console.error("No valid slides found");
                     }
@@ -2905,4 +2923,7 @@
     
     <!-- Add bullet point fixer script -->
     <script src="js/bullet-fixer.js"></script>
+    
+    <!-- Add AI hub layout script -->
+    <script src="js/ai-hub.js"></script>
 </body>

@@ -1,0 +1,236 @@
+/* Slide 10: Use AI Everywhere to Be Fast and Ultra-Efficient - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-gold: #FFC72C;
+    --sparq-white: #FFFFFF;
+}
+
+#slide-10 .content.ai-efficiency {
+    background: linear-gradient(135deg, var(--sparq-carbon) 0%, var(--sparq-teal) 100%);
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Circuit pattern overlay for tech theme */
+#slide-10 .content.ai-efficiency::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h5v5h-5zM30 10h5v5h-5zM50 10h5v5h-5zM70 10h5v5h-5zM90 10h5v5h-5zM10 30h5v5h-5zM30 30h5v5h-5zM50 30h5v5h-5zM70 30h5v5h-5zM90 30h5v5h-5zM10 50h5v5h-5zM30 50h5v5h-5zM50 50h5v5h-5zM70 50h5v5h-5zM90 50h5v5h-5zM10 70h5v5h-5zM30 70h5v5h-5zM50 70h5v5h-5zM70 70h5v5h-5zM90 70h5v5h-5zM10 90h5v5h-5zM30 90h5v5h-5zM50 90h5v5h-5zM70 90h5v5h-5zM90 90h5v5h-5z' fill='rgba(255,255,255,0.03)' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: 50px 50px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+#slide-10 .header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+#slide-10 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-teal);
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#slide-10 .ai-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#slide-10 .ai-hub-container {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+/* Central AI Core */
+#slide-10 .ai-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--sparq-red);
+    box-shadow: 0 0 20px rgba(255, 0, 38, 0.3);
+    z-index: 2;
+}
+
+#slide-10 .ai-core img {
+    width: 60px;
+    height: 60px;
+}
+
+#slide-10 .ai-core-label {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 16px;
+    color: var(--sparq-white);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* AI Application Points */
+#slide-10 .ai-point {
+    position: absolute;
+    width: 160px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid var(--sparq-teal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+#slide-10 .ai-point-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+#slide-10 .ai-point-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sparq-white);
+    margin: 0;
+}
+
+/* Position the points in a circular pattern */
+#slide-10 .ai-point:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slide-10 .ai-point:nth-child(2) {
+    top: 20%;
+    right: 0;
+}
+
+#slide-10 .ai-point:nth-child(3) {
+    bottom: 20%;
+    right: 0;
+}
+
+#slide-10 .ai-point:nth-child(4) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slide-10 .ai-point:nth-child(5) {
+    bottom: 20%;
+    left: 0;
+}
+
+#slide-10 .ai-point:nth-child(6) {
+    top: 20%;
+    left: 0;
+}
+
+/* Connecting lines */
+#slide-10 .ai-connector {
+    position: absolute;
+    background-color: var(--sparq-red);
+    height: 2px;
+    z-index: 0;
+    opacity: 0.7;
+    /* Base styles - actual positions and dimensions are set in JavaScript */
+}
+
+#slide-10 .ai-conclusion {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--sparq-white);
+    text-align: center;
+    margin-top: 30px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-10 .ai-hub-container {
+        height: 350px;
+    }
+    
+    #slide-10 .ai-core {
+        width: 100px;
+        height: 100px;
+    }
+    
+    #slide-10 .ai-core img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #slide-10 .ai-point {
+        width: 140px;
+        padding: 10px;
+    }
+    
+    #slide-10 .ai-point-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-10 .ai-hub-container {
+        height: 300px;
+    }
+    
+    #slide-10 .ai-core {
+        width: 90px;
+        height: 90px;
+    }
+    
+    #slide-10 .ai-core img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    #slide-10 .ai-point {
+        width: 120px;
+        padding: 8px;
+    }
+    
+    #slide-10 .ai-conclusion {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
