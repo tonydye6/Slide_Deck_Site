@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
         printAllSlides();
     });
     
-    // Create a container for the print button that will be positioned in the top right
+    // Create a container for the print button that will be positioned in the top left
     const printButtonContainer = document.createElement('div');
     printButtonContainer.id = 'print-button-container';
     printButtonContainer.style.position = 'absolute';
-    printButtonContainer.style.right = '10px';
+    printButtonContainer.style.left = '10px';
     printButtonContainer.style.top = '10px';
     printButtonContainer.style.zIndex = '1000';
     
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const presentationContainer = document.querySelector('.presentation-container');
     if (presentationContainer) {
         presentationContainer.appendChild(printButtonContainer);
-        console.log('Print button added to far right of presentation');
+        console.log('Print button added to top left of presentation');
     } else {
         // Fallback method: try to add near the navigation controls
         const navControls = document.querySelector('.nav-controls');
