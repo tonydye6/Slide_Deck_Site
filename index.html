@@ -4579,7 +4579,8 @@
             <script>
                 // Simple slide navigation script
                 let currentSlide = 1;
-                const totalSlides = document.querySelectorAll('.slide').length;
+                // Fixed total of 44 slides
+                const totalSlides = 44;
                 
                 function updateSlideCounter() {
                     document.getElementById('slide-counter').textContent = `${currentSlide} / ${totalSlides}`;
