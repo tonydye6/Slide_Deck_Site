@@ -135,18 +135,19 @@
 }
 
 #slide-17 .inline-image {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: 80px;
+    max-height: 85px;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     object-fit: contain;
     margin-top: 3px;
+    background-color: transparent;
 }
 
 #slide-17 .small-logo {
-    max-width: 60px;
-    max-height: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 45px;
+    max-height: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 4px;
     padding: 3px;
     margin: 0 3px;
