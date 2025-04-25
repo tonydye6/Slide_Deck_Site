@@ -11,51 +11,49 @@ document.addEventListener('DOMContentLoaded', function() {
     printButton.id = 'print-button';
     printButton.className = 'nav-btn';
     
-    // Create a more professional printer icon using SVG, matching the image provided
+    // Create a simple PDF icon matching the reference image
     const iconSVG = `
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
-            <path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 12v2H8v-4h8v2zm2-2v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/>
-        </svg>
-        <span style="font-size: 12px; margin-top: 2px; letter-spacing: 0.5px;">PDF</span>
+        <span style="font-size: 12px; font-weight: bold; color: white; letter-spacing: 0.5px;">PDF</span>
     </div>
     `;
     
     printButton.innerHTML = iconSVG;
     printButton.style.cursor = 'pointer';
     
-    // Style the button to match the image provided
-    printButton.style.backgroundColor = '#2B2842'; // Carbon color
+    // Style the button to exactly match the image provided
+    printButton.style.backgroundColor = '#FF0026'; // Outlaw Red background
     printButton.style.color = 'white';
-    printButton.style.border = '2px solid #FF0026'; // Outlaw Red border
-    printButton.style.borderRadius = '50%'; // Make it circular
-    printButton.style.width = '50px';
-    printButton.style.height = '50px';
+    printButton.style.border = 'none'; 
+    printButton.style.borderRadius = '4px'; // Slightly rounded corners
+    printButton.style.width = '36px';
+    printButton.style.height = '36px';
     printButton.style.display = 'flex';
     printButton.style.alignItems = 'center';
     printButton.style.justifyContent = 'center';
     printButton.style.fontFamily = "'ADAM.CG PRO', Arial, sans-serif";
     printButton.style.padding = '0';
-    printButton.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.3)'; // Add subtle shadow
+    printButton.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.3)'; // Add subtle shadow
+    printButton.style.position = 'relative'; // For accurate positioning
     
-    // Add hover and active effects to match the image
+    // Add hover and active effects that match the red button style
     printButton.addEventListener('mouseover', function() {
-        this.style.backgroundColor = '#3B3852'; // Slightly lighter Carbon color
-        this.style.borderColor = '#FF0026'; // Keep Outlaw Red border
+        this.style.backgroundColor = '#D10020'; // Slightly darker Outlaw Red
         this.style.transform = 'scale(1.05)'; // Slight scale effect
     });
     
     printButton.addEventListener('mouseout', function() {
-        this.style.backgroundColor = '#2B2842'; // Carbon color
-        this.style.borderColor = '#FF0026'; // Outlaw Red
+        this.style.backgroundColor = '#FF0026'; // Outlaw Red
         this.style.transform = 'scale(1)'; // Reset scale
     });
     
     printButton.addEventListener('mousedown', function() {
+        this.style.backgroundColor = '#B5001C'; // Even darker Outlaw Red
         this.style.transform = 'scale(0.95)'; // Scale down slightly when pressed
     });
     
     printButton.addEventListener('mouseup', function() {
+        this.style.backgroundColor = '#D10020'; // Return to hover color
         this.style.transform = 'scale(1.05)'; // Return to hover scale
     });
     
@@ -64,12 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
         printAllSlides();
     });
     
-    // Create a container for the print button that will be positioned on the far right
+    // Create a container for the print button that will be positioned in the top right
     const printButtonContainer = document.createElement('div');
     printButtonContainer.id = 'print-button-container';
     printButtonContainer.style.position = 'absolute';
-    printButtonContainer.style.right = '20px';
-    printButtonContainer.style.top = '20px';
+    printButtonContainer.style.right = '10px';
+    printButtonContainer.style.top = '10px';
     printButtonContainer.style.zIndex = '1000';
     
     // Add the button to this container
