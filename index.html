@@ -23,6 +23,14 @@
             <span id="slide-counter">1 / 44</span>
             <button class="nav-btn next-btn" onclick="nextSlide()">&gt;</button>
         </div>
+        
+        <!-- Jump to dropdown menu -->
+        <div class="jump-to-menu">
+            <button class="jump-to-btn" onclick="toggleJumpMenu()">Jump to</button>
+            <div class="jump-menu-content" id="jumpMenuContent">
+                <!-- Slide links will be populated via JavaScript -->
+            </div>
+        </div>
 
         <!-- Slides Container -->
         <div class="slides-container">
@@ -2124,4 +2132,7 @@
     
     <!-- Add footer logo update script -->
     <script src="js/footer-update.js"></script>
+    
+    <!-- Add jump menu script -->
+    <script src="js/jump-menu.js"></script>
 </body>
