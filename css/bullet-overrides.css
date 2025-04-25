@@ -1,13 +1,53 @@
 /* Override all slide-specific bullet styles */
 
-/* GLOBAL OVERRIDE: Turn off all ::before pseudo-elements used for bullets */
+/**
+ * IMPORTANT: This CSS addresses critical bullet point styling issues across all slides.
+ * The problem is that each slide has its own CSS rules creating red circle bullets
+ * which are overlapping with our custom Sparq skull bullets.
+ * 
+ * This override file completely disables ALL ::before pseudo-elements for list items
+ * and ensures our custom bullets are displayed correctly.
+ */
+
+/* GLOBAL OVERRIDE: Completely disable ALL ::before pseudo-elements used for bullets */
 li::before {
     display: none !important;
     content: none !important;
     background-image: none !important;
+    background: none !important;
+    color: transparent !important;
+    border: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }
 
-/* Slide-specific overrides for known styles */
+/* Stronger overrides for slides where red circles are still appearing */
+#slide-2 li::before,
+#slide-5 li::before,
+#slide-6 li::before, 
+#slide-7 li::before,
+#slide-8 li::before,
+#slide-9 li::before,
+#slide-10 li::before,
+#slide-11 li::before,
+#slide-13 li::before,
+#slide-15 li::before,
+#slide-16 li::before,
+#slide-31 li::before {
+    display: none !important;
+    content: none !important;
+    background-image: none !important;
+    background: none !important;
+    opacity: 0 !important;
+}
+
+/* Known problematic slide sections */
 
 /* Slide 2 (Mission) */
 .value-text li::before {
@@ -79,14 +119,19 @@ li::before {
     display: none !important;
 }
 
-/* Make sure our custom bullets are visible */
+/* ENSURE our custom bullets are visible and prominently displayed */
 li img[src*="Bulletpoint_Logo_Skull(Red) copy.png"] {
     display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 100 !important; /* Make sure our bullets are on top */
 }
 
-/* Reset any list styles that might be overriding our custom bullets */
-ul {
+/* Completely reset any list styles that might be overriding our custom bullets */
+ul, ol {
     list-style-type: none !important;
+    list-style-image: none !important;
+    list-style: none !important;
 }
 
 /* Make sure our regular lists don't have any bullets */
