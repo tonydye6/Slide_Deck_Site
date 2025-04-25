@@ -1,0 +1,288 @@
+/* Slide 13: Introducing the Sparq Locker Room - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-white: #FFFFFF;
+}
+
+#slide-13 .content.locker-room {
+    background-image: url('../Locker_Room_Background.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay for readability */
+#slide-13 .content.locker-room::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 40, 66, 0.85); /* Carbon at 85% opacity */
+    z-index: 0;
+}
+
+#slide-13 .header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+#slide-13 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-teal);
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#slide-13 .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--heading-size) * 0.8);
+    color: var(--sparq-white);
+    margin-top: 0;
+    font-weight: 500;
+}
+
+#slide-13 .locker-room-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#slide-13 .left-column {
+    flex: 1;
+    padding-right: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+}
+
+#slide-13 .right-column {
+    flex: 1;
+    padding-left: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#slide-13 .intro-text {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 1.1);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-13 .section-title {
+    margin-bottom: var(--spacing-sm);
+}
+
+#slide-13 h3.section-heading {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    color: var(--sparq-red);
+    font-size: calc(var(--heading-size) * 0.85);
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+}
+
+#slide-13 h4.section-subheading {
+    font-family: 'Inter', sans-serif;
+    color: var(--sparq-white);
+    font-size: calc(var(--heading-size) * 0.65);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+#slide-13 .description {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.95);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-13 .feature-list {
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-13 .feature-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.9);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    padding-left: 28px;
+    position: relative;
+}
+
+#slide-13 .feature-list li img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+#slide-13 .closing-text {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.95);
+    line-height: 1.5;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+#slide-13 .quote-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding: 0 var(--spacing-md);
+}
+
+#slide-13 .quote-wrapper {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: var(--spacing-lg);
+    position: relative;
+    border: 1px solid rgba(0, 161, 156, 0.3);
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-13 .quote-mark {
+    font-family: 'Arial', sans-serif;
+    font-size: 80px;
+    position: absolute;
+    line-height: 0;
+    color: var(--sparq-teal);
+    opacity: 0.5;
+}
+
+#slide-13 .quote-mark-open {
+    top: 30px;
+    left: 10px;
+}
+
+#slide-13 .quote-mark-close {
+    bottom: 10px;
+    right: 20px;
+}
+
+#slide-13 .quote {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 1.05);
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+#slide-13 .attribution-container {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+#slide-13 .headshot {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: var(--spacing-sm);
+    border: 2px solid var(--sparq-teal);
+}
+
+#slide-13 .attribution {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.85);
+    line-height: 1.4;
+    margin: 0;
+}
+
+#slide-13 .visual-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#slide-13 .interface-visual {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--sparq-teal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-13 .locker-room-content {
+        flex-direction: column;
+    }
+    
+    #slide-13 .left-column {
+        padding-right: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    #slide-13 .right-column {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: var(--spacing-md);
+    }
+    
+    #slide-13 .quote {
+        font-size: calc(var(--body-size) * 0.95);
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-13 .header {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-13 .intro-text {
+        font-size: calc(var(--body-size) * 1);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-13 .description {
+        font-size: calc(var(--body-size) * 0.9);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-13 .feature-list li {
+        margin-bottom: 6px;
+    }
+    
+    #slide-13 .quote-wrapper {
+        padding: var(--spacing-md);
+    }
+    
+    #slide-13 .quote-mark {
+        font-size: 60px;
+    }
+    
+    #slide-13 .quote {
+        font-size: calc(var(--body-size) * 0.9);
+    }
+    
+    #slide-13 .headshot {
+        width: 50px;
+        height: 50px;
+    }
+}
