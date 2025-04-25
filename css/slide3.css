@@ -2,83 +2,149 @@
 .web3-simplified {
     background-color: var(--sparq-carbon);
     color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle tech pattern overlay */
+.web3-simplified::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(135deg, rgba(0, 161, 156, 0.05) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(0, 161, 156, 0.05) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(0, 161, 156, 0.05) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(0, 161, 156, 0.05) 25%, transparent 25%);
+    background-size: 60px 60px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.web3-content {
+    position: relative;
+    z-index: 1;
 }
 
 .web3-simplified .title {
     color: var(--sparq-teal);
-    font-size: var(--title-size);
+    font-size: calc(var(--title-size) * 1.2); /* Increased title size */
     margin-bottom: var(--spacing-md);
     text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 161, 156, 0.3);
+    letter-spacing: 1px;
 }
 
 .web3-content p {
     font-family: 'Inter', sans-serif;
     font-size: var(--body-size);
-    line-height: 1.4;
+    line-height: 1.5;
     margin-bottom: var(--spacing-md);
+    max-width: 90%;
 }
 
 .web-evolution {
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-lg);
     position: relative;
+    margin-bottom: var(--spacing-xl);
 }
 
 .three-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
     position: relative;
+}
+
+/* Section divider between columns and market context */
+.web-evolution::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--sparq-teal), transparent);
+    opacity: 0.6;
+}
+
+/* Column styling with distinct blocks */
+.web-column {
+    position: relative;
+    background-color: rgba(30, 30, 36, 0.85); /* Steel color for column bg */
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: var(--spacing-md) var(--spacing-md);
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Web 1 column styling */
+.web-column:first-child {
+    border-color: var(--sparq-teal);
+}
+
+/* Web 2 column styling */
+.web-column:nth-child(2) {
+    border-color: var(--sparq-teal);
+}
+
+/* Web 3 column styling (highlight) */
+.web-column.highlight {
+    border: 2px solid var(--sparq-red);
+    background: linear-gradient(135deg, rgba(30, 30, 36, 0.95), rgba(255, 0, 38, 0.15));
+    box-shadow: 0 6px 20px rgba(255, 0, 38, 0.2);
 }
 
 /* Add arrows between columns */
-.web-column {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: var(--spacing-md);
-    transition: transform 0.3s;
-}
-
 .web-column:not(:last-child)::after {
     content: "→";
     position: absolute;
-    right: -15px;
+    right: -21px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--sparq-red);
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     z-index: 10;
+    text-shadow: 0 0 10px rgba(255, 0, 38, 0.5);
 }
 
 .web-column:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.web-column.highlight {
-    border: 1px solid var(--sparq-red);
-    background-color: rgba(255, 0, 38, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .web-column h3 {
-    font-size: var(--heading-size);
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif; /* Updated font */
+    font-size: calc(var(--heading-size) * 1.1);
     margin-bottom: var(--spacing-sm);
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .web-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    margin-bottom: var(--spacing-sm);
+    height: 70px;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-xs);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 70px;
+    margin: 0 auto var(--spacing-md);
 }
 
 .web-column p {
     text-align: center;
     font-weight: bold;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    font-size: calc(var(--body-size) * 1.05);
 }
 
 .web-column ul {
@@ -88,38 +154,45 @@
 
 .web-column li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: var(--spacing-xs);
+    padding-left: 28px;
+    margin-bottom: var(--spacing-sm);
     font-family: 'Inter', sans-serif;
     font-size: calc(var(--body-size) * 0.9);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .web-column li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 5px;
-    width: 15px;
-    height: 15px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
     background-image: url('../attached_assets/Logo_Skull(Red).png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+/* Market context section */
 .web3-approach {
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
     background-color: rgba(0, 161, 156, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     border-left: 4px solid var(--sparq-teal);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .web3-approach p {
     font-family: 'Inter', sans-serif;
     font-size: var(--body-size);
-    line-height: 1.5;
-    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.web3-approach p strong {
+    color: var(--sparq-teal);
+    font-weight: 700;
 }
 
 .web3-approach p:last-child {
@@ -129,7 +202,12 @@
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .three-column {
-        gap: 15px;
+        gap: 22px;
+    }
+    
+    .web-column:not(:last-child)::after {
+        right: -16px;
+        font-size: 24px;
     }
     
     .web-column li {
@@ -140,14 +218,18 @@
 @media (max-width: 992px) {
     .three-column {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
     }
     
     .web-column:not(:last-child)::after {
         content: "↓";
         right: 50%;
         top: auto;
-        bottom: -25px;
+        bottom: -30px;
         transform: translateX(50%);
+    }
+    
+    .web3-approach {
+        margin-top: var(--spacing-lg);
     }
 }
