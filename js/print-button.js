@@ -80,38 +80,101 @@ document.addEventListener('DOMContentLoaded', function() {
  * Print all slides in the presentation
  */
 function printAllSlides() {
-    console.log('Preparing all slides for printing...');
+    console.log('Preparing all 44 slides for printing...');
+    
+    // First, remove any existing print styles
+    const existingStyle = document.getElementById('print-styles');
+    if (existingStyle) {
+        document.head.removeChild(existingStyle);
+    }
     
     // Create a print-specific stylesheet
     const style = document.createElement('style');
     style.id = 'print-styles';
     style.media = 'print';
     
-    // Add print-specific CSS
+    // Much more comprehensive print styles to ensure all slides are visible
     style.textContent = `
         @media print {
+            @page {
+                size: auto;
+                margin: 0mm;
+            }
+
             /* Hide navigation elements */
-            .nav-controls, .jump-to-menu, #print-button {
+            .nav-controls, .jump-to-menu, #print-button, #jumpMenuContent {
                 display: none !important;
             }
             
-            /* Show all slides */
-            .slide {
+            /* Make ALL slides visible and properly formatted for printing */
+            .slides-container .slide {
                 display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
                 page-break-after: always !important;
                 page-break-inside: avoid !important;
+                break-after: page !important;
                 height: 100vh !important;
                 width: 100% !important;
+                max-width: 100% !important;
                 box-sizing: border-box !important;
                 margin: 0 !important;
                 padding: 20px !important;
+                overflow: visible !important;
             }
             
-            /* Ensure backgrounds print */
+            /* Hide any "display: none" that might be applied dynamically */
+            .slides-container .slide[style*="display: none"] {
+                display: block !important;
+            }
+            
+            /* Special handling for active slides */
+            .slide-active {
+                display: block !important;
+            }
+            
+            /* Ensure all content is visible */
+            .slides-container {
+                height: auto !important;
+                overflow: visible !important;
+                display: block !important;
+            }
+            
+            /* Ensure backgrounds and colors print */
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
                 color-adjust: exact !important;
+            }
+            
+            /* Make sure images print */
+            img, svg {
+                max-width: 100% !important;
+                page-break-inside: avoid !important;
+            }
+            
+            /* Ensure text doesn't break */
+            p, h1, h2, h3, h4, h5, h6, li {
+                page-break-inside: avoid !important;
+            }
+            
+            /* Hide any non-essential elements */
+            body > *:not(.presentation-container),
+            .presentation-container > *:not(.slides-container),
+            .presentation-container > *:not(.nav-controls):not(.jump-to-menu):not(.slides-container) {
+                display: none !important;
+            }
+            
+            /* Ensure font colors print */
+            body {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Give each slide a minimum height */
+            .slide {
+                min-height: 100vh !important;
             }
         }
     `;
@@ -119,61 +182,82 @@ function printAllSlides() {
     // Add the style to the head
     document.head.appendChild(style);
     
-    // Show preparing message to user
-    alert('Preparing all 44 slides for printing. The print dialog will open shortly...');
+    // Create a print-only container where we'll place all slides for printing
+    const printContainer = document.createElement('div');
+    printContainer.id = 'print-all-slides-container';
+    printContainer.style.position = 'absolute';
+    printContainer.style.left = '-9999px';
+    printContainer.style.top = '-9999px';
+    printContainer.style.width = '100%';
+    printContainer.style.height = 'auto';
     
-    // Delay slightly to let the alert be shown
+    // Clone all slides and add them to the print container
+    const slidesContainer = document.querySelector('.slides-container');
+    
+    // Clone all slides
+    const allSlides = Array.from(document.querySelectorAll('.slide'));
+    
+    console.log(`Found ${allSlides.length} total slides to print`);
+    
+    // Remember current active slide
+    const currentSlideNumber = window.currentSlide || 1;
+    
+    // Store original display states
+    const originalDisplayStates = {};
+    
+    // Make all slides visible for printing (in the original DOM)
+    allSlides.forEach((slide, index) => {
+        // Save original display state
+        originalDisplayStates[slide.id] = {
+            display: slide.style.display,
+            wasActive: slide.classList.contains('slide-active')
+        };
+        
+        // Temporarily make all slides visible
+        slide.style.display = 'block';
+        slide.classList.remove('slide-active');
+        slide.setAttribute('data-print-index', index + 1);
+    });
+    
+    // Show preparing message
+    alert('Preparing all 44 slides for printing. When the print dialog opens, make sure to select "Print Background Colors" in your browser print settings for best results.');
+    
+    // Delay to let the DOM update
     setTimeout(function() {
-        // Save current slide for later
-        const currentSlideNumber = window.currentSlide;
-        
-        // Make all slides visible for printing
-        const slides = document.querySelectorAll('.slide');
-        
-        slides.forEach(slide => {
-            // Add a class to mark for printing
-            slide.classList.add('print-visible');
-            
-            // Make sure it's visible but keep track of active status
-            if (slide.classList.contains('slide-active')) {
-                slide.dataset.wasActive = 'true';
-            } else {
-                slide.dataset.wasActive = 'false';
-                // Make visible for printing
-                slide.style.display = 'block';
-            }
-        });
-        
-        // Trigger print dialog
+        // Open print dialog
         window.print();
         
-        // Clean up after printing (or after dialog is closed)
+        // Clean up after printing
         setTimeout(function() {
-            // Restore slide visibility
-            slides.forEach(slide => {
-                slide.classList.remove('print-visible');
+            // Restore original slide visibility
+            allSlides.forEach(slide => {
+                const originalState = originalDisplayStates[slide.id];
                 
-                // Restore previous visibility state
-                if (slide.dataset.wasActive === 'false') {
-                    slide.style.display = '';
-                    slide.classList.remove('slide-active');
-                } else {
-                    slide.classList.add('slide-active');
+                if (originalState) {
+                    // Restore original display state
+                    slide.style.display = originalState.display;
+                    
+                    // Restore active class if it was active
+                    if (originalState.wasActive) {
+                        slide.classList.add('slide-active');
+                    } else {
+                        slide.classList.remove('slide-active');
+                    }
                 }
                 
-                // Clean up data attribute
-                slide.removeAttribute('data-was-active');
+                // Remove print attribute
+                slide.removeAttribute('data-print-index');
             });
             
             // Remove print stylesheet
             document.head.removeChild(style);
             
-            // Show the correct slide again
+            // Show the original active slide again
             if (window.showSlide) {
                 window.showSlide(currentSlideNumber);
             }
             
-            console.log('Print cleanup completed');
+            console.log('Print cleanup completed, restored to slide', currentSlideNumber);
         }, 1000);
-    }, 100);
+    }, 500);
 }
