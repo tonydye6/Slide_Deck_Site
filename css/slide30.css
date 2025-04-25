@@ -1,0 +1,177 @@
+/* Slide 30: GAME SLATE */
+#slide-30 {
+    background-color: var(--sparq-carbon);
+}
+
+#slide-30 .content {
+    padding: 40px;
+    position: relative;
+    color: var(--sparq-white);
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#slide-30 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#slide-30 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--sparq-teal);
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#slide-30 .appendix-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--sparq-teal);
+    padding: 4px 8px;
+    border: 1px solid var(--sparq-teal);
+    border-radius: 4px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+#slide-30 .games-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex: 1;
+    overflow: hidden;
+}
+
+#slide-30 .game-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(33.333% - 20px);
+}
+
+#slide-30 .game-image-container {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#slide-30 .game-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#slide-30 .game-title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 18px;
+    color: var(--sparq-gold);
+    text-align: center;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+}
+
+#slide-30 .game-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-30 .title {
+        font-size: 32px;
+    }
+    
+    #slide-30 .games-container {
+        gap: 20px;
+    }
+    
+    #slide-30 .game-title {
+        font-size: 16px;
+    }
+    
+    #slide-30 .game-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide-30 .content {
+        padding: 30px;
+    }
+    
+    #slide-30 .title {
+        font-size: 28px;
+    }
+    
+    #slide-30 .appendix-label {
+        top: 30px;
+        right: 30px;
+    }
+    
+    #slide-30 .game-image-container {
+        margin-bottom: 10px;
+    }
+    
+    #slide-30 .game-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    #slide-30 .game-description {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-30 .content {
+        padding: 25px;
+    }
+    
+    #slide-30 .header {
+        margin-bottom: 15px;
+    }
+    
+    #slide-30 .title {
+        font-size: 24px;
+    }
+    
+    #slide-30 .appendix-label {
+        top: 25px;
+        right: 25px;
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    
+    #slide-30 .games-container {
+        gap: 15px;
+    }
+    
+    #slide-30 .game-image-container {
+        margin-bottom: 8px;
+    }
+    
+    #slide-30 .game-title {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    #slide-30 .game-description {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+}
