@@ -1,0 +1,172 @@
+/* Slide 20: Sparq Inc. Advisory Board - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-steel: #1E1E24;
+    --sparq-white: #FFFFFF;
+    --sparq-gold: #FFD700;
+}
+
+#slide-20 .content.advisory-board {
+    background-color: var(--sparq-carbon);
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+#slide-20 .header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+#slide-20 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-teal);
+    margin-bottom: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slide-20 .advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+#slide-20 .advisor-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: calc(var(--spacing-sm) * 0.8);
+    border: 1px solid rgba(0, 161, 156, 0.2);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#slide-20 .advisor-cell:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slide-20 .headshot-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: calc(var(--spacing-xs) * 0.8);
+    border: 2px solid rgba(0, 161, 156, 0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+#slide-20 .advisor-headshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#slide-20 .advisor-name {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: calc(var(--body-size) * 1);
+    color: var(--sparq-white);
+    margin: 0 0 0.2em 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+#slide-20 .advisor-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--sparq-teal);
+    margin: 0 0 calc(var(--spacing-xs) * 0.7) 0;
+    line-height: 1.2;
+}
+
+#slide-20 .company-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    margin-top: auto;
+}
+
+#slide-20 .company-text-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+    height: 20px;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 8px;
+    color: var(--sparq-white);
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-20 .advisors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #slide-20 .advisors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-20 .header {
+        margin-bottom: calc(var(--spacing-md) * 0.7);
+    }
+    
+    #slide-20 .title {
+        font-size: calc(var(--title-size) * 0.9);
+    }
+    
+    #slide-20 .advisors-grid {
+        gap: calc(var(--spacing-sm) * 0.7);
+    }
+    
+    #slide-20 .advisor-cell {
+        padding: calc(var(--spacing-sm) * 0.6);
+    }
+    
+    #slide-20 .headshot-container {
+        width: 70px;
+        height: 70px;
+        margin-bottom: calc(var(--spacing-xs) * 0.6);
+    }
+    
+    #slide-20 .advisor-name {
+        font-size: calc(var(--body-size) * 0.9);
+    }
+    
+    #slide-20 .advisor-title {
+        font-size: 11px;
+        margin-bottom: calc(var(--spacing-xs) * 0.5);
+    }
+    
+    #slide-20 .company-logo-container {
+        height: 20px;
+    }
+    
+    #slide-20 .company-text-logo {
+        height: 18px;
+        font-size: 7px;
+    }
+}
