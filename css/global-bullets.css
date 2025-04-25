@@ -1,21 +1,43 @@
 /* Global custom bullet points styling using the sparq-bullet-list class */
 
 /* Main bullet list styles */
-ul.sparq-bullet-list {
+ul.sparq-bullet-list,
+ul.feature-list,
+.business-section ul,
+.milestone ul,
+.market-intro ul,
+.traction-milestones ul,
+.economic-factors ul,
+.media-outlets ul {
   list-style: none !important; /* Force removal of default bullets */
   padding-left: 0 !important;
   margin-left: 0 !important;
 }
 
 /* Style direct children list items */
-ul.sparq-bullet-list > li {
+ul.sparq-bullet-list > li,
+ul.feature-list > li,
+.business-section ul > li,
+.milestone ul > li,
+.market-intro ul > li,
+.traction-milestones ul > li,
+.economic-factors ul > li,
+.media-outlets ul > li {
   padding-left: 28px !important; /* Space for bullet + margin */
   position: relative !important; /* Needed for positioning ::before */
   margin-bottom: 8px !important; /* Space between items */
+  list-style: none !important;
 }
 
 /* Create the custom bullet using ::before */
-ul.sparq-bullet-list > li::before {
+ul.sparq-bullet-list > li::before,
+ul.feature-list > li::before,
+.business-section ul > li::before,
+.milestone ul > li::before,
+.market-intro ul > li::before,
+.traction-milestones ul > li::before,
+.economic-factors ul > li::before,
+.media-outlets ul > li::before {
   content: '' !important; /* Use empty content with background-image */
   background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png') !important;
   background-size: contain !important;
@@ -26,11 +48,19 @@ ul.sparq-bullet-list > li::before {
   position: absolute !important;
   left: 0 !important;
   top: 4px !important; /* Adjust for vertical alignment */
+  display: block !important;
 }
 
 /* --- Styling for NESTED Lists --- */
 /* Ensure nested lists revert to standard bullets */
-ul.sparq-bullet-list ul {
+ul.sparq-bullet-list ul,
+ul.feature-list ul,
+.business-section ul ul,
+.milestone ul ul,
+.market-intro ul ul,
+.traction-milestones ul ul,
+.economic-factors ul ul,
+.media-outlets ul ul {
   list-style: disc !important; /* Use standard disc for nested */
   padding-left: 20px !important; /* Indentation for nested */
   margin-left: 10px !important; /* Adjust margin if needed */
@@ -38,14 +68,28 @@ ul.sparq-bullet-list ul {
 }
 
 /* Remove custom bullet from nested list items */
-ul.sparq-bullet-list ul li::before {
+ul.sparq-bullet-list ul li::before,
+ul.feature-list ul li::before,
+.business-section ul ul li::before,
+.milestone ul ul li::before,
+.market-intro ul ul li::before,
+.traction-milestones ul ul li::before,
+.economic-factors ul ul li::before,
+.media-outlets ul ul li::before {
   content: none !important;
   background-image: none !important;
   display: none !important; /* Hide the pseudo-element entirely */
 }
 
 /* Reset padding for nested list items */
-ul.sparq-bullet-list ul li {
+ul.sparq-bullet-list ul li,
+ul.feature-list ul li,
+.business-section ul ul li,
+.milestone ul ul li,
+.market-intro ul ul li,
+.traction-milestones ul ul li,
+.economic-factors ul ul li,
+.media-outlets ul ul li {
   padding-left: 0 !important;
   position: static !important;
   margin-bottom: 4px !important; /* Adjust spacing */
