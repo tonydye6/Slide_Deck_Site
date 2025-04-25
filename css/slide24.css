@@ -1,0 +1,239 @@
+/* Slide 24: Join the Future of Sports Gaming - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-steel: #1E1E24;
+    --sparq-white: #FFFFFF;
+    --sparq-gold: #FFD700;
+}
+
+#slide-24 .content.join-future {
+    position: relative;
+    overflow: hidden;
+    color: var(--sparq-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#slide-24 .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('../Background3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#slide-24 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(255, 0, 38, 0.8) 0%, rgba(0, 161, 156, 0.8) 50%, rgba(43, 40, 66, 0.9) 100%);
+    opacity: 0.85;
+}
+
+#slide-24 .content-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#slide-24 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    color: var(--sparq-gold);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+#slide-24 .description {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--sparq-white);
+    margin-bottom: 40px;
+    max-width: 800px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#slide-24 .characters-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+#slide-24 .character {
+    height: 380px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+}
+
+#slide-24 .character.left {
+    transform: translateX(-40px);
+}
+
+#slide-24 .character.right {
+    transform: translateX(40px);
+}
+
+#slide-24 .contact-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#slide-24 .contact-heading {
+    font-family: 'Neodex', 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 24px;
+    color: var(--sparq-white);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#slide-24 .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#slide-24 .contact-item {
+    text-align: center;
+}
+
+#slide-24 .contact-name {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 18px;
+    color: var(--sparq-white);
+    margin-bottom: 5px;
+}
+
+#slide-24 .contact-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+#slide-24 .contact-email {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--sparq-teal);
+    margin-bottom: 5px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#slide-24 .contact-email:hover {
+    color: var(--sparq-gold);
+    text-decoration: underline;
+}
+
+#slide-24 .contact-phone {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--sparq-teal);
+}
+
+#slide-24 .logo-container {
+    margin-top: 20px;
+}
+
+#slide-24 .logo {
+    height: 60px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-24 .character {
+        height: 320px;
+    }
+    
+    #slide-24 .title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide-24 .character {
+        height: 280px;
+    }
+    
+    #slide-24 .title {
+        font-size: 34px;
+    }
+    
+    #slide-24 .description {
+        font-size: 16px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-24 .title {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    #slide-24 .description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    #slide-24 .character {
+        height: 280px;
+    }
+    
+    #slide-24 .contact-container {
+        padding: 15px 30px;
+    }
+    
+    #slide-24 .contact-heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #slide-24 .contact-name {
+        font-size: 16px;
+    }
+    
+    #slide-24 .contact-title {
+        font-size: 12px;
+    }
+    
+    #slide-24 .contact-email, 
+    #slide-24 .contact-phone {
+        font-size: 14px;
+    }
+    
+    #slide-24 .logo {
+        height: 50px;
+    }
+}
