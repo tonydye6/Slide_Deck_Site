@@ -1,0 +1,53 @@
+Objective: Regenerate the data visualization on Slide 38 ("Allocation [Continued]") of the Sparq Games pitch deck HTML to accurately represent the source stacked bar chart provided in slide38_Replit_Output_and_Source_Chart.pdf. Replace the existing incorrect chart entirely.
+
+Target: Slide 38 ("Allocation [Continued]") - specifically the chart area.
+
+Specific Instructions for Chart Regeneration:
+
+Remove Existing Chart: Delete the current incorrect chart visualization code.
+
+Implement New Chart - Stacked Bar Chart:
+
+Type: Create a Stacked Bar Chart. Do NOT use a stacked area chart.
+
+Data Points (Bars): Create bars corresponding to the weeks shown in the source chart's X-axis (0, 3, 6, 9, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60).
+
+Data Series & Stacking Order: Each bar must be composed of stacked segments representing the allocation categories. The stacking order (bottom to top) MUST match the source legend:
+
+Token Sale
+
+Team
+
+Partners
+
+Marketing
+
+NFT Holders
+
+Ecosystem
+
+Liquidity
+
+Foundation
+
+Segment Heights: The height of each colored segment within each bar must visually approximate the proportions shown in the source chart image for that specific week. Estimate these proportions carefully from the source image. The total height of each bar should reflect the cumulative total at that week, reaching 1,000,000,000 at week 60.
+
+Colors: Assign distinct Sparq brand colors to each category (e.g., Token Sale: #00A19C, Team: #EB0028, Partners: #FF3864, Marketing: #404BF2, NFT Holders: #FFD700, Ecosystem: #A0522D (SaddleBrown - adjust if needed), Liquidity: #C0F2EA, Foundation: #DAA520 (Goldenrod - adjust if needed)). Ensure the chosen colors are used consistently in the chart and the legend.
+
+Axes:
+
+X-axis: Label "Weeks", include markers for 0, 3, 6, 9, 24, ..., 60.
+
+Y-axis: Label "Finite Token Supply", include markers from 0 to 1,000,000,000 (e.g., 0, 200M, 400M, 600M, 800M, 1B).
+
+Use 'Inter' font for axis labels.
+
+Legend: Create a clear legend below the chart listing all 8 categories, matching the stacking order and the assigned colors accurately. Use 'Inter' font for the legend.
+
+Implementation Method: If possible, use a JavaScript charting library (like Chart.js or D3.js) configured to produce this specific stacked bar chart. If a library cannot be used, construct the chart using HTML div elements. Each bar would be a container div, and each segment within the bar would be an inner div with a specific height (calculated based on the estimated proportion and total bar height) and the correct background-color. Use CSS Flexbox or Grid for layout.
+
+Descriptive Text: Ensure the descriptive paragraph below the chart remains present and correctly styled (Inter font).
+
+Content Fit: Ensure the entire slide content (title, subtitle, chart, legend, text) fits without overflow or scroll bars. Adjust chart size or text size slightly if absolutely necessary.
+
+Reference: The final chart must visually match the structure, data representation, and categories shown in the source chart image from slide38_Replit_Output_and_Source_Chart.pdf. Align other styling with sparq_deck_design_doc_v2. Replace the existing chart code on Slide 38.

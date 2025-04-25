@@ -4,7 +4,7 @@
 }
 
 #slide-39 .content {
-    padding: 25px;
+    padding: 18px;
     position: relative;
     color: var(--sparq-white);
     height: 100%;
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 #slide-39 .title-container {
@@ -27,7 +27,7 @@
 
 #slide-39 .title {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     text-transform: uppercase;
     color: var(--sparq-teal);
     margin: 0;
@@ -35,17 +35,17 @@
 
 #slide-39 .subtitle {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--sparq-white);
-    margin: 5px 0 0 0;
+    margin: 3px 0 0 0;
     font-weight: 500;
 }
 
 #slide-39 .appendix-label {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--sparq-teal);
-    padding: 3px 6px;
+    padding: 2px 5px;
     border: 1px solid var(--sparq-teal);
     border-radius: 4px;
 }
@@ -54,13 +54,14 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    overflow: hidden;
 }
 
 #slide-39 .flow-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
 #slide-39 .flow-step {
@@ -68,13 +69,13 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    padding: 12px 15px;
+    padding: 8px 10px;
     position: relative;
 }
 
 #slide-39 .step-number {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background-color: var(--sparq-teal);
     color: var(--sparq-carbon);
     border-radius: 50%;
@@ -82,15 +83,15 @@
     align-items: center;
     justify-content: center;
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 12px;
-    margin-right: 12px;
+    font-size: 11px;
+    margin-right: 8px;
     flex-shrink: 0;
 }
 
 #slide-39 .step-icon {
-    width: 30px;
-    height: 30px;
-    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,8 +99,8 @@
 }
 
 #slide-39 .step-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     fill: none;
     stroke: var(--sparq-teal);
     stroke-width: 2;
@@ -113,31 +114,32 @@
 
 #slide-39 .step-title {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--sparq-white);
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 #slide-39 .step-description {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.3;
     color: var(--sparq-white);
 }
 
 #slide-39 .arrow-down {
     align-self: center;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: -4px 0;
 }
 
 #slide-39 .arrow-down svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     fill: none;
     stroke: var(--sparq-teal);
     stroke-width: 2;
@@ -146,30 +148,30 @@
 }
 
 #slide-39 .why-section {
-    margin-top: auto;
-    padding: 15px;
+    margin-top: 5px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.2);
     border-left: 3px solid var(--sparq-red);
 }
 
 #slide-39 .why-title {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--sparq-red);
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
 }
 
 #slide-39 .why-text {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 1.3;
+    margin-bottom: 10px;
 }
 
 #slide-39 .highlight-container {
     text-align: center;
-    padding: 12px;
-    margin-top: 15px;
+    padding: 8px;
+    margin-top: 8px;
     background-color: rgba(255, 215, 0, 0.1);
     border-radius: 6px;
     border: 1px solid var(--sparq-gold);
@@ -177,10 +179,10 @@
 
 #slide-39 .highlight-text {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--sparq-gold);
-    line-height: 1.4;
+    line-height: 1.3;
     margin: 0;
 }
 
