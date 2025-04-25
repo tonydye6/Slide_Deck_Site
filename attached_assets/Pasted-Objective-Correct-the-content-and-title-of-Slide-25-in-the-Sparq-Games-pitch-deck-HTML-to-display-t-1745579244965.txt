@@ -1,0 +1,37 @@
+Objective: Correct the content and title of Slide 25 in the Sparq Games pitch deck HTML to display the required Disclaimer information accurately and ensure full visibility. Replace the existing content and title of Slide 25.
+
+Target: Slide 25 of the HTML pitch deck.
+
+Specific Instructions:
+
+Replace Title: Change the current title of Slide 25 to exactly: "Disclaimer". Apply the standard title styling (ADAM.CG PRO, Large, Uppercase, Grit Teal #00A19C).
+
+Replace Content: Remove all existing body content on Slide 25 and replace it with the following exact text block:
+
+The materials presented in this Company Deck are provided for informational purposes only and should not be considered an offer, solicitation, or invitation to purchase or subscribe for securities or other financial products. This Deck does not represent a public offering and is not intended to form the basis of any investment decision. Recipients are advised to conduct their own due diligence, seek independent professional advice, and review all applicable laws, regulations, and restrictions. No representations or warranties, express or implied, are made as to the accuracy or completeness of the information contained herein, and the Company reserves the right to amend or update these materials at any time.
+
+Styling & Layout:
+
+Apply standard body text styling to the disclaimer paragraph:
+
+Font: Inter
+
+Size: Small (use 12px to 14px, prioritize smaller size to ensure fit)
+
+Color: White (#FFFFFF) or light grey (#E0E0E0) on the dark background (Carbon #2B2842 or Steel #1E1E24). Ensure high contrast.
+
+Line Spacing: Use standard or slightly tight line spacing (e.g., leading-normal or leading-snug) to conserve vertical space.
+
+Layout: Use a single text block. Ensure adequate padding around the text block (e.g., p-6 or p-8).
+
+Container (Optional but Recommended): Consider placing the text within a subtle container to visually define it (e.g., add a thin Grit Teal border: border border-teal-500 rounded-lg p-6 or a slightly different background shade like Steel #1E1E24 with padding).
+
+Content Fit (CRITICAL):
+
+Ensure the entire disclaimer text block is fully visible on the slide without any overflow or requiring a scroll bar. This is the most critical requirement for this slide.
+
+Use text wrapping. If necessary, reduce font size to the minimum readable size (12px) to achieve fit.
+
+Cleanup: Remove any other incorrect elements (like quotes or images) that might currently be on Slide 25. Ensure the Sparq Skull footer logo is present and correctly placed.
+
+Reference: This correction ensures Slide 25 accurately reflects the required legal disclaimer content and title. Align with sparq_deck_design_doc_v2 for general styling principles, but prioritize fitting all content above specific container styling if there's a conflict
