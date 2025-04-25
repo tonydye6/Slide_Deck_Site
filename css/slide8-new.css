@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(43, 40, 66, 0.9) 0%, rgba(0, 161, 156, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(43, 40, 66, 0.95) 0%, rgba(43, 40, 66, 0.9) 100%);
     z-index: 2;
 }
 
@@ -71,7 +71,11 @@
 .ecosystem-text {
     display: flex;
     flex-direction: column;
-    padding-right: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    position: relative;
+    background-color: rgba(43, 40, 66, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .ecosystem-text p {
@@ -100,7 +104,7 @@
 
 .ecosystem-text li::before {
     content: '';
-    background-image: url('../attached_assets/Logo_Skull(Red).png');
+    background-image: url('../attached_assets/Bulletpoint_Logo_Skull(Red) copy.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

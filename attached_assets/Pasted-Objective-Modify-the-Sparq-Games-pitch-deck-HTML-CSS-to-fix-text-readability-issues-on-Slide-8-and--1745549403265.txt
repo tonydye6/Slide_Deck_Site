@@ -1,0 +1,45 @@
+Objective: Modify the Sparq Games pitch deck HTML/CSS to fix text readability issues on Slide 8 and implement a global style change for primary bullet points across all slides.
+
+Target: Primarily Slide 8 for readability, but the CSS change for bullet points affects the entire deck.
+
+Specific Instructions:
+
+Fix Text Readability on Slide 8:
+
+Problem: The text in the left section of Slide 8 (containing the main description and bullet points) is currently difficult to read against the background image (Background2.jpg or Background3.jpg with overlay).
+
+Solution: Improve text contrast significantly. Choose one of these methods:
+
+Option A (Preferred): Increase the opacity of the dark overlay applied to the background image only on Slide 8 to at least 90-95% dark (Carbon #2B2842), ensuring the white text (#FFFFFF) has high contrast.
+
+Option B: Alternatively, add a distinct semi-transparent background container specifically behind the text block in the left section of Slide 8. Use a dark color like Carbon #2B2842 with around 70-80% opacity for this container, ensuring the white text on top is clearly legible.
+
+Verification: Ensure all text in the left section of Slide 8 is easily readable after the change.
+
+Implement Global Custom Bullet Points:
+
+Problem: The deck is currently using default HTML bullet points instead of the specified Sparq Skull icon.
+
+Solution: Modify the global CSS to use the image attached_assets/Bulletpoint_Logo_Skull(Red) copy.png for all primary (first-level) unordered list items (ul > li) throughout the entire HTML document.
+
+CSS Implementation Steps:
+
+Target primary list items (e.g., ul > li or a specific class applied to primary lists).
+
+Remove default list styling (e.g., list-style: none; padding-left: 0; margin-left: 0;).
+
+Use the ::before pseudo-element to insert the custom bullet image:
+
+content: url('attached_assets/Bulletpoint_Logo_Skull(Red) copy.png'); (Adjust path if necessary based on where the Agent stores assets).
+
+Set an appropriate size for the image (e.g., width: 16px; height: 16px; - adjust as needed for visual balance).
+
+Ensure proper spacing between the image bullet and the list item text (e.g., using display: inline-block; margin-right: 8px;).
+
+Adjust vertical alignment if needed (vertical-align: middle; or similar) so the icon aligns nicely with the text.
+
+Ensure nested lists (ul ul li) revert to standard bullet styles (e.g., list-style: disc; or list-style: square;) and have appropriate indentation (margin-left: 20px; or similar).
+
+Verification: Check multiple slides (e.g., Slide 2, Slide 8, Slide 16, Slide 23) to confirm that all primary bullet points now use the red skull image and nested bullets use standard styles.
+
+Reference: These changes should build upon the existing structure and styles defined in sparq_deck_design_doc_v2. Ensure the readability fix on Slide 8 integrates smoothly with the overall design.
