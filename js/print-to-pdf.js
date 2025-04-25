@@ -16,18 +16,20 @@ function setupPrintButton() {
     // Create print button element
     const printButton = document.createElement('button');
     printButton.id = 'print-button';
-    printButton.className = 'nav-control print-control';
+    printButton.className = 'nav-btn print-control';
     printButton.innerHTML = '<span class="print-icon">🖨️</span> PDF';
     printButton.title = 'Print to PDF';
     
-    // Find navigation controls container
-    const navControls = document.querySelector('.navigation-controls');
+    // Find the navigation area - in this deck it's the nav-controls div
+    const navControls = document.querySelector('.nav-controls');
     if (navControls) {
-        // Insert print button before the jump menu button
-        const jumpMenu = document.querySelector('.jump-to-menu');
-        if (jumpMenu) {
-            navControls.insertBefore(printButton, jumpMenu);
+        // Add it after the slide counter
+        const slideCounter = document.getElementById('slide-counter');
+        if (slideCounter) {
+            // Insert after slide counter
+            slideCounter.insertAdjacentElement('afterend', printButton);
         } else {
+            // Fallback - insert at the end of nav controls
             navControls.appendChild(printButton);
         }
         
@@ -35,8 +37,20 @@ function setupPrintButton() {
         printButton.addEventListener('click', function() {
             preparePrintLayout();
         });
+        console.log("Print button added successfully");
     } else {
-        console.error('Navigation controls not found');
+        // Alternative approach - try to add it next to the jump menu
+        const jumpMenu = document.querySelector('.jump-to-menu');
+        if (jumpMenu) {
+            jumpMenu.insertAdjacentElement('beforebegin', printButton);
+            // Add click event listener
+            printButton.addEventListener('click', function() {
+                preparePrintLayout();
+            });
+            console.log("Print button added next to jump menu");
+        } else {
+            console.error('Navigation controls and jump menu not found');
+        }
     }
 }
 
@@ -51,6 +65,17 @@ function preparePrintLayout() {
     
     // Create a clone of the entire presentation for printing
     const originalContent = document.querySelector('.presentation-container');
+    if (!originalContent) {
+        console.error('Presentation container not found');
+        return;
+    }
+    
+    // Clean up any existing print container
+    const existingPrintContainer = document.getElementById('print-container');
+    if (existingPrintContainer) {
+        document.body.removeChild(existingPrintContainer);
+    }
+    
     const printContainer = originalContent.cloneNode(true);
     printContainer.id = 'print-container';
     
@@ -67,6 +92,8 @@ function preparePrintLayout() {
     
     // Show all slides in the print container
     const slides = printContainer.querySelectorAll('.slide');
+    console.log(`Preparing ${slides.length} slides for printing`);
+    
     slides.forEach(slide => {
         slide.classList.add('slide-print');
         slide.classList.remove('slide-active');
@@ -78,14 +105,28 @@ function preparePrintLayout() {
         slide.style.overflow = 'hidden';
     });
     
-    // Hide navigation controls in print version
-    const navControlsInPrint = printContainer.querySelector('.navigation-controls');
-    if (navControlsInPrint) {
-        navControlsInPrint.style.display = 'none';
+    // Hide navigation elements in print version
+    const navControls = printContainer.querySelector('.nav-controls');
+    if (navControls) {
+        navControls.style.display = 'none';
+    }
+    
+    const jumpMenu = printContainer.querySelector('.jump-to-menu');
+    if (jumpMenu) {
+        jumpMenu.style.display = 'none';
+    }
+    
+    // Remove any existing print stylesheet
+    const existingPrintStyle = document.getElementById('print-styles');
+    if (existingPrintStyle) {
+        document.head.removeChild(existingPrintStyle);
     }
     
     // Create print-specific stylesheet
     injectPrintStyles();
+    
+    // Alert user that print is being prepared
+    alert('Preparing all 44 slides for printing. The print dialog will open shortly...');
     
     // Wait a bit for styles to apply, then trigger print dialog
     setTimeout(function() {
@@ -98,6 +139,7 @@ function preparePrintLayout() {
             if (printStylesheet) {
                 document.head.removeChild(printStylesheet);
             }
+            console.log('Print process completed');
         }, 1000);
     }, 500);
 }
@@ -115,20 +157,21 @@ function injectPrintStyles() {
     // Add print-specific CSS rules
     const css = `
         @media print {
-            /* Hide main content */
-            #presentation-container:not(#print-container) {
+            /* Hide original presentation container while keeping the print container */
+            .presentation-container:not(#print-container) {
                 display: none !important;
             }
             
             /* Hide all non-essential elements */
-            .navigation-controls, .jump-to-menu, #jumpMenuContent {
+            .nav-controls, .jump-to-menu, #jumpMenuContent, #print-button {
                 display: none !important;
             }
             
             /* Format slides for printing */
             .slide-print {
                 display: block !important;
-                page-break-after: always;
+                page-break-after: always !important;
+                page-break-inside: avoid !important;
                 height: 100vh !important;
                 width: 100% !important;
                 box-sizing: border-box !important;
@@ -138,23 +181,51 @@ function injectPrintStyles() {
                 opacity: 1 !important;
                 position: relative !important;
                 overflow: hidden !important;
+                break-after: page !important;
             }
             
             /* Fix fonts and sizes for better printing */
             body {
                 font-size: 12pt !important;
-                color: #000 !important;
-                background: #fff !important;
+                color: black !important;
+                background: white !important;
             }
             
+            /* Ensure headings don't break */
             h1, h2, h3, h4, h5, h6 {
-                page-break-after: avoid;
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
             }
             
             /* Ensure images print properly */
             img, svg {
                 max-width: 100% !important;
-                page-break-inside: avoid;
+                max-height: 90vh !important;
+                page-break-inside: avoid !important;
+            }
+            
+            /* Ensure lists print properly */
+            ul, ol, li {
+                page-break-inside: avoid !important;
+            }
+            
+            /* Ensure tables print properly */
+            table, tr, td, th {
+                page-break-inside: avoid !important;
+            }
+            
+            /* Ensure all backgrounds and colors print */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Print each slide on its own page */
+            #print-container .slide {
+                display: block !important;
+                page-break-after: always !important;
+                break-after: page !important;
             }
         }
     `;
