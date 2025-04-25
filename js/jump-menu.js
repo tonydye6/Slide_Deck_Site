@@ -1,50 +1,50 @@
 // Array of slide titles for the jump menu
 const slideTitles = [
-    "SPARQ", // Slide 1
+    "Cover", // Slide 1
     "Mission", // Slide 2
     "Web3 Simplified", // Slide 3
     "The Problem", // Slide 4
-    "Why is Web3 Hard to Adopt?", // Slide 5
-    "The Solution", // Slide 6
-    "Sports & Web3: Perfect Match", // Slide 7
-    "Our Approach", // Slide 8
-    "Market Opportunity", // Slide 9
-    "Games Distribution", // Slide 10
-    "Game Genres", // Slide 11
-    "Game Studio Partners", // Slide 12
-    "Crown U", // Slide 13
-    "Crown U: College Football Rivalry", // Slide 14
-    "Crown U Vision", // Slide 15
-    "Games Roadmap", // Slide 16
-    "Athlete IP Strategy", // Slide 17
-    "Athlete Partnerships", // Slide 18
-    "Athlete Testimonials", // Slide 19
-    "AI-Powered Pipeline", // Slide 20
-    "Play-to-Own Overview", // Slide 21
-    "NFT Strategy", // Slide 22
-    "IP Portfolio", // Slide 23
-    "Fantasy Sports", // Slide 24
-    "User Experience Flow", // Slide 25
-    "Athlete & Partner Benefits", // Slide 26
-    "Web3 for Sports Fans", // Slide 27
-    "Web3 Blockchain Integration", // Slide 28
-    "Token Economy", // Slide 29
-    "Competitive Analysis", // Slide 30
-    "Marketing Strategy", // Slide 31
-    "Go-to-Market Strategy", // Slide 32
-    "Revenue Model", // Slide 33
-    "Revenue Projections", // Slide 34
-    "Raising Round", // Slide 35
-    "Use of Funds", // Slide 36
-    "Trusted by Athletes", // Slide 37
-    "Allocation", // Slide 38
-    "Allocation [Continued]", // Slide 38b
-    "Game Studio Team", // Slide 39
-    "Advisors", // Slide 40
-    "The Locker Room: Enabling the Ecosystem", // Slide 41
-    "The Locker Room: Legacy Builder", // Slide 42
-    "Industry Leaders: Athlete Comp", // Slide 43
-    "Rise Together Fund", // Slide 44
+    "Web3 Failed", // Slide 5
+    "Recession Proof", // Slide 6
+    "NCAA Sports", // Slide 7
+    "Gaming Ecosystem", // Slide 8
+    "The Playbook", // Slide 9
+    "AI Everywhere", // Slide 10
+    "Media Coverage", // Slide 11
+    "Go To Market", // Slide 12
+    "Locker Room™", // Slide 13
+    "Market Opportunity", // Slide 14
+    "Business Model", // Slide 15
+    "Traction", // Slide 16
+    "CEO", // Slide 17
+    "Game Leadership", // Slide 18
+    "Sports Ties", // Slide 19
+    "Advisory Board", // Slide 20
+    "Board of Directors", // Slide 21
+    "F.T.C.", // Slide 22
+    "Fundraise", // Slide 23
+    "Join the Future", // Slide 24
+    "Disclaimer", // Slide 25
+    "Appendix", // Slide 26
+    "Web3 Matters", // Slide 27
+    "CROWN U™", // Slide 28
+    "Rollout", // Slide 29
+    "Game Slate", // Slide 30
+    "$Sparq Token", // Slide 31
+    "TGE Strategy", // Slide 32
+    "Bitcoin Halving", // Slide 33
+    "Market Cycles", // Slide 34
+    "Risk & Mitigation", // Slide 35
+    "Deflationary Core", // Slide 36
+    "Token Allocation", // Slide 37
+    "Allocation Cont.", // Slide 38
+    "Retention/Engagement", // Slide 38b
+    "Trojan Horse", // Slide 39
+    "The Locker Room (1)", // Slide 40
+    "The Locker Room (2)", // Slide 41
+    "The Locker Room (3)", // Slide 42
+    "Athlete Comp", // Slide 43
+    "R.T.F.", // Slide 44
 ];
 
 // When the document is loaded, initialize the jump menu
@@ -87,8 +87,8 @@ function toggleJumpMenu() {
 
 // Function to jump to a specific slide
 function jumpToSlide(slideIndex) {
-    // Handle special case for slide 38b (Allocation [Continued])
-    if (slideIndex === 41) { // 41 is the index in the array for Allocation [Continued]
+    // Handle special case for slide 38b (Allocation Cont.)
+    if (slideIndex === 39) { // 39 is the index in the array for "Retention/Engagement", but we want to show slide-38b
         // Target the slide-38b element instead
         const targetSlide = document.getElementById('slide-38b');
         if (targetSlide) {
@@ -97,16 +97,16 @@ function jumpToSlide(slideIndex) {
             });
             targetSlide.classList.add('slide-active');
             // Update currentSlide variable in the main script
-            currentSlide = 41;
+            currentSlide = 39;
             updateSlideCounter();
             // Dispatch the slide change event
-            document.dispatchEvent(new CustomEvent('slide-change', { detail: 41 }));
+            document.dispatchEvent(new CustomEvent('slide-change', { detail: 39 }));
             return;
         }
     }
     
-    // Handle special case for slide 43a (Retention and Engagement)
-    if (slideIndex === 45) { // This shouldn't happen with our new menu, but just in case
+    // Handle special case for slide 43a (Retention/Engagement)
+    if (slideIndex === 40) { // 40 is the index for "Trojan Horse", but we want to show slide-43a
         // Target the slide-43a element instead
         const targetSlide = document.getElementById('slide-43a');
         if (targetSlide) {
@@ -115,10 +115,10 @@ function jumpToSlide(slideIndex) {
             });
             targetSlide.classList.add('slide-active');
             // Update currentSlide variable in the main script
-            currentSlide = 45;
+            currentSlide = 40;
             updateSlideCounter();
             // Dispatch the slide change event
-            document.dispatchEvent(new CustomEvent('slide-change', { detail: 45 }));
+            document.dispatchEvent(new CustomEvent('slide-change', { detail: 40 }));
             return;
         }
     }
