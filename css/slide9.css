@@ -1,0 +1,196 @@
+/* Slide 9: The Playbook - Styling */
+
+:root {
+    --sparq-red: #FF0026;
+    --sparq-teal: #00A19C;
+    --sparq-carbon: #2B2842;
+    --sparq-gold: #FFC72C;
+    --sparq-white: #FFFFFF;
+}
+
+#slide-9 .content.playbook {
+    background: linear-gradient(135deg, var(--sparq-teal) 0%, var(--sparq-carbon) 100%);
+    color: var(--sparq-white);
+    position: relative;
+    overflow: hidden;
+}
+
+#slide-9 .header {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-9 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: var(--title-size);
+    font-weight: bold;
+    color: var(--sparq-white);
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#slide-9 .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--heading-size) * 0.8);
+    color: var(--sparq-white);
+    margin-top: 0;
+    font-weight: 500;
+}
+
+#slide-9 .playbook-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#slide-9 .playbook-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 1.1);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#slide-9 .mass-adoption-playbook {
+    margin-top: var(--spacing-sm);
+}
+
+#slide-9 h3 {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    color: var(--sparq-gold);
+    font-size: calc(var(--heading-size) * 0.75);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+}
+
+#slide-9 .playbook-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+#slide-9 .step {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--sparq-red);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+#slide-9 .step::before {
+    content: attr(data-step);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 28px;
+    color: var(--sparq-red);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+#slide-9 .step-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: var(--spacing-sm);
+    color: var(--sparq-teal);
+}
+
+#slide-9 h4 {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    color: var(--sparq-teal);
+    font-size: calc(var(--heading-size) * 0.65);
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+}
+
+#slide-9 h4 svg {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#slide-9 .sparq-bullet-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#slide-9 .sparq-bullet-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(var(--body-size) * 0.9);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-xs);
+    padding-left: 28px;
+    position: relative;
+}
+
+#slide-9 .sparq-logo-tagline {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+#slide-9 .footer-logo-img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+#slide-9 .tagline {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-9 .playbook-steps {
+        gap: var(--spacing-sm);
+    }
+    
+    #slide-9 .step {
+        padding: var(--spacing-sm);
+    }
+    
+    #slide-9 h4 {
+        font-size: calc(var(--heading-size) * 0.6);
+    }
+    
+    #slide-9 .sparq-bullet-list li {
+        font-size: calc(var(--body-size) * 0.85);
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-9 .playbook-intro {
+        font-size: calc(var(--body-size) * 1);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-9 h3 {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    #slide-9 .playbook-steps {
+        gap: var(--spacing-sm);
+    }
+    
+    #slide-9 .step {
+        padding: var(--spacing-sm);
+    }
+}
