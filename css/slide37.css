@@ -1,0 +1,233 @@
+/* Slide 37: Token Allocation */
+#slide-37 {
+    background-color: var(--sparq-carbon);
+}
+
+#slide-37 .content {
+    padding: 25px;
+    position: relative;
+    color: var(--sparq-white);
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#slide-37 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#slide-37 .title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--sparq-teal);
+    margin: 0;
+}
+
+#slide-37 .appendix-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--sparq-teal);
+    padding: 3px 6px;
+    border: 1px solid var(--sparq-teal);
+    border-radius: 4px;
+}
+
+#slide-37 .token-allocation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+    overflow: hidden;
+}
+
+#slide-37 .table-section {
+    flex: 1;
+}
+
+#slide-37 .section-title {
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+    font-size: 16px;
+    color: var(--sparq-teal);
+    text-transform: uppercase;
+    margin: 0 0 6px 0;
+}
+
+#slide-37 .token-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--sparq-teal);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+#slide-37 .token-table th {
+    background-color: rgba(0, 161, 156, 0.2);
+    color: var(--sparq-teal);
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+    border: 1px solid var(--sparq-teal);
+}
+
+#slide-37 .token-table td {
+    padding: 5px 8px;
+    border: 1px solid var(--sparq-teal);
+    vertical-align: middle;
+}
+
+#slide-37 .token-table tr:nth-child(odd) td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#slide-37 .token-table tr:nth-child(even) td {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slide-37 .number-cell {
+    text-align: right;
+}
+
+#slide-37 .percentage-cell {
+    text-align: right;
+}
+
+#slide-37 .top-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+#slide-37 .economic-model {
+    flex: 1;
+}
+
+#slide-37 .sales-structure {
+    flex: 1;
+}
+
+#slide-37 .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+#slide-37 .token-sales {
+    flex: 1;
+}
+
+#slide-37 .other-segments {
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-37 .content {
+        padding: 20px;
+    }
+    
+    #slide-37 .header {
+        margin-bottom: 12px;
+    }
+    
+    #slide-37 .token-allocation-content {
+        gap: 15px;
+    }
+    
+    #slide-37 .token-table {
+        font-size: 11px;
+    }
+    
+    #slide-37 .token-table th,
+    #slide-37 .token-table td {
+        padding: 5px 6px;
+    }
+    
+    #slide-37 .section-title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    
+    #slide-37 .top-section,
+    #slide-37 .bottom-section {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide-37 .content {
+        padding: 15px;
+    }
+    
+    #slide-37 .header {
+        margin-bottom: 10px;
+    }
+    
+    #slide-37 .title {
+        font-size: 26px;
+    }
+    
+    #slide-37 .token-allocation-content {
+        gap: 12px;
+    }
+    
+    #slide-37 .token-table {
+        font-size: 10px;
+    }
+    
+    #slide-37 .token-table th,
+    #slide-37 .token-table td {
+        padding: 4px 5px;
+    }
+    
+    #slide-37 .section-title {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    #slide-37 .top-section,
+    #slide-37 .bottom-section {
+        gap: 15px;
+    }
+}
+
+@media (max-height: 700px) {
+    #slide-37 .content {
+        padding: 12px;
+    }
+    
+    #slide-37 .header {
+        margin-bottom: 8px;
+    }
+    
+    #slide-37 .title {
+        font-size: 24px;
+    }
+    
+    #slide-37 .token-allocation-content {
+        gap: 10px;
+    }
+    
+    #slide-37 .token-table {
+        font-size: 9px;
+    }
+    
+    #slide-37 .token-table th,
+    #slide-37 .token-table td {
+        padding: 3px 4px;
+    }
+    
+    #slide-37 .section-title {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    
+    #slide-37 .top-section,
+    #slide-37 .bottom-section {
+        gap: 12px;
+    }
+}
