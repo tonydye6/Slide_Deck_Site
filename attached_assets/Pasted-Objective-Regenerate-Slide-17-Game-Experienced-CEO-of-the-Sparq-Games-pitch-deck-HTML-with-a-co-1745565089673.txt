@@ -1,0 +1,45 @@
+Objective: Regenerate Slide 17 ("Game Experienced CEO") of the Sparq Games pitch deck HTML with a completely redesigned two-column layout focused on clear structure, better visual integration, and absolute prevention of content overflow. Replace the previous version of Slide 17 entirely.
+
+Target: Slide 17 ("Game Experienced CEO") of the HTML pitch deck.
+
+Specific Instructions for New Design:
+
+Background: Use a clean, dark background (Carbon #2B2842 or Steel #1E1E24).
+
+Layout: Implement a two-column layout (Left column ~30-35% width, Right column ~65-70% width). Ensure columns stack vertically on smaller screens.
+
+Left Column (Images):
+
+Place the primary headshot JanH_(Headshot).png prominently at the top.
+
+Below the headshot, place the Jan_Nasdaq(Experienced_CEO_Slide).png image, scaled appropriately to fit neatly within this column. Consider applying a grayscale filter (filter: grayscale(100%);) or a subtle frame.
+
+Right Column (Titles, Text, Logos, Character Image):
+
+Place the main title "GAME EXPERIENCED CEO" (ADAM.CG PRO, Large, Uppercase, Grit Teal) and the name "JAN HORSFALL" (ADAM.CG PRO or Neodex, Medium-Large, White) at the top.
+
+Structure the biographical text and associated visuals vertically below the titles:
+
+Valvoline/Lycos Section: Display the relevant paragraph (Inter, Small-Medium, White). Place Valvoline_Logo.png (small) adjacent to or just below this text.
+
+Turbine Section: Display the relevant paragraph (Inter, Use font size 13px-14px AND leading-snug line spacing). Create a small visual block below or adjacent containing Turbine_Logo.png (small) AND Lotro_Character.png (small, maybe opacity: 0.8).
+
+CEO Roles Section: Display the relevant paragraph (Inter, Small-Medium, White). Below this text, create a compact grid (e.g., 4x2) displaying the logos (Gemini Voice, Novo, Gelazzi, Big Freeze, Universal, PetroChoice, Warner Bros, NorthWestern Energy - use text/generic if files unavailable). Keep logos small and uniform.
+
+MIT Section: Display the relevant paragraph (Inter, Small-Medium, White). Place the MIT logo (text/generic) adjacent to this text.
+
+Content Fit & Readability (CRITICAL):
+
+Ensure ALL text content, images, and logos for Slide 17 are fully visible without overflowing or requiring scroll bars. This is the absolute top priority.
+
+Use text wrapping extensively in the right column.
+
+Mandatory: Use reduced font size (13px-14px) and tight line spacing (leading-snug) for the Inter description paragraphs, especially the Turbine section, as needed to fit. Minimum font size 12px.
+
+Ensure high contrast between text and the dark background.
+
+Typography & Color: Strictly adhere to the font rules (ADAM.CG PRO, Inter, Neodex accents) and Sparq color palette (Outlaw Red, Grit Teal, Carbon, Steel, White) as defined in the main design document (sparq_deck_design_doc_v2).
+
+Polish: Ensure clean alignment within the right column. Use consistent spacing between the text/visual sections. Place the Sparq Skull footer logo correctly.
+
+Reference: This revised layout aims for better structure and guarantees content fit by separating visuals and mandating text scaling. Align with sparq_deck_design_doc_v2. Replace the existing Slide 17 code.
