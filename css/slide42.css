@@ -1,0 +1,167 @@
+/* Slide 42: The Locker Room: Legacy Builder */
+.legacy-builder-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 120px);
+    padding: 0 40px;
+}
+
+.legacy-builder-content h2 {
+    font-family: 'ADAM.CG PRO', sans-serif;
+    color: #FF0026; /* Outlaw Red */
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.legacy-builder-content h3 {
+    font-family: 'ADAM.CG PRO', sans-serif;
+    color: #00A19C; /* Grit Teal */
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.legacy-builder-container {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+}
+
+.legacy-content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.legacy-content-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.legacy-description {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.benefits-list, .cross-game-items {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.benefit-item, .item-type {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.benefit-icon, .item-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-icon img, .item-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.benefit-content, .item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-title, .item-title {
+    font-weight: bold;
+    font-family: 'ADAM.CG PRO', sans-serif;
+    color: #FFD700; /* Victory Gold */
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.benefit-description, .item-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.progression-indicators {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.progression-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.indicator-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2B2842; /* Carbon */
+    border: 2px solid #00A19C; /* Grit Teal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.indicator-label {
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.case-study {
+    background-color: rgba(43, 40, 66, 0.7); /* Carbon with transparency */
+    border-left: 4px solid #FF0026; /* Outlaw Red */
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.case-study h4 {
+    color: #FFD700; /* Victory Gold */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'ADAM.CG PRO', sans-serif;
+}
+
+.cross-game-header {
+    margin-bottom: 15px;
+}
+
+.divider {
+    height: 2px;
+    background-color: #00A19C; /* Grit Teal */
+    margin: 15px 0;
+}
+
+/* Quote section */
+.legacy-quote {
+    background-color: rgba(0, 161, 156, 0.15); /* Grit Teal with transparency */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+.legacy-quote p {
+    font-style: italic;
+    padding-left: 20px;
+    border-left: 3px solid #FF0026; /* Outlaw Red */
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
