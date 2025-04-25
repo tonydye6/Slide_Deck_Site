@@ -191,6 +191,7 @@ p {
     overflow: hidden; /* Prevent scrolling */
     background-color: var(--sparq-carbon); /* Updated to Carbon background color */
     padding: var(--spacing-md); /* Reduced from lg to md to allow more space */
+    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
 }
 
 .slide-active {
@@ -208,6 +209,8 @@ p {
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculation */
+    position: relative; /* Needed for absolute positioning within */
 }
 
 .header {
@@ -516,6 +519,57 @@ ul li:before {
     
     .slide {
         padding: var(--spacing-md);
+    }
+}
+
+/* Height-based responsive adjustments */
+@media (max-height: 700px) {
+    :root {
+        --title-size: 2.5rem;
+        --subtitle-size: 1.8rem;
+        --heading-size: 1.3rem;
+        --body-size: 0.9rem;
+        --small-size: 0.8rem;
+        --quote-size: 1.1rem;
+        
+        --spacing-xl: 2.5rem;
+        --spacing-lg: 1.5rem;
+        --spacing-md: 1rem;
+        --spacing-sm: 0.5rem;
+        --spacing-xs: 0.25rem;
+    }
+    
+    .header {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .slide {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-height: 600px) {
+    :root {
+        --title-size: 2rem;
+        --subtitle-size: 1.5rem;
+        --heading-size: 1.1rem;
+        --body-size: 0.8rem;
+        --small-size: 0.7rem;
+        --quote-size: 1rem;
+        
+        --spacing-xl: 2rem;
+        --spacing-lg: 1.2rem;
+        --spacing-md: 0.8rem;
+        --spacing-sm: 0.4rem;
+        --spacing-xs: 0.2rem;
+    }
+    
+    .header {
+        margin-bottom: 0.4rem;
+    }
+    
+    .slide {
+        padding: 0.5rem;
     }
 }
 

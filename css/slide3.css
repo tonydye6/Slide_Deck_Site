@@ -135,9 +135,56 @@
     .web-column li {
         font-size: calc(var(--body-size) * 0.85);
     }
+    
+    .web-icon {
+        height: 50px; /* Slightly reduce icon height */
+    }
 }
 
 @media (max-width: 992px) {
+    .web3-simplified .title {
+        font-size: calc(var(--title-size) * 0.85);
+    }
+    
+    .web3-content > p {
+        font-size: calc(var(--body-size) * 0.9);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .web-column {
+        padding: var(--spacing-xs);
+    }
+    
+    .web-column h3 {
+        font-size: calc(var(--heading-size) * 0.85);
+        margin-bottom: 5px;
+    }
+    
+    .web-icon {
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    
+    .web-column li {
+        font-size: calc(var(--body-size) * 0.75);
+        margin-bottom: 3px;
+        line-height: 1.3;
+        padding-left: 20px;
+    }
+    
+    .web-column li::before {
+        width: 12px;
+        height: 12px;
+        top: 3px;
+    }
+    
+    .web3-approach p {
+        font-size: calc(var(--body-size) * 0.85);
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 768px) {
     .three-column {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -149,5 +196,121 @@
         top: auto;
         bottom: -25px;
         transform: translateX(50%);
+    }
+    
+    .web-column li {
+        font-size: calc(var(--body-size) * 0.85);
+    }
+    
+    .web-icon {
+        height: 50px;
+    }
+}
+
+/* Ensure content always fits within viewport */
+@media (max-height: 700px) {
+    .web3-simplified .title {
+        font-size: calc(var(--title-size) * 0.75);
+        margin-bottom: 10px;
+    }
+    
+    .web3-content > p {
+        margin-bottom: 10px;
+        font-size: calc(var(--body-size) * 0.85);
+    }
+    
+    .web-evolution {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .web-column {
+        padding: 10px;
+    }
+    
+    .web-icon {
+        height: 30px;
+        margin-bottom: 5px;
+    }
+    
+    .web-column p {
+        margin-bottom: 5px;
+    }
+    
+    .web-column li {
+        margin-bottom: 2px;
+        line-height: 1.2;
+        font-size: calc(var(--body-size) * 0.7);
+    }
+    
+    .web3-approach {
+        margin-top: 10px;
+        padding: 10px;
+    }
+    
+    .web3-approach p {
+        margin-bottom: 5px;
+        font-size: calc(var(--body-size) * 0.8);
+        line-height: 1.2;
+    }
+}
+
+/* Extreme height constraints */
+@media (max-height: 600px) {
+    .web3-simplified .title {
+        font-size: calc(var(--title-size) * 0.6);
+        margin-bottom: 5px;
+    }
+    
+    .web3-content > p {
+        margin-bottom: 5px;
+        font-size: calc(var(--body-size) * 0.75);
+    }
+    
+    .web-evolution {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .web-column {
+        padding: 5px;
+    }
+    
+    .web-icon {
+        height: 25px;
+        margin-bottom: 3px;
+    }
+    
+    .web-column p {
+        margin-bottom: 3px;
+        font-size: calc(var(--body-size) * 0.7);
+    }
+    
+    .web-column li {
+        margin-bottom: 1px;
+        line-height: 1.1;
+        font-size: calc(var(--body-size) * 0.55);
+        padding-left: 15px;
+    }
+    
+    .web-column li::before {
+        width: 8px;
+        height: 8px;
+        top: 2px;
+    }
+    
+    .web3-approach {
+        margin-top: 5px;
+        padding: 5px;
+    }
+    
+    .web3-approach p {
+        margin-bottom: 3px;
+        font-size: calc(var(--body-size) * 0.7);
+        line-height: 1.1;
+    }
+    
+    .three-column {
+        gap: 10px;
     }
 }
