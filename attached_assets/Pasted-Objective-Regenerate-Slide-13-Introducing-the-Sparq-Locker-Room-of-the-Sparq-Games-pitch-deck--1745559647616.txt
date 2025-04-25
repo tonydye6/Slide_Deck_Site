@@ -1,0 +1,41 @@
+Objective: Regenerate Slide 13 ("Introducing the Sparq Locker Room™") of the Sparq Games pitch deck HTML with a completely new, structured two-column layout, incorporating the specified background image and improving visual appeal. Replace the previous version of Slide 13 entirely.
+
+Target: Slide 13 ("Introducing the Sparq Locker Room™") of the HTML pitch deck.
+
+Specific Instructions for New Design:
+
+Background: Apply Locker_Room_Background.png (from Support_Images_Grid.pdf) as the full slide background image. Apply a dark overlay (Carbon #2B2842 at 75-85% opacity) over the image to ensure high text readability while retaining the locker room ambiance.
+
+Layout: Implement a two-column layout (e.g., Left column ~60% width, Right column ~40% width).
+
+Left Column ("The Concept & Benefits"):
+
+Place the main title "INTRODUCING THE SPARQ LOCKER ROOM™" (ADAM.CG PRO, Large, Grit Teal) and subtitle "The Seamless Bridge to Web3" (Inter, Medium, White) at the top.
+
+Add the intro paragraph "Tens of millions..." below the titles (Inter, Medium, White).
+
+Create a section titled "Web3 Without the Friction" (Heading: Neodex or ADAM.CG PRO, Medium, Outlaw Red).
+
+Include the paragraph "Our proprietary platform serves..." under this heading (Inter, Small-Medium, White).
+
+List the 4 benefits (Earn rewards, Own collectibles, Participate, Turn rewards) using an unordered list (<ul class="sparq-list">). Ensure the custom bullet point CSS using attached_assets/Bulletpoint_Logo_Skull(Red) copy.png is correctly applied. Use Inter font (Small-Medium, White) for list items.
+
+Right Column ("The Experience & Validation"):
+
+Place a stylized icon representing the "Locker Room" or "Bridge" concept at the top (use Grit Teal/White).
+
+Create a distinct quote block (e.g., background Steel #1E1E24 or Grit Teal border).
+
+Display the quote "Simple, appreciated sports-based benefits..." inside (Inter, Italic, Medium-Large, White). Use large stylized quotation marks (Outlaw Red).
+
+Add attribution "Dan 'DA' Algattas..." and his small, masked headshot (DanielA_(Headshot).png) below the quote (Inter, Small, White/Grit Teal).
+
+Place the concluding paragraph "This friction-free onboarding strategy..." below the quote block (Inter, Small-Medium, White).
+
+Typography & Color: Strictly adhere to the font rules (ADAM.CG PRO, Inter, Neodex accents) and Sparq color palette (Outlaw Red, Grit Teal, Carbon, Steel, White, Victory Gold) as defined in the main design document (sparq_deck_design_doc_v2).
+
+Readability & Polish: Ensure all text has high contrast against the background/overlay. Use consistent padding and margins. Align elements cleanly. Include the Sparq Skull footer logo.
+
+Content Fit: Ensure all text content from Updated_Pitch_Deck_Content.txt for Slide 13 is included and fully visible without overflow.
+
+Reference: This new layout should effectively integrate the background image and present the information in a more structured and visually engaging manner, aligning with sparq_deck_design_doc_v2. Replace the existing Slide 13 code.
