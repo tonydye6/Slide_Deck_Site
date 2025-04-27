@@ -1,0 +1,173 @@
+/* New Slide 17 Styling - CEO Profile */
+#slide-17 {
+    color: white;
+    background-color: #2B2842; /* Carbon */
+}
+
+#slide-17 .content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+#slide-17 .ceo-slide-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#slide-17 .title {
+    color: #00A19C; /* Grit Teal */
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#slide-17 .ceo-name {
+    color: #FF0026; /* Outlaw Red */
+    font-size: 30px;
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+/* Main content grid */
+#slide-17 .ceo-content-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    gap: 15px;
+    flex: 1;
+}
+
+/* Headshot column */
+#slide-17 .ceo-headshot-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slide-17 .ceo-headshot {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #00A19C; /* Grit Teal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Bio sections */
+#slide-17 .ceo-bio-section {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 3px solid #FF0026; /* Outlaw Red */
+}
+
+#slide-17 .ceo-bio-section h3 {
+    color: #00A19C; /* Grit Teal */
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#slide-17 .ceo-bio-section p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Highlight styling */
+#slide-17 .highlight {
+    color: #00A19C; /* Grit Teal */
+    font-weight: bold;
+}
+
+#slide-17 .highlight-red {
+    color: white;
+    background-color: rgba(255, 0, 38, 0.3); /* Outlaw Red with transparency */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 0, 38, 0.5);
+}
+
+/* Companies grid */
+#slide-17 .ceo-companies-grid {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+#slide-17 .ceo-companies-grid h3 {
+    color: #00A19C; /* Grit Teal */
+    margin: 0 0 10px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#slide-17 .company-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+#slide-17 .company {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 0, 38, 0.3); /* Outlaw Red with transparency */
+    color: white;
+    font-size: 10px;
+    padding: 6px 3px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Footer */
+#slide-17 .slide-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #slide-17 .ceo-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #slide-17 .ceo-headshot-column {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-height: 720px) {
+    #slide-17 .ceo-slide-header {
+        margin-bottom: 10px;
+    }
+    
+    #slide-17 .title {
+        font-size: 32px;
+    }
+    
+    #slide-17 .ceo-name {
+        font-size: 26px;
+    }
+    
+    #slide-17 .ceo-bio-section {
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    
+    #slide-17 .ceo-bio-section h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    #slide-17 .ceo-bio-section p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+}
