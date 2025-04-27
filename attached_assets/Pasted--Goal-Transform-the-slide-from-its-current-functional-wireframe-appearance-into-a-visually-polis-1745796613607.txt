@@ -1,0 +1,19 @@
+**Goal:** Transform the slide from its current functional/wireframe appearance into a visually polished and engaging presentation slide, adhering strictly to the standards and elements defined in the 'Sparq_Brand_Guide.pdf' and aiming for a level of aesthetic quality similar to the 'INK_Games_Deck(for_reference).pdf' (use INK as a quality benchmark, not for direct copying).
+
+**Crucial Constraints:**
+1.  **Retain All Content:** All original text content from Slide 2 of 'Replit_Deck.pdf' MUST be included and remain readable. Do not summarize or remove text.
+2.  **Apply Sparq Brand Guide:**
+    * **Colors:** Strictly use the official Sparq color palette (Steel `#1E1E24` for background, Carbon `#2B2B42` for elements, and accents like Cyber Teal `#00F2EA`, Rebel Pink `#FF3864`, Victory Gold `#FFD700`, Outlaw Red `#EB0028`, Grit Teal `#00A19C`, Graphite Blue `#404BF2`). Apply these strategically for backgrounds, text, headings, highlights, borders, icons, and graphic elements.
+    * **Typography:** Use fonts that approximate the feel of `ADAM.CG PRO` (bold, geometric sans-serif like Orbitron or heavy Inter/Montserrat) for headings and `NEONDER` (clean sans-serif like Inter) for body text. Ensure clear hierarchy and readability.
+    * **Archetype Feel:** Reflect the 'Outlaw' brand archetype – modern, disruptive, bold, tech-focused.
+
+**Specific Visual Enhancements Required:**
+* **Layout:** Improve the visual organization. Use cards, columns, spacing, and alignment effectively, especially if the original slide is text-heavy, to make it cleaner and easier to scan.
+* **Icons:** Replace any generic icons or emojis with professional icons (e.g., Font Awesome). Style these icons using Sparq brand accent colors.
+* **Visual Elements:** Incorporate graphical elements like:
+    * **Gradient Lines/Dividers:** Use subtle gradients featuring Sparq accent colors (e.g., `linear-gradient(90deg, #00F2EA, #FF3864, #FFD700)`) to separate sections or add visual interest.    * **Accented Borders/Highlights:** Use accent colors for borders on cards or to highlight key information.
+    * **Subtle Background Textures:** Consider adding very subtle background textures or patterns consistent with the tech/outlaw theme if appropriate, ensuring text remains readable.
+* **Imagery (If Applicable):** If the slide contains images, ensure they are well-integrated, high-quality, and fit the overall aesthetic. Add subtle borders or effects if needed.
+* **Responsiveness:** Ensure the design looks good and functions well on different screen sizes.
+
+**Output:** Generate the redesigned slide using Tailwind CSS for styling.
