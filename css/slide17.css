@@ -1,5 +1,4 @@
-/* Slide 17: Game Experienced CEO - Styling */
-
+/* New Slide 17 Styling - CEO Profile */
 :root {
     --sparq-red: #FF0026;
     --sparq-teal: #00A19C;
@@ -9,273 +8,182 @@
     --sparq-gold: #FFD700;
 }
 
-#slide-17 .content.ceo-profile {
-    background-color: var(--sparq-carbon);
-    color: var(--sparq-white);
-    position: relative;
-    overflow: hidden;
+/* Base slide styling */
+#slide-17 {
+    color: white;
+    background-color: #2B2842; /* Carbon */
 }
 
-/* Solid background instead of image */
-#slide-17 .bg-watermark {
-    display: none;
-}
-
-/* Use solid background instead of overlay */
-#slide-17 .bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+#slide-17 .content {
+    padding: 20px;
     height: 100%;
-    background: linear-gradient(135deg, rgba(43, 40, 66, 1) 0%, rgba(30, 30, 36, 1) 100%);
-    z-index: 0;
-}
-
-/* Two-column layout container */
-#slide-17 .two-column-layout {
-    display: flex;
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    gap: 20px;
-    padding: 10px;
-}
-
-/* Left column - Headshot */
-#slide-17 .left-column {
-    width: 30%;
-    padding-right: 15px;
-    position: relative;
-    z-index: 2;
-}
-
-/* Right column - Content */
-#slide-17 .right-column {
-    width: 70%;
-    padding-left: 5px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 2;
 }
 
 /* Header styling */
-#slide-17 .header {
-    position: relative;
-    margin-bottom: 5px;
+#slide-17 .ceo-slide-header {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #slide-17 .title {
-    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--title-size) * 0.8);
-    font-weight: bold;
-    color: var(--sparq-teal);
-    margin-bottom: 0.05em;
+    color: #00A19C; /* Grit Teal */
+    font-size: 36px;
+    margin: 0;
     text-transform: uppercase;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
 }
 
 #slide-17 .ceo-name {
+    color: #FF0026; /* Outlaw Red */
+    font-size: 30px;
+    margin: 5px 0 0;
+    font-weight: bold;
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--heading-size) * 0.9);
-    color: var(--sparq-red);
-    margin-top: 0;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* CEO Headshot styling */
-#slide-17 .headshot-container {
-    width: 100%;
-    margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px;
-    border-radius: 8px;
+/* Main content grid */
+#slide-17 .ceo-content-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    gap: 15px;
+    flex: 1;
+}
+
+/* Headshot column */
+#slide-17 .ceo-headshot-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #slide-17 .ceo-headshot {
     width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    border: 2px solid var(--sparq-teal);
+    border-radius: 10px;
+    border: 3px solid #00A19C; /* Grit Teal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Bio sections styling */
-#slide-17 .bio-container {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    flex: 1;
+/* Bio sections */
+#slide-17 .ceo-bio-section {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 3px solid #FF0026; /* Outlaw Red */
 }
 
-#slide-17 .bio-section {
-    padding: 8px 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 6px;
-    border-left: 3px solid var(--sparq-red);
-    margin-bottom: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-/* Career highlights grid */
-#slide-17 .career-highlights {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-}
-
-#slide-17 .highlight-item {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 6px;
-    border-radius: 4px;
-    font-size: calc(var(--body-size) * 0.7);
-    border: 1px solid rgba(0, 161, 156, 0.2);
-}
-
-#slide-17 .section-title {
-    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--body-size) * 0.8);
-    color: var(--sparq-teal);
-    margin: 0 0 3px 0;
+#slide-17 .ceo-bio-section h3 {
+    color: #00A19C; /* Grit Teal */
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: bold;
     text-transform: uppercase;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
 }
 
-#slide-17 .section-content {
-    font-family: 'Inter', sans-serif;
-    font-size: calc(var(--body-size) * 0.75);
-    color: var(--sparq-white);
-    line-height: 1.25;
+#slide-17 .ceo-bio-section p {
     margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
 }
 
+/* Highlight styling */
 #slide-17 .highlight {
-    color: var(--sparq-teal);
+    color: #00A19C; /* Grit Teal */
     font-weight: bold;
 }
 
-#slide-17 .achievement {
-    display: inline-block;
-    background-color: rgba(255, 0, 38, 0.3);
-    padding: 2px 6px;
+#slide-17 .highlight-red {
+    color: white;
+    background-color: rgba(255, 0, 38, 0.3); /* Outlaw Red with transparency */
+    padding: 2px 4px;
     border-radius: 3px;
-    margin: 0 2px;
-    font-weight: 700;
-    color: var(--sparq-white);
-    font-size: calc(var(--body-size) * 0.7);
+    font-weight: bold;
     border: 1px solid rgba(255, 0, 38, 0.5);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Companies grid */
+#slide-17 .ceo-companies-grid {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+#slide-17 .ceo-companies-grid h3 {
+    color: #00A19C; /* Grit Teal */
+    margin: 0 0 10px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+}
+
+#slide-17 .company-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+#slide-17 .company {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 0, 38, 0.3); /* Outlaw Red with transparency */
+    color: white;
+    font-size: 10px;
+    padding: 6px 3px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
+}
+
+/* Footer */
+#slide-17 .slide-footer {
+    margin-top: 15px;
+    text-align: center;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    #slide-17 .two-column-layout {
-        flex-direction: column;
+    #slide-17 .ceo-content-grid {
+        grid-template-columns: 1fr;
     }
-
-    #slide-17 .left-column,
-    #slide-17 .right-column {
-        width: 100%;
-        padding: 0;
-    }
-
-    #slide-17 .headshot-container {
+    
+    #slide-17 .ceo-headshot-column {
         max-width: 200px;
         margin: 0 auto;
     }
 }
 
 @media (max-height: 720px) {
-    #slide-17 .header {
-        margin-bottom: calc(var(--spacing-xs) * 0.8);
+    #slide-17 .ceo-slide-header {
+        margin-bottom: 10px;
     }
-
+    
     #slide-17 .title {
-        font-size: calc(var(--title-size) * 0.9);
+        font-size: 32px;
     }
-
+    
     #slide-17 .ceo-name {
-        font-size: calc(var(--heading-size) * 1);
-        margin-bottom: calc(var(--spacing-sm) * 0.7);
+        font-size: 26px;
     }
-}
-
-/*Company Logos Section */
-#slide-17 .company-logos-container {
-    background-color: rgba(30, 30, 36, 0.85);
-    border-radius: 6px;
-    padding: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    border: 1px solid var(--sparq-teal);
-}
-
-#slide-17 .logos-title {
-    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: calc(var(--body-size) * 0.7);
-    color: var(--sparq-teal);
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#slide-17 .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-}
-
-#slide-17 .company-logo {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 4px;
-    padding: 5px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 8px;
-    color: var(--sparq-white);
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-    border: 1px solid rgba(255, 0, 38, 0.3);
-}
-
-#slide-17 .company-logo:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: var(--sparq-red);
-}
-
-/* Adjust footer for this slide to ensure it's compact */
-#slide-17 .slide-footer {
-    margin-top: 5px;
-    padding: 5px 0;
-    height: auto;
-}
-
-@media (max-width: 1200px) {
-    #slide-17 .logo-grid {
-        grid-template-columns: repeat(2, 1fr); /* Adjusted for smaller screens */
+    
+    #slide-17 .ceo-bio-section {
+        padding: 8px;
+        margin-bottom: 8px;
     }
-}
-@media (max-height: 720px) {
-    #slide-17 .company-logos-container {
-        padding: calc(var(--spacing-sm) * 0.8);
+    
+    #slide-17 .ceo-bio-section h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
     }
-    #slide-17 .logo-grid {
-        gap: calc(var(--spacing-xs) * 0.8);
-    }
-    #slide-17 .company-logo {
-        height: 35px;
-        font-size: 9px;
+    
+    #slide-17 .ceo-bio-section p {
+        font-size: 12px;
+        line-height: 1.3;
     }
 }
