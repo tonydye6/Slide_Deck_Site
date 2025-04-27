@@ -1,3 +1,4 @@
+
 /* Slide 2: Mission - Redesigned with Sparq Brand Guidelines */
 #slide-2 {
     background: var(--sparq-steel); /* Steel background as specified in brand guide */
@@ -305,24 +306,4 @@
     .mission-content p {
         font-size: 15px;
     }
-}
-
-/* Slide Footer (maintained from original) */
-.slide-footer {
-    position: absolute;
-    bottom: var(--spacing-sm);
-    left: var(--spacing-sm);
-    display: flex;
-    align-items: center;
-    z-index: 10;
-}
-
-.slide-footer .footer-logo-img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.5rem;
-    object-fit: contain;
-    filter: brightness(0.9);
-    max-width: 24px !important;
-    max-height: 24px !important;
 }
