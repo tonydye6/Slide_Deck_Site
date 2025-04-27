@@ -26,8 +26,7 @@
     background-image: url('../attached_assets/Jan_Nasdaq(Experienced_CEO_Slide).png');
     background-size: cover;
     background-position: center;
-    opacity: 0.12;
-    filter: grayscale(100%);
+    opacity: 0.3;
     z-index: 0;
 }
 
@@ -38,41 +37,37 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(43, 40, 66, 0.9) 0%, rgba(30, 30, 36, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(43, 40, 66, 0.65) 0%, rgba(30, 30, 36, 0.7) 100%);
     z-index: 0;
 }
 
-/* Three-column layout container */
-#slide-17 .three-column-layout {
+/* Two-column layout container */
+#slide-17 .two-column-layout {
     display: flex;
     position: relative;
     z-index: 1;
     height: 100%;
     width: 100%;
-    gap: 8px;
-    padding: 5px;
+    gap: 20px;
+    padding: 10px;
 }
 
 /* Left column - Headshot */
 #slide-17 .left-column {
-    width: 25%;
-    padding-right: 5px;
-}
-
-/* Middle column - Content */
-#slide-17 .middle-column {
-    width: 45%;
-    padding: 0 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Right column - Career Highlights */
-#slide-17 .right-column {
     width: 30%;
+    padding-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Right column - Content */
+#slide-17 .right-column {
+    width: 70%;
     padding-left: 5px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
 }
 
 /* Header styling */
@@ -88,16 +83,21 @@
     color: var(--sparq-teal);
     margin-bottom: 0.05em;
     text-transform: uppercase;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 #slide-17 .ceo-name {
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
     font-size: calc(var(--heading-size) * 0.9);
-    color: var(--sparq-white);
+    color: var(--sparq-red);
     margin-top: 0;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* CEO Headshot styling */
@@ -123,10 +123,12 @@
 }
 
 #slide-17 .bio-section {
-    padding: 6px 8px;
-    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 6px;
     border-left: 3px solid var(--sparq-red);
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Career highlights grid */
@@ -178,12 +180,11 @@
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    #slide-17 .three-column-layout {
+    #slide-17 .two-column-layout {
         flex-direction: column;
     }
 
     #slide-17 .left-column,
-    #slide-17 .middle-column,
     #slide-17 .right-column {
         width: 100%;
         padding: 0;
