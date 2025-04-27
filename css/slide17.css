@@ -103,15 +103,18 @@
 /* CEO Headshot styling */
 #slide-17 .headshot-container {
     width: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 8px;
 }
 
 #slide-17 .ceo-headshot {
     width: 100%;
     height: auto;
     border-radius: 6px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 161, 156, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--sparq-teal);
 }
 
 /* Bio sections styling */
@@ -169,13 +172,16 @@
 
 #slide-17 .achievement {
     display: inline-block;
-    background-color: rgba(255, 0, 38, 0.15);
-    padding: 1px 4px;
+    background-color: rgba(255, 0, 38, 0.3);
+    padding: 2px 6px;
     border-radius: 3px;
-    margin: 0 1px;
-    font-weight: 600;
+    margin: 0 2px;
+    font-weight: 700;
     color: var(--sparq-white);
     font-size: calc(var(--body-size) * 0.7);
+    border: 1px solid rgba(255, 0, 38, 0.5);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive adjustments */
@@ -213,10 +219,11 @@
 
 /*Company Logos Section */
 #slide-17 .company-logos-container {
-    background-color: var(--sparq-steel);
+    background-color: rgba(30, 30, 36, 0.85);
     border-radius: 6px;
-    padding: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--sparq-teal);
 }
 
 #slide-17 .logos-title {
@@ -225,33 +232,36 @@
     color: var(--sparq-teal);
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #slide-17 .logo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
 }
 
 #slide-17 .company-logo {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 4px;
-    padding: 4px;
-    height: 22px;
+    padding: 5px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'ADAM-CG-PRO', 'Arial Black', sans-serif;
-    font-size: 7px;
+    font-size: 8px;
     color: var(--sparq-white);
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 0, 38, 0.3);
 }
 
 #slide-17 .company-logo:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: var(--sparq-red);
 }
 
 /* Adjust footer for this slide to ensure it's compact */
